@@ -5,17 +5,25 @@ import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ icon, title, description, imageUrl, index, slug }) => {
   return (
-    <Link to={`/services/${slug}`} className="block">
-      <div className={`service-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500 hover:transform hover:scale-105`} data-service-index={index}>
+    <Link to={`/services/${slug}`} className="block h-full">
+      <div className={`service-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500 hover:transform hover:scale-105 h-full flex flex-col`} data-service-index={index}>
         <div className="h-48 overflow-hidden">
           <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
         </div>
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-grow">
           <div className="flex items-center mb-4">
             {icon}
             <h3 className="text-xl font-semibold ml-2">{title}</h3>
           </div>
-          <p className="text-gray-600">{description}</p>
+          <p className="text-gray-600 flex-grow">{description}</p>
+          <div className="mt-4 text-gray-700 font-medium">
+            <span className="flex items-center">
+              <span>Learn more</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
     </Link>
@@ -57,7 +65,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-800 text-grey">
+    <section id="services" className="py-20 bg-gray-800 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">{t('services.title')}</h2>
