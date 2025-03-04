@@ -1,52 +1,15 @@
 import React from 'react';
 import { Code, MapPin, Phone, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   
-  const scrollToService = (serviceType) => {
-    // First navigate to homepage if not already there
-    if (window.location.pathname !== '/') {
-      window.location.href = '/#services';
-      return;
-    }
-    
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' });
-      
-      // Highlight the specific service card
-      setTimeout(() => {
-        const serviceCards = document.querySelectorAll('.service-card');
-        let index = 0;
-        
-        switch(serviceType) {
-          case 'software':
-            index = 0;
-            break;
-          case 'consulting':
-            index = 1;
-            break;
-          case 'web':
-            index = 2;
-            break;
-          case 'support':
-            index = 3;
-            break;
-          default:
-            return;
-        }
-        
-        if (serviceCards[index]) {
-          serviceCards[index].classList.add('service-highlight');
-          setTimeout(() => {
-            serviceCards[index].classList.remove('service-highlight');
-          }, 2000);
-        }
-      }, 1000);
-    }
+  const navigateToService = (serviceSlug) => {
+    navigate(`/services/${serviceSlug}`);
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -84,7 +47,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <button 
-                  onClick={() => scrollToService('software')} 
+                  onClick={() => navigateToService('software-development')} 
                   className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
                 >
                   {t('footer.software')}
@@ -92,7 +55,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToService('consulting')} 
+                  onClick={() => navigateToService('consulting-architecture')} 
                   className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
                 >
                   {t('footer.consulting')}
@@ -100,7 +63,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToService('web')} 
+                  onClick={() => navigateToService('web-solutions')} 
                   className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
                 >
                   {t('footer.web')}
@@ -108,7 +71,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToService('support')} 
+                  onClick={() => navigateToService('support-maintenance')} 
                   className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
                 >
                   {t('footer.support')}
