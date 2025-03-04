@@ -38,8 +38,8 @@ const enTranslations = {
   // Footer
   "footer.company": "ACL-Smart Software",
   "footer.tagline": "Innovative software solutions for modern businesses.",
-  "footer.address": "123 Tech Park, Innovation Street, Business District, 10001",
-  "footer.phone": "+40 758 158 490",
+  "footer.address": "Romania, Hunedoara, Petrosani, 332014",
+  "footer.phone": "+40 758 154 490",
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Services",
   "footer.software": "Software Development",
@@ -217,8 +217,8 @@ const roTranslations = {
   // Footer
   "footer.company": "ACL-Smart Software",
   "footer.tagline": "Soluții software inovatoare pentru afaceri moderne.",
-  "footer.address": "123 Tech Park, Strada Inovației, Cartierul de Afaceri, 10001",
-  "footer.phone": "+40 758 158 490",
+  "footer.address": "România, Hunedoara, Petroșani, 332014",
+  "footer.phone": "+40 758 154 490",
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Servicii",
   "footer.software": "Dezvoltare Software",
