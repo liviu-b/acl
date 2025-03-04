@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Code } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,15 +41,15 @@ const Header = () => {
           <div className="hidden md:flex space-x-8">
             {isHomePage ? (
               <>
-                <a href="#home" className="text-gray-100 hover:text-gray-300 transition-colors">Home</a>
-                <a href="#about" className="text-gray-100 hover:text-gray-300 transition-colors">About</a>
-                <a href="#services" className="text-gray-100 hover:text-gray-300 transition-colors">Services</a>
+                <a href="#home" className="text-gray-100 hover:text-gray-300 transition-colors">{t('nav.home')}</a>
+                <a href="#about" className="text-gray-100 hover:text-gray-300 transition-colors">{t('nav.about')}</a>
+                <a href="#services" className="text-gray-100 hover:text-gray-300 transition-colors">{t('nav.services')}</a>
               </>
             ) : (
               <>
-                <Link to="/" className="text-gray-100 hover:text-gray-300 transition-colors">Home</Link>
-                <Link to="/#about" className="text-gray-100 hover:text-gray-300 transition-colors">About</Link>
-                <Link to="/#services" className="text-gray-100 hover:text-gray-300 transition-colors">Services</Link>
+                <Link to="/" className="text-gray-100 hover:text-gray-300 transition-colors">{t('nav.home')}</Link>
+                <Link to="/#about" className="text-gray-100 hover:text-gray-300 transition-colors">{t('nav.about')}</Link>
+                <Link to="/#services" className="text-gray-100 hover:text-gray-300 transition-colors">{t('nav.services')}</Link>
               </>
             )}
           </div>
@@ -67,15 +69,15 @@ const Header = () => {
             <div className="flex flex-col space-y-4">
               {isHomePage ? (
                 <>
-                  <a href="#home" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>Home</a>
-                  <a href="#about" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>About</a>
-                  <a href="#services" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>Services</a>
+                  <a href="#home" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>{t('nav.home')}</a>
+                  <a href="#about" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>{t('nav.about')}</a>
+                  <a href="#services" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>{t('nav.services')}</a>
                 </>
               ) : (
                 <>
-                  <Link to="/" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>Home</Link>
-                  <Link to="/#about" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>About</Link>
-                  <Link to="/#services" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>Services</Link>
+                  <Link to="/" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>{t('nav.home')}</Link>
+                  <Link to="/#about" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>{t('nav.about')}</Link>
+                  <Link to="/#services" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>{t('nav.services')}</Link>
                 </>
               )}
             </div>

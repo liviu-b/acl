@@ -1,8 +1,11 @@
 import React from 'react';
 import { Code, MapPin, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+  
   const scrollToService = (serviceType) => {
     // First navigate to homepage if not already there
     if (window.location.pathname !== '/') {
@@ -53,38 +56,38 @@ const Footer = () => {
           <div className="flex flex-col items-center">
             <div className="flex items-center mb-4">
               <Code className="h-8 w-8 text-gray-300" />
-              <span className="ml-2 text-xl font-bold">ACL-Smart Software</span>
+              <span className="ml-2 text-xl font-bold">{t('footer.company')}</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Innovative software solutions for modern businesses.
+              {t('footer.tagline')}
             </p>
             
             {/* Contact Information */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center justify-center">
                 <MapPin className="h-5 w-5 text-gray-400 mr-2" />
-                <span className="text-gray-400">Hunedoara, Petrosani, 332014</span>
+                <span className="text-gray-400">{t('footer.address')}</span>
               </div>
               <div className="flex items-center justify-center">
                 <Phone className="h-5 w-5 text-gray-400 mr-2" />
-                <span className="text-gray-400">+40 758 154 490</span>
+                <span className="text-gray-400">{t('footer.phone')}</span>
               </div>
               <div className="flex items-center justify-center">
                 <Mail className="h-5 w-5 text-gray-400 mr-2" />
-                <span className="text-gray-400">office@acl-smartsoftware.tech</span>
+                <span className="text-gray-400">{t('footer.email')}</span>
               </div>
             </div>
           </div>
           
           <div className="flex flex-col items-center">
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.services')}</h3>
             <ul className="space-y-2">
               <li>
                 <button 
                   onClick={() => scrollToService('software')} 
                   className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
                 >
-                  Software Development
+                  {t('footer.software')}
                 </button>
               </li>
               <li>
@@ -92,7 +95,7 @@ const Footer = () => {
                   onClick={() => scrollToService('consulting')} 
                   className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
                 >
-                  Consulting & Architecture
+                  {t('footer.consulting')}
                 </button>
               </li>
               <li>
@@ -100,7 +103,7 @@ const Footer = () => {
                   onClick={() => scrollToService('web')} 
                   className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
                 >
-                  Web Solutions
+                  {t('footer.web')}
                 </button>
               </li>
               <li>
@@ -108,21 +111,21 @@ const Footer = () => {
                   onClick={() => scrollToService('support')} 
                   className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
                 >
-                  Support & Maintenance
+                  {t('footer.support')}
                 </button>
               </li>
             </ul>
           </div>
           
           <div className="flex flex-col items-center">
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.legal')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link 
                   to="/privacy-policy" 
                   className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
                 >
-                  Privacy Policy
+                  {t('footer.privacy')}
                 </Link>
               </li>
               <li>
@@ -130,7 +133,7 @@ const Footer = () => {
                   to="/gdpr-policy" 
                   className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
                 >
-                  GDPR Compliance
+                  {t('footer.gdpr')}
                 </Link>
               </li>
               <li>
@@ -140,7 +143,7 @@ const Footer = () => {
                   rel="noopener noreferrer" 
                   className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
                 >
-                  ANPC
+                  {t('footer.anpc')}
                 </a>
               </li>
             </ul>
@@ -148,7 +151,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} ACL-Smart Software. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {t('footer.company')}. {t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

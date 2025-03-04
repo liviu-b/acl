@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { MessageCircle, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const WhatsAppChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useTranslation();
 
   // Show chat button after a delay
   useEffect(() => {
@@ -30,7 +32,7 @@ const WhatsAppChat = () => {
       {isOpen ? (
         <div className="bg-white rounded-lg shadow-xl w-72 overflow-hidden transition-all duration-300 transform scale-100 origin-bottom-right">
           <div className="bg-green-500 text-white p-4 flex justify-between items-center">
-            <h3 className="font-semibold">Chat with us</h3>
+            <h3 className="font-semibold">{t('chat.title')}</h3>
             <button 
               onClick={() => setIsOpen(false)}
               className="text-white hover:text-gray-200 transition-colors"
@@ -41,14 +43,14 @@ const WhatsAppChat = () => {
           
           <div className="p-4">
             <p className="text-gray-700 mb-4">
-              Hello! How can we help you today? Send us a message and we'll get back to you as soon as possible.
+              {t('chat.message')}
             </p>
             
             <form onSubmit={handleSubmit}>
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Type your message here..."
+                placeholder={t('chat.placeholder')}
                 className="w-full p-2 border border-gray-300 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 rows={3}
                 required
@@ -58,7 +60,7 @@ const WhatsAppChat = () => {
                 type="submit"
                 className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded transition-colors duration-300"
               >
-                Chat on WhatsApp
+                {t('chat.button')}
               </button>
             </form>
           </div>

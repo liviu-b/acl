@@ -1,7 +1,18 @@
 import React from 'react';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Code } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
+  const { t } = useTranslation();
+  
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  
   return (
     <section id="home" className="relative h-screen flex items-center justify-center bg-gray-900 text-white">
       <div className="absolute inset-0 z-0">
@@ -14,15 +25,21 @@ const Hero = () => {
       </div>
       
       <div className="container mx-auto px-4 z-10 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">Innovative Software Solutions</h1>
+        <div 
+          onClick={scrollToTop}
+          className="inline-flex justify-center mb-8 cursor-pointer transform hover:scale-110 transition-all duration-300"
+        >
+          <Code className="h-20 w-20 text-white" />
+        </div>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">{t('hero.title')}</h1>
         <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">
-          ACL-Smart Software delivers cutting-edge technology solutions tailored to your business needs.
+          {t('hero.subtitle')}
         </p>
         <a 
           href="#services" 
           className="inline-flex items-center px-8 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-md transition-colors duration-300"
         >
-          Explore Our Services
+          {t('hero.cta')}
           <ArrowDown className="ml-2 h-5 w-5" />
         </a>
       </div>

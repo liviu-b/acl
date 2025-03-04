@@ -11,16 +11,20 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import GDPRPolicy from './components/GDPRPolicy';
 import HomePage from './components/HomePage';
 import WhatsAppChat from './components/WhatsAppChat';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import ServiceDetail from './components/ServiceDetail';
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
         <Header />
+        <LanguageSwitcher />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/gdpr-policy" element={<GDPRPolicy />} />
+          <Route path="/services/:serviceSlug" element={<ServiceDetail />} />
         </Routes>
         <Footer />
         <WhatsAppChat />
