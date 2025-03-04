@@ -51,7 +51,7 @@ const Contact = () => {
                 <MapPin className="h-6 w-6 text-gray-700 mr-4 mt-1" />
                 <div>
                   <h4 className="font-semibold">{t('contact.address.title') || 'Address'}</h4>
-                  <p className="text-gray-600">{t('contact.address.value') || '123 Tech Park, Innovation Street'}<br />{t('contact.address.city') || 'Business District, 10001'}</p>
+                  <p className="text-gray-600">{t('contact.address.value') || 'Hunedoara, Petroșani'}<br />{t('contact.address.city') || '332014'}</p>
                 </div>
               </div>
               
