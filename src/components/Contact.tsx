@@ -59,7 +59,7 @@ const Contact = () => {
                 <Phone className="h-6 w-6 text-gray-700 mr-4 mt-1" />
                 <div>
                   <h4 className="font-semibold">{t('contact.phone.title') || 'Phone'}</h4>
-                  <p className="text-gray-600">{t('contact.phone.value') || '+40 758 158 490'}</p>
+                  <p className="text-gray-600">{t('contact.phone.value') || '+40 758 154 490'}</p>
                 </div>
               </div>
               
