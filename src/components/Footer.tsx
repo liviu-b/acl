@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-white-900 text-gray">
+    <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="flex flex-col items-center">
@@ -28,15 +28,15 @@ const Footer = () => {
             {/* Contact Information */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center justify-center">
-                <MapPin className="h-5 w-5 text-black-400 mr-2" />
+                <MapPin className="h-5 w-5 text-gray-400 mr-2" />
                 <span className="text-gray-400">{t('footer.address')}</span>
               </div>
               <div className="flex items-center justify-center">
-                <Phone className="h-5 w-5 text-black-400 mr-2" />
+                <Phone className="h-5 w-5 text-gray-400 mr-2" />
                 <span className="text-gray-400">{t('footer.phone')}</span>
               </div>
               <div className="flex items-center justify-center">
-                <Mail className="h-5 w-5 text-black-400 mr-2" />
+                <Mail className="h-5 w-5 text-gray-400 mr-2" />
                 <span className="text-gray-400">{t('footer.email')}</span>
               </div>
             </div>
