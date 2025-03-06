@@ -233,31 +233,7 @@ const ServiceDetail = () => {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="mt-12 text-center">
-          <h2 className="text-2xl font-bold mb-4">{currentLanguage === 'en' ? 'Ready to get started?' : 'Gata să începem?'}</h2>
-          <p className="text-gray-700 mb-6">
-            {currentLanguage === 'en' 
-              ? `Contact us today to discuss how we can help with your ${service.title.toLowerCase()} needs.`
-              : `Contactați-ne astăzi pentru a discuta cum vă putem ajuta cu nevoile dumneavoastră de ${service.title.toLowerCase()}.`
-            }
-          </p>
-          <a 
-            href="#contact" 
-            onClick={() => {
-              navigate('/');
-              setTimeout(() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }, 100);
-            }}
-            className="inline-flex items-center px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-md transition-colors duration-300"
-          >
-            {currentLanguage === 'en' ? 'Contact Us' : 'Contactați-ne'}
-          </a>
-        </div>
+      
       </div>
     </div>
   );
