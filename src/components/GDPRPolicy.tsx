@@ -137,7 +137,7 @@ const GDPRPolicy = () => {
                 <p className="font-semibold">{t('gdpr.contact.dpo')}</p>
                 <p>{t('gdpr.contact.company')}</p>
                 <p>{t('gdpr.contact.email')}: office@acl-smartsoftware.tech</p>
-                <p>{t('gdpr.contact.phone')}: +40 758 158 490</p>
+                <p>{t('gdpr.contact.phone')}: +40 758 154 490</p>
               </div>
             </section>
           </div>

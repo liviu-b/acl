@@ -135,7 +135,7 @@ const PrivacyPolicy = () => {
               <div className="mt-3">
                 <p className="font-semibold">{t('privacy.contact.company')}</p>
                 <p>{t('privacy.contact.email')}: office@acl-smartsoftware.tech</p>
-                <p>{t('privacy.contact.phone')}: +40 758 158 490</p>
+                <p>{t('privacy.contact.phone')}: +40 758 154 490</p>
               </div>
             </section>
           </div>
