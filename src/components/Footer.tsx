@@ -28,15 +28,15 @@ const Footer = () => {
             {/* Contact Information */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center justify-center">
-                <MapPin className="h-5 w-5 text-gray-400 mr-2" />
+                <MapPin className="h-5 w-5 text-black-400 mr-2" />
                 <span className="text-gray-400">{t('footer.address')}</span>
               </div>
               <div className="flex items-center justify-center">
-                <Phone className="h-5 w-5 text-gray-400 mr-2" />
+                <Phone className="h-5 w-5 text-black-400 mr-2" />
                 <span className="text-gray-400">{t('footer.phone')}</span>
               </div>
               <div className="flex items-center justify-center">
-                <Mail className="h-5 w-5 text-gray-400 mr-2" />
+                <Mail className="h-5 w-5 text-black-400 mr-2" />
                 <span className="text-gray-400">{t('footer.email')}</span>
               </div>
             </div>
