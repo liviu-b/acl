@@ -8,6 +8,7 @@ const WhatsAppChat = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useTranslation();
 
+  // Show chat button after a delay
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -29,8 +30,8 @@ const WhatsAppChat = () => {
   return (
     <div className="fixed bottom-5 right-5 z-50">
       {isOpen ? (
-        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-xl w-72 overflow-hidden transition-all duration-300 transform scale-100 origin-bottom-right border border-gray-700">
-          <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-4 flex justify-between items-center">
+        <div className="bg-white rounded-lg shadow-xl w-72 overflow-hidden transition-all duration-300 transform scale-100 origin-bottom-right">
+          <div className="bg-green-500 text-white p-4 flex justify-between items-center">
             <h3 className="font-semibold">{t('chat.title')}</h3>
             <button 
               onClick={() => setIsOpen(false)}
@@ -41,7 +42,7 @@ const WhatsAppChat = () => {
           </div>
           
           <div className="p-4">
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-700 mb-4">
               {t('chat.message')}
             </p>
             
@@ -50,14 +51,14 @@ const WhatsAppChat = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder={t('chat.placeholder')}
-                className="w-full p-2 bg-gray-700 border border-gray-600 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-white placeholder-gray-400"
+                className="w-full p-2 border border-gray-300 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 rows={3}
                 required
               ></textarea>
               
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white font-medium py-2 px-4 rounded transition-all duration-300 transform hover:scale-105"
+                className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded transition-colors duration-300"
               >
                 {t('chat.button')}
               </button>
@@ -67,7 +68,7 @@ const WhatsAppChat = () => {
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center"
+          className="bg-green-500 hover:bg-green-600 text-white rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center"
           aria-label="Open chat"
         >
           <MessageCircle className="h-6 w-6" />
