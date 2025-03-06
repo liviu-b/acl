@@ -6,7 +6,7 @@ const About = () => {
   const { t } = useTranslation();
   
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-gray-900 to-blue-900 text-white">
+    <section id="about" className="py-20 bg-white text-gray-800">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 mb-10 lg:mb-0">
@@ -16,30 +16,30 @@ const About = () => {
                 alt="Our Team" 
                 className="rounded-lg shadow-xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-blue-600 p-6 rounded-lg shadow-lg">
-                <Building2 className="h-12 w-12 text-white" />
+              <div className="absolute -bottom-6 -right-6 bg-gray-700 p-6 rounded-lg shadow-lg">
+                <Building2 className="h-12 w-12 text-gray-300" />
               </div>
             </div>
           </div>
           
           <div className="lg:w-1/2 lg:pl-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('about.title')}</h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-600 mb-6">
               {t('about.paragraph1')}
             </p>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-600 mb-6">
               {t('about.paragraph2')}
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <h3 className="text-xl font-semibold mb-2">{t('about.mission.title')}</h3>
-                <p className="text-gray-300">
+                <p className="text-gray-600">
                   {t('about.mission.text')}
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">{t('about.vision.title')}</h3>
-                <p className="text-gray-300">
+                <p className="text-gray-600">
                   {t('about.vision.text')}
                 </p>
               </div>
