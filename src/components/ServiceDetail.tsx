@@ -232,8 +232,6 @@ const ServiceDetail = () => {
             ))}
           </div>
         </div>
-
-      
       </div>
     </div>
   );
