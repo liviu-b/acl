@@ -6,7 +6,7 @@ const About = () => {
   const { t } = useTranslation();
   
   return (
-    <section id="about" className="py-20 bg-gray text-white-800">
+    <section id="about" className="py-20 bg-white text-gray-800">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 mb-10 lg:mb-0">
