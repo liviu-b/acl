@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Code, Wrench, Globe } from 'lucide-react';
+import { Code, Wrench, Globe, Smartphone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const ServiceDetail = () => {
@@ -30,17 +30,50 @@ const ServiceDetail = () => {
         { step: currentLanguage === 'en' ? "Maintenance & Support" : "Mentenanță și Suport", description: currentLanguage === 'en' ? "Ongoing support and updates keep your software running optimally." : "Suportul și actualizările continue mențin software-ul dumneavoastră funcționând optim." }
       ],
       benefits: currentLanguage === 'en' ? [
-        "Custom solutions tailored to your specific business needs",
-        "Scalable architecture that grows with your business",
-        "Modern, user-friendly interfaces",
-        "Secure, reliable performance",
-        "Integration with existing systems"
+        "Custom-tailored solutions that perfectly match your business requirements",
+        "Scalable architecture designed for future growth and expansion",
+        "Enhanced operational efficiency through process automation",
+        "Robust security measures protecting your valuable data",
+        "Seamless integration with existing systems and workflows",
+        "Reduced operational costs through optimized processes"
       ] : [
-        "Soluții personalizate adaptate nevoilor specifice ale afacerii dumneavoastră",
-        "Arhitectură scalabilă care crește odată cu afacerea dumneavoastră",
-        "Interfețe moderne, ușor de utilizat",
-        "Performanță sigură și fiabilă",
-        "Integrare cu sistemele existente"
+        "Soluții personalizate care se potrivesc perfect cerințelor afacerii dumneavoastră",
+        "Arhitectură scalabilă proiectată pentru creștere și expansiune viitoare",
+        "Eficiență operațională îmbunătățită prin automatizarea proceselor",
+        "Măsuri robuste de securitate care vă protejează datele valoroase",
+        "Integrare perfectă cu sistemele și fluxurile de lucru existente",
+        "Costuri operaționale reduse prin procese optimizate"
+      ]
+    },
+    'mobile-development': {
+      icon: <Smartphone className="h-12 w-12 text-purple-400" />,
+      title: t('services.mobile.title'),
+      description: currentLanguage === 'en'
+        ? "Create powerful mobile experiences for your users. We develop native and cross-platform applications that engage and delight."
+        : "Creați experiențe mobile puternice pentru utilizatorii dumneavoastră. Dezvoltăm aplicații native și cross-platform care implică și încântă.",
+      imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      process: [
+        { step: currentLanguage === 'en' ? "Market Research" : "Cercetare de Piață", description: currentLanguage === 'en' ? "We analyze your target market and user needs to define the app strategy." : "Analizăm piața țintă și nevoile utilizatorilor pentru a defini strategia aplicației." },
+        { step: currentLanguage === 'en' ? "UX/UI Design" : "Design UX/UI", description: currentLanguage === 'en' ? "Our designers create intuitive and engaging mobile interfaces." : "Designerii noștri creează interfețe mobile intuitive și atractive." },
+        { step: currentLanguage === 'en' ? "Development" : "Dezvoltare", description: currentLanguage === 'en' ? "We build your app using the latest mobile development technologies." : "Construim aplicația folosind cele mai recente tehnologii de dezvoltare mobilă." },
+        { step: currentLanguage === 'en' ? "Testing" : "Testare", description: currentLanguage === 'en' ? "Comprehensive testing across devices ensures quality." : "Testarea completă pe diverse dispozitive asigură calitatea." },
+        { step: currentLanguage === 'en' ? "App Store Launch" : "Lansare în App Store", description: currentLanguage === 'en' ? "We handle the app store submission and optimization process." : "Gestionăm procesul de submitere și optimizare pentru app store." },
+        { step: currentLanguage === 'en' ? "Monitoring & Updates" : "Monitorizare și Actualizări", description: currentLanguage === 'en' ? "Continuous monitoring and updates keep your app performing optimally." : "Monitorizarea și actualizările continue mențin performanța optimă a aplicației." }
+      ],
+      benefits: currentLanguage === 'en' ? [
+        "Native performance and seamless user experience across all devices",
+        "Offline functionality for uninterrupted user access",
+        "Push notifications to enhance user engagement",
+        "Secure data handling and user authentication",
+        "Analytics integration for data-driven improvements",
+        "Regular updates and maintenance for optimal performance"
+      ] : [
+        "Performanță nativă și experiență fluidă pe toate dispozitivele",
+        "Funcționalitate offline pentru acces neîntrerupt al utilizatorilor",
+        "Notificări push pentru îmbunătățirea angajamentului utilizatorilor",
+        "Gestionarea securizată a datelor și autentificarea utilizatorilor",
+        "Integrare analytics pentru îmbunătățiri bazate pe date",
+        "Actualizări și mentenanță regulată pentru performanță optimă"
       ]
     },
     'consulting-architecture': {
@@ -59,17 +92,19 @@ const ServiceDetail = () => {
         { step: currentLanguage === 'en' ? "Ongoing Support" : "Suport Continuu", description: currentLanguage === 'en' ? "We provide continued guidance as your business evolves." : "Oferim îndrumare continuă pe măsură ce afacerea dumneavoastră evoluează." }
       ],
       benefits: currentLanguage === 'en' ? [
-        "Expert guidance from experienced architects",
-        "Optimized system performance and scalability",
-        "Reduced technical debt",
-        "Future-proof technology decisions",
-        "Cost-effective solutions"
+        "Strategic technology roadmap aligned with business goals",
+        "Optimized system architecture for maximum performance",
+        "Reduced technical debt and maintenance costs",
+        "Enhanced security and risk management",
+        "Improved scalability and system reliability",
+        "Knowledge transfer and team empowerment"
       ] : [
-        "Îndrumare expertă de la arhitecți cu experiență",
-        "Performanță și scalabilitate optimizate ale sistemului",
-        "Reducerea datoriei tehnice",
-        "Decizii tehnologice pregătite pentru viitor",
-        "Soluții rentabile"
+        "Plan tehnologic strategic aliniat cu obiectivele de afaceri",
+        "Arhitectură de sistem optimizată pentru performanță maximă",
+        "Reducerea datoriei tehnice și a costurilor de întreținere",
+        "Securitate și management al riscurilor îmbunătățite",
+        "Scalabilitate și fiabilitate îmbunătățite ale sistemului",
+        "Transfer de cunoștințe și împuternicirea echipei"
       ]
     },
     'web-solutions': {
@@ -88,17 +123,19 @@ const ServiceDetail = () => {
         { step: currentLanguage === 'en' ? "Launch & Optimization" : "Lansare și Optimizare", description: currentLanguage === 'en' ? "We deploy your solution and provide ongoing optimization." : "Implementăm soluția dumneavoastră și oferim optimizare continuă." }
       ],
       benefits: currentLanguage === 'en' ? [
-        "Mobile-responsive designs that work on all devices",
-        "SEO-optimized for better visibility",
-        "Fast-loading pages for improved user experience",
-        "Secure, reliable hosting",
-        "Analytics integration for data-driven decisions"
+        "Responsive design that works flawlessly across all devices",
+        "Advanced SEO optimization for improved visibility",
+        "Lightning-fast loading speeds for better user experience",
+        "Secure hosting with 99.9% uptime guarantee",
+        "Comprehensive analytics and performance monitoring",
+        "Regular updates and security maintenance"
       ] : [
-        "Design-uri responsive pentru mobil care funcționează pe toate dispozitivele",
-        "Optimizate SEO pentru vizibilitate mai bună",
-        "Pagini cu încărcare rapidă pentru o experiență îmbunătățită a utilizatorului",
-        "Găzduire sigură și fiabilă",
-        "Integrare de analize pentru decizii bazate pe date"
+        "Design responsive care funcționează impecabil pe toate dispozitivele",
+        "Optimizare SEO avansată pentru vizibilitate îmbunătățită",
+        "Viteze de încărcare rapide pentru o experiență mai bună",
+        "Găzduire sigură cu garanție de uptime de 99.9%",
+        "Analize comprehensive și monitorizarea performanței",
+        "Actualizări regulate și mentenanță de securitate"
       ]
     }
   };
