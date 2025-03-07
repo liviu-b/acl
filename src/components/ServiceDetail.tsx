@@ -15,7 +15,7 @@ const ServiceDetail = () => {
 
   const services = {
     'software-development': {
-      icon: <Code className="h-12 w-12 text-blue-600" />,
+      icon: <Code className="h-12 w-12 text-blue-400" />,
       title: t('services.software.title'),
       description: t('services.software.description'),
       imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
@@ -42,7 +42,7 @@ const ServiceDetail = () => {
       ]
     },
     'mobile-development': {
-      icon: <Smartphone className="h-12 w-12 text-purple-600" />,
+      icon: <Smartphone className="h-12 w-12 text-purple-400" />,
       title: t('services.mobile.title'),
       description: t('services.mobile.description'),
       imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
@@ -69,7 +69,7 @@ const ServiceDetail = () => {
       ]
     },
     'consulting-architecture': {
-      icon: <Wrench className="h-12 w-12 text-emerald-600" />,
+      icon: <Wrench className="h-12 w-12 text-emerald-400" />,
       title: t('services.consulting.title'),
       description: t('services.consulting.description'),
       imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
@@ -96,7 +96,7 @@ const ServiceDetail = () => {
       ]
     },
     'web-solutions': {
-      icon: <Globe className="h-12 w-12 text-amber-600" />,
+      icon: <Globe className="h-12 w-12 text-amber-400" />,
       title: t('services.web.title'),
       description: t('services.web.description'),
       imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
@@ -134,10 +134,14 @@ const ServiceDetail = () => {
   }
 
   return (
-    <div className="pt-24 pb-20 bg-gray-100">
-      <div className="container mx-auto px-4">
+    <div className="pt-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+        <div className="absolute inset-0 pattern-grid opacity-20"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative pb-20">
         {/* Hero Section */}
-        <div className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-12 shadow-xl transform hover:scale-[1.02] transition-all duration-500">
+        <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden mb-12">
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/60 to-gray-900/80"></div>
           <img 
             src={service.imageUrl} 
@@ -147,56 +151,60 @@ const ServiceDetail = () => {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center max-w-4xl px-4">
               <div className="flex justify-center mb-6">
-                <div className="p-4 rounded-full bg-white/10 backdrop-blur-sm ring-2 ring-white/30">
+                <div className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
                   {service.icon}
                 </div>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">{service.title}</h1>
-              <p className="text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto">{service.description}</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
+                {service.title}
+              </h1>
+              <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                {service.description}
+              </p>
             </div>
           </div>
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
             {currentLanguage === 'en' ? 'Key Benefits' : 'Beneficii cheie'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {service.benefits.map((benefit, index) => (
               <div 
                 key={index} 
-                className="flex items-start p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300"
+                className="flex items-start p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors duration-300"
               >
-                <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-blue-500 mr-4"></div>
-                <p className="text-gray-700">{benefit}</p>
+                <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-blue-400 mr-4"></div>
+                <p className="text-gray-300">{benefit}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Process Section */}
-        <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
-          <h2 className="text-2xl font-bold mb-12 text-gray-800 text-center">
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+          <h2 className="text-2xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white text-center">
             {currentLanguage === 'en' ? 'Our Process' : 'Procesul nostru'}
           </h2>
           <div className="space-y-12">
             {service.process.map((step, index) => (
               <div 
                 key={index} 
-                className="flex group hover:bg-gray-50 p-4 rounded-xl transition-all duration-300"
+                className="flex group hover:bg-white/5 p-4 rounded-xl transition-all duration-300"
               >
                 <div className="mr-6 relative">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white font-bold group-hover:bg-blue-600 transition-colors duration-300 shadow-lg">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 border border-blue-400/20 text-blue-400 font-bold group-hover:bg-blue-500/30 transition-colors duration-300">
                     {index + 1}
                   </div>
                   {index < service.process.length - 1 && (
-                    <div className="absolute left-1/2 top-12 bottom-0 w-0.5 bg-blue-200 transform -translate-x-1/2"></div>
+                    <div className="absolute left-1/2 top-12 bottom-0 w-0.5 bg-blue-400/20 transform -translate-x-1/2"></div>
                   )}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">{step.step}</h3>
-                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{step.step}</h3>
+                  <p className="text-gray-300 leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { ArrowDown, Code } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -14,14 +13,9 @@ const Hero = () => {
   };
   
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center bg-gray-900 text-white">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700 opacity-90"></div>
-        <img 
-          src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
-          alt="Technology Background" 
-          className="w-full h-full object-cover"
-        />
+    <section id="home" className="relative min-h-screen flex items-center justify-center">
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+        <div className="absolute inset-0 pattern-grid opacity-20"></div>
       </div>
       
       <div className="container mx-auto px-4 z-10 text-center">
@@ -29,15 +23,19 @@ const Hero = () => {
           onClick={scrollToTop}
           className="inline-flex justify-center mb-8 cursor-pointer transform hover:scale-110 transition-all duration-300"
         >
-          <Code className="h-20 w-20 text-white" />
+          <div className="p-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+            <Code className="h-12 w-12 text-white" />
+          </div>
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">{t('hero.title')}</h1>
-        <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
+          {t('hero.title')}
+        </h1>
+        <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-300">
           {t('hero.subtitle')}
         </p>
         <a 
           href="#services" 
-          className="inline-flex items-center px-8 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-md transition-colors duration-300"
+          className="inline-flex items-center px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-xl transition-all duration-300 hover:bg-white/20"
         >
           {t('hero.cta')}
           <ArrowDown className="ml-2 h-5 w-5" />
