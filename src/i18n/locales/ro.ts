@@ -26,10 +26,6 @@ export default {
   "services.software.title": "Dezvoltare Software Personalizat",
   "services.software.description": "Creăm aplicații personalizate adaptate cerințelor dumneavoastră specifice. Echipa noastră de dezvoltare excelează în construirea de soluții software scalabile și robuste folosind tehnologii și metodologii moderne.",
 
-  // Mobile Development Service
-  "services.mobile.title": "Dezvoltare Aplicații Mobile",
-  "services.mobile.description": "Creăm aplicații mobile de ultimă generație pentru platformele iOS și Android, oferind experiențe de utilizare perfecte și funcționalități puternice pentru nevoile afacerii dumneavoastră.",
-
   // Consulting Service
   "services.consulting.title": "Consultanță și Arhitectură",
   "services.consulting.description": "Consultanții noștri experți oferă îndrumare strategică privind arhitectura software și deciziile tehnologice. Analizăm nevoile afacerii dumneavoastră și proiectăm structuri de sistem optime.",

@@ -26,10 +26,6 @@ export default {
   "services.software.title": "Custom Software Development",
   "services.software.description": "We create custom applications tailored to your specific requirements. Our development team excels in building scalable, robust software solutions using modern technologies and methodologies.",
 
-  // Mobile Development Service
-  "services.mobile.title": "Mobile App Development",
-  "services.mobile.description": "We create cutting-edge mobile applications for iOS and Android platforms, delivering seamless user experiences and powerful functionality for your business needs.",
-
   // Consulting Service
   "services.consulting.title": "Consulting & Architecture",
   "services.consulting.description": "Our expert consultants provide strategic guidance on software architecture and technology decisions. We analyze your business needs and design optimal system structures that align with your goals.",
