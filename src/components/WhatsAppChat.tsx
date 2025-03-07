@@ -1,32 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, X } from 'lucide-react';
+import { MessageCircle, X, Send } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const WhatsAppChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
-  const [showToast, setShowToast] = useState(false);
   const { t } = useTranslation();
 
-  // Show chat button and toast after a delay
   useEffect(() => {
     const buttonTimer = setTimeout(() => {
       setIsVisible(true);
     }, 2000);
-
-    const toastTimer = setTimeout(() => {
-      setShowToast(true);
-    }, 3000);
-
-    const hideToastTimer = setTimeout(() => {
-      setShowToast(false);
-    }, 8000);
     
     return () => {
       clearTimeout(buttonTimer);
-      clearTimeout(toastTimer);
-      clearTimeout(hideToastTimer);
     };
   }, []);
 
@@ -41,92 +29,67 @@ const WhatsAppChat = () => {
   if (!isVisible) return null;
 
   return (
-    <>
-      {/* Welcome Toast */}
-      <div
-        className={`
-          fixed bottom-24 right-5 z-50 bg-white rounded-lg shadow-xl p-4 w-80
-          transform transition-all duration-500 
-          ${showToast ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}
-        `}
-      >
-        <div className="flex items-start">
-          <div className="flex-shrink-0 bg-green-100 rounded-full p-2">
-            <MessageCircle className="h-6 w-6 text-green-600" />
-          </div>
-          <div className="ml-3 w-0 flex-1">
-            <p className="text-sm font-medium text-gray-900">
-              Welcome to ACL-Smart Software!
-            </p>
-            <p className="mt-1 text-sm text-gray-500">
-              We are here for your digital needs. Click the chat icon to get in touch!
-            </p>
-          </div>
-          <button
-            onClick={() => setShowToast(false)}
-            className="ml-4 flex-shrink-0 flex"
-          >
-            <X className="h-5 w-5 text-gray-400 hover:text-gray-500" />
-          </button>
-        </div>
-      </div>
-
-      {/* Chat Widget */}
-      <div className="fixed bottom-5 right-5 z-50">
-        {isOpen ? (
-          <div className="bg-white rounded-lg shadow-xl w-80 overflow-hidden transition-all duration-300 transform scale-100 origin-bottom-right">
-            <div className="bg-green-500 text-white p-4 flex justify-between items-center">
-              <h3 className="font-semibold">{t('chat.title')}</h3>
-              <button 
-                onClick={() => setIsOpen(false)}
-                className="text-white hover:text-gray-200 transition-colors"
-              >
-                <X className="h-5 w-5" />
-              </button>
+    <div className="fixed bottom-5 right-5 z-50">
+      {isOpen ? (
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 w-80 overflow-hidden transition-all duration-300 transform scale-100 origin-bottom-right shadow-xl">
+          {/* Header */}
+          <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm border-b border-white/10 p-4 flex justify-between items-center">
+            <div className="flex items-center">
+              <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+              <h3 className="font-semibold text-white">{t('chat.title')}</h3>
             </div>
-            
-            <div className="p-4">
-              <div className="bg-green-50 rounded-lg p-3 mb-4">
-                <p className="text-gray-700 font-medium">
-                  Welcome to ACL-Smart Software!
-                </p>
-              </div>
-              
-              <p className="text-gray-700 mb-4">
-                {t('chat.message')}
-              </p>
-              
-              <form onSubmit={handleSubmit}>
+            <button 
+              onClick={() => setIsOpen(false)}
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </div>
+          
+          {/* Chat Content */}
+          <div className="p-4 space-y-4">
+            {/* Message Form */}
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="relative">
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder={t('chat.placeholder')}
-                  className="w-full p-3 border border-gray-300 rounded mb-3 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+                  className="w-full p-4 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:border-transparent resize-none text-white placeholder-gray-400"
                   rows={3}
                   required
                 ></textarea>
-                
-                <button
-                  type="submit"
-                  className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded transition-colors duration-300 flex items-center justify-center"
-                >
-                  {t('chat.button')}
-                  <MessageCircle className="h-5 w-5 ml-2" />
-                </button>
-              </form>
-            </div>
+                <div className="absolute bottom-2 right-2 text-gray-400 text-xs">
+                  {message.length}/500
+                </div>
+              </div>
+              
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-green-500/20 to-green-600/20 hover:from-green-500/30 hover:to-green-600/30 backdrop-blur-sm border border-white/10 text-white font-medium py-3 px-4 rounded-xl transition-all duration-300 flex items-center justify-center group"
+              >
+                {t('chat.button')}
+                <Send className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" />
+              </button>
+            </form>
           </div>
-        ) : (
-          <button
-            onClick={() => setIsOpen(true)}
-            className="bg-green-500 hover:bg-green-600 text-white rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center animate-bounce-slow"
-            aria-label="Open chat"
-          >
-            <MessageCircle className="h-6 w-6" />
-          </button>
-        )}
-      </div>
-    </>
+        </div>
+      ) : (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="relative group"
+          aria-label="Open chat"
+        >
+          {/* Glowing effect */}
+          <div className="absolute -inset-2 bg-gradient-to-r from-green-500/30 to-green-600/30 rounded-full blur-lg opacity-75 group-hover:opacity-100 animate-pulse transition-opacity"></div>
+          
+          {/* Button */}
+          <div className="relative bg-gradient-to-r from-green-500 to-green-600 p-3 rounded-full shadow-lg transition-all duration-300 group-hover:scale-110 flex items-center justify-center">
+            <MessageCircle className="h-6 w-6 text-white" />
+          </div>
+        </button>
+      )}
+    </div>
   );
 };
 
