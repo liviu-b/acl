@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || !isHomePage ? 'bg-gray-800 shadow-lg' : 'bg-transparent'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || !isHomePage ? 'bg-gray-900/80 backdrop-blur-sm border-b border-white/10' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
@@ -64,7 +64,7 @@ const Header = () => {
       
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-800 shadow-lg">
+        <div className="md:hidden bg-gray-900/80 backdrop-blur-sm border-t border-white/10">
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col space-y-4">
               {isHomePage ? (
