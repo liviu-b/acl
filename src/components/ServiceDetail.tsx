@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Code, Wrench, Globe, Smartphone } from 'lucide-react';
+import { Code, Wrench, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const ServiceDetail = () => {
@@ -39,33 +39,6 @@ const ServiceDetail = () => {
         "Interfețe moderne, ușor de utilizat",
         "Performanță sigură și fiabilă",
         "Integrare cu sistemele existente"
-      ]
-    },
-    'mobile-development': {
-      icon: <Smartphone className="h-12 w-12 text-purple-400" />,
-      title: t('services.mobile.title'),
-      description: t('services.mobile.description'),
-      imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      process: [
-        { step: currentLanguage === 'en' ? "Market Research" : "Cercetare de Piață", description: currentLanguage === 'en' ? "We analyze your target market and competition to ensure your app stands out." : "Analizăm piața țintă și competiția pentru a ne asigura că aplicația dvs. se remarcă." },
-        { step: currentLanguage === 'en' ? "UX/UI Design" : "Design UX/UI", description: currentLanguage === 'en' ? "Creating intuitive and engaging user experiences for your mobile app." : "Creăm experiențe de utilizator intuitive și atractive pentru aplicația dvs. mobilă." },
-        { step: currentLanguage === 'en' ? "Development" : "Dezvoltare", description: currentLanguage === 'en' ? "Building your app using the latest mobile development technologies." : "Construim aplicația dvs. folosind cele mai recente tehnologii de dezvoltare mobilă." },
-        { step: currentLanguage === 'en' ? "Testing" : "Testare", description: currentLanguage === 'en' ? "Comprehensive testing across devices and operating systems." : "Testare completă pe diverse dispozitive și sisteme de operare." },
-        { step: currentLanguage === 'en' ? "App Store Optimization" : "Optimizare App Store", description: currentLanguage === 'en' ? "Maximizing your app's visibility in app stores." : "Maximizăm vizibilitatea aplicației dvs. în magazinele de aplicații." },
-        { step: currentLanguage === 'en' ? "Launch & Marketing" : "Lansare și Marketing", description: currentLanguage === 'en' ? "Strategic launch and ongoing marketing support." : "Lansare strategică și suport continuu de marketing." }
-      ],
-      benefits: currentLanguage === 'en' ? [
-        "Native and cross-platform development expertise",
-        "Engaging user experiences",
-        "Offline functionality",
-        "Push notifications and real-time updates",
-        "Analytics and performance monitoring"
-      ] : [
-        "Expertiză în dezvoltare nativă și cross-platform",
-        "Experiențe de utilizator captivante",
-        "Funcționalitate offline",
-        "Notificări push și actualizări în timp real",
-        "Analiză și monitorizare a performanței"
       ]
     },
     'consulting-architecture': {

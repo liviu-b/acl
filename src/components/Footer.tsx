@@ -54,14 +54,6 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => navigateToService('mobile-development')} 
-                  className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
-                >
-                  {t('footer.mobile')}
-                </button>
-              </li>
-              <li>
-                <button 
                   onClick={() => navigateToService('consulting-architecture')} 
                   className="text-gray-400 hover:text-white hover:scale-110 transform transition-all duration-300 inline-block"
                 >

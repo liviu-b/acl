@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Wrench, Globe, Smartphone } from 'lucide-react';
+import { Code, Wrench, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -96,19 +96,6 @@ const Services = () => {
       ]
     },
     {
-      icon: <Smartphone className="h-5 w-5 text-purple-400" />,
-      title: t('services.mobile.title'),
-      description: t('services.mobile.description'),
-      imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      slug: "mobile-development",
-      features: [
-        "iOS Development",
-        "Android Development",
-        "Cross-Platform Apps",
-        "App Store Launch"
-      ]
-    },
-    {
       icon: <Wrench className="h-5 w-5 text-emerald-400" />,
       title: t('services.consulting.title'),
       description: t('services.consulting.description'),
@@ -152,7 +139,7 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <ServiceCard 
               key={index}
