@@ -27,6 +27,8 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const navLinkClasses = "text-gray-100 text-lg font-medium transition-all duration-300 hover:text-white hover:shadow-glow";
+
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || !isHomePage ? 'bg-gray-900/80 backdrop-blur-sm border-b border-white/10' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 py-4">
@@ -41,15 +43,15 @@ const Header = () => {
           <div className="hidden md:flex space-x-8">
             {isHomePage ? (
               <>
-                <a href="#home" className="text-gray-100 hover:text-gray-300 transition-colors">{t('nav.home')}</a>
-                <a href="#about" className="text-gray-100 hover:text-gray-300 transition-colors">{t('nav.about')}</a>
-                <a href="#services" className="text-gray-100 hover:text-gray-300 transition-colors">{t('nav.services')}</a>
+                <a href="#home" className={navLinkClasses}>{t('nav.home')}</a>
+                <a href="#about" className={navLinkClasses}>{t('nav.about')}</a>
+                <a href="#services" className={navLinkClasses}>{t('nav.services')}</a>
               </>
             ) : (
               <>
-                <Link to="/" className="text-gray-100 hover:text-gray-300 transition-colors">{t('nav.home')}</Link>
-                <Link to="/#about" className="text-gray-100 hover:text-gray-300 transition-colors">{t('nav.about')}</Link>
-                <Link to="/#services" className="text-gray-100 hover:text-gray-300 transition-colors">{t('nav.services')}</Link>
+                <Link to="/" className={navLinkClasses}>{t('nav.home')}</Link>
+                <Link to="/#about" className={navLinkClasses}>{t('nav.about')}</Link>
+                <Link to="/#services" className={navLinkClasses}>{t('nav.services')}</Link>
               </>
             )}
           </div>
@@ -69,15 +71,15 @@ const Header = () => {
             <div className="flex flex-col space-y-4">
               {isHomePage ? (
                 <>
-                  <a href="#home" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>{t('nav.home')}</a>
-                  <a href="#about" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>{t('nav.about')}</a>
-                  <a href="#services" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>{t('nav.services')}</a>
+                  <a href="#home" className={navLinkClasses} onClick={toggleMenu}>{t('nav.home')}</a>
+                  <a href="#about" className={navLinkClasses} onClick={toggleMenu}>{t('nav.about')}</a>
+                  <a href="#services" className={navLinkClasses} onClick={toggleMenu}>{t('nav.services')}</a>
                 </>
               ) : (
                 <>
-                  <Link to="/" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>{t('nav.home')}</Link>
-                  <Link to="/#about" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>{t('nav.about')}</Link>
-                  <Link to="/#services" className="text-gray-100 hover:text-gray-300 transition-colors" onClick={toggleMenu}>{t('nav.services')}</Link>
+                  <Link to="/" className={navLinkClasses} onClick={toggleMenu}>{t('nav.home')}</Link>
+                  <Link to="/#about" className={navLinkClasses} onClick={toggleMenu}>{t('nav.about')}</Link>
+                  <Link to="/#services" className={navLinkClasses} onClick={toggleMenu}>{t('nav.services')}</Link>
                 </>
               )}
             </div>
