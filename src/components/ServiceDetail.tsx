@@ -45,37 +45,7 @@ const ServiceDetail = () => {
         "Costuri operaționale reduse prin procese optimizate"
       ]
     },
-    'mobile-development': {
-      icon: <Smartphone className="h-12 w-12 text-purple-400" />,
-      title: t('services.mobile.title'),
-      description: currentLanguage === 'en'
-        ? "Create powerful mobile experiences for your users. We develop native and cross-platform applications that engage and delight."
-        : "Creați experiențe mobile puternice pentru utilizatorii dumneavoastră. Dezvoltăm aplicații native și cross-platform care implică și încântă.",
-      imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      process: [
-        { step: currentLanguage === 'en' ? "Market Research" : "Cercetare de Piață", description: currentLanguage === 'en' ? "We analyze your target market and user needs to define the app strategy." : "Analizăm piața țintă și nevoile utilizatorilor pentru a defini strategia aplicației." },
-        { step: currentLanguage === 'en' ? "UX/UI Design" : "Design UX/UI", description: currentLanguage === 'en' ? "Our designers create intuitive and engaging mobile interfaces." : "Designerii noștri creează interfețe mobile intuitive și atractive." },
-        { step: currentLanguage === 'en' ? "Development" : "Dezvoltare", description: currentLanguage === 'en' ? "We build your app using the latest mobile development technologies." : "Construim aplicația folosind cele mai recente tehnologii de dezvoltare mobilă." },
-        { step: currentLanguage === 'en' ? "Testing" : "Testare", description: currentLanguage === 'en' ? "Comprehensive testing across devices ensures quality." : "Testarea completă pe diverse dispozitive asigură calitatea." },
-        { step: currentLanguage === 'en' ? "App Store Launch" : "Lansare în App Store", description: currentLanguage === 'en' ? "We handle the app store submission and optimization process." : "Gestionăm procesul de submitere și optimizare pentru app store." },
-        { step: currentLanguage === 'en' ? "Monitoring & Updates" : "Monitorizare și Actualizări", description: currentLanguage === 'en' ? "Continuous monitoring and updates keep your app performing optimally." : "Monitorizarea și actualizările continue mențin performanța optimă a aplicației." }
-      ],
-      benefits: currentLanguage === 'en' ? [
-        "Native performance and seamless user experience across all devices",
-        "Offline functionality for uninterrupted user access",
-        "Push notifications to enhance user engagement",
-        "Secure data handling and user authentication",
-        "Analytics integration for data-driven improvements",
-        "Regular updates and maintenance for optimal performance"
-      ] : [
-        "Performanță nativă și experiență fluidă pe toate dispozitivele",
-        "Funcționalitate offline pentru acces neîntrerupt al utilizatorilor",
-        "Notificări push pentru îmbunătățirea angajamentului utilizatorilor",
-        "Gestionarea securizată a datelor și autentificarea utilizatorilor",
-        "Integrare analytics pentru îmbunătățiri bazate pe date",
-        "Actualizări și mentenanță regulată pentru performanță optimă"
-      ]
-    },
+    
     'consulting-architecture': {
       icon: <Wrench className="h-12 w-12 text-emerald-400" />,
       title: t('services.consulting.title'),
@@ -150,15 +120,21 @@ const ServiceDetail = () => {
   }
 
   return (
-    <div className="pt-24 relative min-h-screen">
+    <div className="pt-24 relative min-h-screen overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/10 to-transparent opacity-50"></div>
         <div className="absolute inset-0 pattern-grid opacity-20"></div>
       </div>
 
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -inset-[10px] opacity-50">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 relative pb-20">
-        {/* Hero Section */}
         <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-12">
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/80 to-gray-900/90"></div>
           <img 
@@ -183,7 +159,6 @@ const ServiceDetail = () => {
           </div>
         </div>
 
-        {/* Benefits Section */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-8 md:p-10 mb-12 hover:bg-white/10 transition-colors duration-300">
           <h2 className="font-tech text-3xl font-bold mb-10 tech-gradient-text">
             {currentLanguage === 'en' ? 'Key Benefits' : 'Beneficii cheie'}
@@ -203,7 +178,6 @@ const ServiceDetail = () => {
           </div>
         </div>
 
-        {/* Process Section */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-8 md:p-10 hover:bg-white/10 transition-colors duration-300">
           <h2 className="font-tech text-3xl font-bold mb-12 tech-gradient-text text-center">
             {currentLanguage === 'en' ? 'Our Process' : 'Procesul nostru'}

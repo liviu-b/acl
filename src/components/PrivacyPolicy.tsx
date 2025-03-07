@@ -9,13 +9,24 @@ const PrivacyPolicy = () => {
   }, []);
 
   return (
-    <section className="py-20 pt-32 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+    <section className="py-20 pt-32 relative min-h-screen overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/10 to-transparent opacity-50"></div>
         <div className="absolute inset-0 pattern-grid opacity-20"></div>
       </div>
 
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -inset-[10px] opacity-50">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 relative">
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 max-w-4xl mx-auto">
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-8 max-w-4xl mx-auto hover:bg-white/10 transition-colors duration-300">
           <h1 className="text-3xl font-bold mb-6 text-white">{t('privacy.title')}</h1>
           <p className="text-gray-300 mb-8">{t('privacy.lastUpdated')}</p>
 
