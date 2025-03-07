@@ -1,30 +1,10 @@
 import React from 'react';
-import { Building2, Target, Eye, Users, BarChart as ChartBar, Shield } from 'lucide-react';
+import { Building2, Target, Eye } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-
-const StatCard = ({ icon: Icon, title, value }) => (
-  <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 transform hover:scale-105 transition-all duration-300">
-    <div className="flex items-center space-x-4">
-      <div className="p-3 rounded-xl bg-white/10">
-        <Icon className="h-6 w-6 text-white" />
-      </div>
-      <div>
-        <h4 className="text-white text-lg font-semibold">{value}</h4>
-        <p className="text-gray-400">{title}</p>
-      </div>
-    </div>
-  </div>
-);
 
 const About = () => {
   const { t } = useTranslation();
   
-  const stats = [
-    { icon: Users, title: "Happy Clients", value: "200+" },
-    { icon: ChartBar, title: "Projects Completed", value: "500+" },
-    { icon: Shield, title: "Years Experience", value: "10+" }
-  ];
-
   return (
     <section id="about" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
@@ -47,12 +27,6 @@ const About = () => {
                   <Building2 className="h-8 w-8 text-white" />
                 </div>
               </div>
-            </div>
-
-            <div className="grid grid-cols-3 gap-4 mt-8">
-              {stats.map((stat, index) => (
-                <StatCard key={index} {...stat} />
-              ))}
             </div>
           </div>
           
