@@ -107,31 +107,33 @@ const ServiceDetail = () => {
   }
 
   return (
-    <div className="pt-24 relative min-h-screen bg-gray-900">
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+    <div className="pt-24 relative min-h-screen">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/10 to-transparent opacity-50"></div>
         <div className="absolute inset-0 pattern-grid opacity-20"></div>
       </div>
 
       <div className="container mx-auto px-4 relative pb-20">
         {/* Hero Section */}
-        <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-12 service-detail-card">
+        <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-12">
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/80 to-gray-900/90"></div>
           <img 
             src={service.imageUrl} 
             alt={service.title} 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 flex items-center justify-center p-4">
+          <div className="absolute inset-0 flex items-center justify-center p-8">
             <div className="text-center max-w-4xl">
-              <div className="flex justify-center mb-6">
-                <div className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg">
+              <div className="flex justify-center mb-8">
+                <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg transform hover:scale-105 transition-transform duration-300">
                   {service.icon}
                 </div>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white service-detail-text">
+              <h1 className="font-tech text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tech-gradient-text">
                 {service.title}
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-100 leading-relaxed max-w-3xl mx-auto service-detail-text">
+              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
                 {service.description}
               </p>
             </div>
@@ -139,18 +141,18 @@ const ServiceDetail = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-6 sm:p-8 mb-12 service-detail-card">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-white service-detail-text">
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-8 md:p-10 mb-12 hover:bg-white/10 transition-colors duration-300">
+          <h2 className="font-tech text-3xl font-bold mb-10 tech-gradient-text">
             {currentLanguage === 'en' ? 'Key Benefits' : 'Beneficii cheie'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {service.benefits.map((benefit, index) => (
               <div 
                 key={index} 
-                className="flex items-start p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                className="flex items-start p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
               >
-                <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-blue-400 mr-4 group-hover:bg-blue-300"></div>
-                <p className="text-base sm:text-lg text-gray-100 font-medium service-detail-text">
+                <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-blue-400 mr-4 group-hover:bg-blue-300 transition-colors duration-300"></div>
+                <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                   {benefit}
                 </p>
               </div>
@@ -159,29 +161,29 @@ const ServiceDetail = () => {
         </div>
 
         {/* Process Section */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-6 sm:p-8 service-detail-card">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-12 text-white text-center service-detail-text">
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-8 md:p-10 hover:bg-white/10 transition-colors duration-300">
+          <h2 className="font-tech text-3xl font-bold mb-12 tech-gradient-text text-center">
             {currentLanguage === 'en' ? 'Our Process' : 'Procesul nostru'}
           </h2>
-          <div className="space-y-8 sm:space-y-12">
+          <div className="space-y-8">
             {service.process.map((step, index) => (
               <div 
                 key={index} 
-                className="flex flex-col sm:flex-row group hover:bg-white/5 p-6 rounded-xl transition-all duration-300"
+                className="flex group hover:bg-white/5 p-6 rounded-xl transition-all duration-300"
               >
-                <div className="mb-4 sm:mb-0 sm:mr-8 relative">
-                  <div className="flex items-center justify-center w-14 h-14 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xl font-bold group-hover:bg-blue-500/30 transition-all duration-300 shadow-lg">
+                <div className="mr-8 relative">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-blue-500/20 border border-blue-400/30 text-blue-300 font-tech text-xl font-bold group-hover:bg-blue-500/30 transition-all duration-300">
                     {index + 1}
                   </div>
                   {index < service.process.length - 1 && (
-                    <div className="hidden sm:block absolute left-1/2 top-14 bottom-0 w-0.5 bg-blue-400/20 transform -translate-x-1/2"></div>
+                    <div className="absolute left-1/2 top-16 bottom-0 w-0.5 bg-blue-400/20 transform -translate-x-1/2"></div>
                   )}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3 service-detail-text">
+                  <h3 className="font-tech text-2xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
                     {step.step}
                   </h3>
-                  <p className="text-base sm:text-lg text-gray-100 leading-relaxed service-detail-text">
+                  <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
                     {step.description}
                   </p>
                 </div>
