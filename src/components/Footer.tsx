@@ -23,9 +23,9 @@ const Footer = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 py-16 relative">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
           {/* Company Info */}
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center">
             <div className="flex items-center mb-6">
               <Code className="h-8 w-8 text-white" />
               <span className="ml-3 text-xl font-tech font-bold text-white">{t('footer.company')}</span>
@@ -36,19 +36,19 @@ const Footer = () => {
             </p>
             
             <div className="space-y-4">
-              <div className="flex items-center group">
+              <div className="flex items-center justify-center group">
                 <MapPin className="h-5 w-5 text-blue-400 mr-3 group-hover:text-blue-300 transition-colors duration-300" />
                 <span className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                   Romania, Hunedoara, Petrosani, 332014
                 </span>
               </div>
-              <div className="flex items-center group">
+              <div className="flex items-center justify-center group">
                 <Phone className="h-5 w-5 text-blue-400 mr-3 group-hover:text-blue-300 transition-colors duration-300" />
                 <span className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                   +40 758 154 490
                 </span>
               </div>
-              <div className="flex items-center group">
+              <div className="flex items-center justify-center group">
                 <Mail className="h-5 w-5 text-blue-400 mr-3 group-hover:text-blue-300 transition-colors duration-300" />
                 <span className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
                   {t('footer.email')}
@@ -58,7 +58,7 @@ const Footer = () => {
           </div>
           
           {/* Services */}
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center">
             <h3 className="text-lg font-tech font-semibold mb-6 tech-gradient-text">
               {t('footer.services')}
             </h3>
@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
           
           {/* Legal */}
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center">
             <h3 className="text-lg font-tech font-semibold mb-6 tech-gradient-text">
               {t('footer.legal')}
             </h3>

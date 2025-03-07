@@ -32,20 +32,17 @@ const enTranslations = {
   "services.consulting.description": "Our expert consultants provide strategic guidance on software architecture and technology decisions. We analyze your business needs and design optimal system structures that align with your goals. Our architectural solutions focus on scalability, performance, and maintainability.",
   "services.web.title": "Web Solutions",
   "services.web.description": "We develop responsive, user-friendly web applications and platforms that enhance your online presence. Our web solutions integrate seamlessly with existing systems and APIs, providing a cohesive digital experience. From corporate websites to complex e-commerce platforms, we deliver web solutions that drive results.",
-  "services.support.title": "Support and Maintenance",
-  "services.support.description": "We provide comprehensive technical support and maintenance services to ensure your software remains operational and up-to-date. Our team monitors systems continuously, implements updates, and resolves issues promptly. We also offer data backup and recovery services to protect your valuable information.",
 
   // Footer
   "footer.company": "ACL-Smart Software",
   "footer.tagline": "Innovative software solutions for modern businesses.",
-  "footer.address": "Romania, Hunedoara, Petrosani, 332014",
-  "footer.phone": "+40 758 154 490",
+  "footer.address": "123 Tech Park, Innovation Street, Business District, 10001",
+  "footer.phone": "+40 758 158 490",
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Services",
   "footer.software": "Software Development",
   "footer.consulting": "Consulting & Architecture",
   "footer.web": "Web Solutions",
-  "footer.support": "Support & Maintenance",
   "footer.legal": "Legal",
   "footer.privacy": "Privacy Policy",
   "footer.gdpr": "GDPR Compliance",
@@ -54,9 +51,10 @@ const enTranslations = {
 
   // WhatsApp Chat
   "chat.title": "Chat with us",
-  "chat.message": "Hello! How can we help you today? Send us a message and we'll get back to you as soon as possible.",
   "chat.placeholder": "Type your message here...",
   "chat.button": "Chat on WhatsApp",
+  "chat.welcome.title": "Welcome to ACL-Smart Software!",
+  "chat.welcome.message": "We are here for your digital needs. Click the chat icon to get in touch!",
 
   // Language Switcher
   "language.en": "English",
@@ -210,21 +208,18 @@ const roTranslations = {
   "services.consulting.title": "Consultanță și Arhitectură",
   "services.consulting.description": "Consultanții noștri experți oferă îndrumare strategică privind arhitectura software și deciziile tehnologice. Analizăm nevoile afacerii dumneavoastră și proiectăm structuri de sistem optime care se aliniază cu obiectivele dumneavoastră. Soluțiile noastre arhitecturale se concentrează pe scalabilitate, performanță și mentenabilitate.",
   "services.web.title": "Soluții Web",
-  "services.web.description": "Dezvoltăm aplicații și platforme web responsive, ușor de utilizat, care îmbunătățesc prezența dumneavoastră online. Soluțiile noastre web se integrează perfect cu sistemele și API-urile existente, oferind o experiență digitală coerentă. De la site-uri web corporative la platforme complexe de e-commerce, oferim soluții web care generează rezultate.",
-  "services.support.title": "Suport și Mentenanță",
-  "services.support.description": "Oferim servicii complete de suport tehnic și mentenanță pentru a asigura că software-ul dumneavoastră rămâne operațional și actualizat. Echipa noastră monitorizează sistemele în mod continuu, implementează actualizări și rezolvă problemele prompt. De asemenea, oferim servicii de backup și recuperare a datelor pentru a vă proteja informațiile valoroase.",
+  "services.web.description": "Dezvoltăm aplicații și platforme web responsive, ușor de utilizat, care îmbunătățesc prezența dumneavoastră online. Soluțiile noastre web se integrează perfect cu sistemele existente și API-urile, oferind o experiență digitală coerentă. De la site-uri web corporative la platforme complexe de e-commerce, oferim soluții web care generează rezultate.",
 
   // Footer
   "footer.company": "ACL-Smart Software",
   "footer.tagline": "Soluții software inovatoare pentru afaceri moderne.",
-  "footer.address": "România, Hunedoara, Petroșani, 332014",
-  "footer.phone": "+40 758 154 490",
+  "footer.address": "123 Tech Park, Strada Inovației, Cartierul de Afaceri, 10001",
+  "footer.phone": "+40 758 158 490",
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Servicii",
   "footer.software": "Dezvoltare Software",
   "footer.consulting": "Consultanță și Arhitectură",
   "footer.web": "Soluții Web",
-  "footer.support": "Suport și Mentenanță",
   "footer.legal": "Legal",
   "footer.privacy": "Politica de Confidențialitate",
   "footer.gdpr": "Conformitate GDPR",
@@ -233,9 +228,10 @@ const roTranslations = {
 
   // WhatsApp Chat
   "chat.title": "Discută cu noi",
-  "chat.message": "Bună! Cum te putem ajuta astăzi? Trimite-ne un mesaj și îți vom răspunde cât mai curând posibil.",
   "chat.placeholder": "Scrie mesajul tău aici...",
   "chat.button": "Discută pe WhatsApp",
+  "chat.welcome.title": "Bine ați venit la ACL-Smart Software!",
+  "chat.welcome.message": "Suntem aici pentru nevoile dvs. digitale. Click pe iconița de chat pentru a lua legătura!",
 
   // Language Switcher
   "language.en": "Engleză",

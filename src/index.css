@@ -69,7 +69,7 @@ body {
 }
 
 /* WhatsApp chat animations */
-@keyframes bounce {
+@keyframes float {
   0%, 100% {
     transform: translateY(0);
   }
@@ -78,8 +78,8 @@ body {
   }
 }
 
-.animate-bounce-slow {
-  animation: bounce 2s infinite;
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
 
 /* Focus styles */
