@@ -61,12 +61,12 @@ const Hero = () => {
           {/* CTA Button */}
           <a 
             href="#services" 
-            className="group relative inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-xl transition-all duration-500 hover:bg-white/15 hover:scale-105 overflow-hidden"
+            className="group relative inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-xl transition-all duration-500 hover:bg-white/15 hover:scale-105 overflow-hidden min-w-[240px] justify-center"
           >
             {/* Button Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-purple-500/10 group-hover:to-blue-500/10 transition-all duration-500"></div>
             
-            <span className="relative font-tech text-lg">
+            <span className="relative font-tech text-lg whitespace-nowrap">
               {t('hero.cta')}
             </span>
             <ArrowDown className="relative ml-3 h-5 w-5 transform group-hover:translate-y-1 transition-transform duration-500" />
