@@ -21,8 +21,30 @@ export default {
   // Services
   "services.title": "Our Services",
   "services.subtitle": "We offer a comprehensive range of IT services designed to help your business thrive in the digital age.",
-  "services.software.title": "Software Development",
-  "services.software.description": "We create custom applications tailored to your specific requirements. Our development team excels in building scalable, robust software solutions using modern technologies and methodologies. From concept to deployment, we ensure your software meets the highest quality standards.",
+  
+  // Software Development Service
+  "services.software.title": "Custom Software Development Services",
+  "services.software.description": "We offer customized software development solutions, perfectly tailored to your unique requirements and needs. With a client-centered approach, we transform your ideas and challenges into efficient and innovative software applications.",
+  "services.software.whatWeOffer": "What we offer:",
+  "services.software.offerings": [
+    "Detailed consultation and requirements analysis",
+    "Web, mobile, and desktop application development",
+    "Integration with existing systems and platforms",
+    "Scalable and high-performance solutions",
+    "Rigorous testing and quality assurance",
+    "Post-implementation technical support and maintenance"
+  ],
+  "services.software.benefits": [
+    "Solutions perfectly adapted to your specific needs",
+    "Cutting-edge technologies",
+    "Team of experts with extensive experience",
+    "Transparent communication and regular updates",
+    "Flexibility and agility in development",
+    "High-quality results, delivered on time"
+  ],
+  "services.software.callToAction": "Whether you're an innovative startup or an established company, we're ready to turn your vision into digital reality. Contact us today to discuss your project and discover how we can create the perfect software solution for your business together.",
+
+  // Other Services
   "services.consulting.title": "Consulting and Architecture",
   "services.consulting.description": "Our expert consultants provide strategic guidance on software architecture and technology decisions. We analyze your business needs and design optimal system structures that align with your goals. Our architectural solutions focus on scalability, performance, and maintainability.",
   "services.web.title": "Web Solutions",
@@ -33,8 +55,8 @@ export default {
   // Footer
   "footer.company": "ACL-Smart Software",
   "footer.tagline": "Innovative software solutions for modern businesses.",
-  "footer.address": "Romania, Hunedoara, Petrosani, 332014",
-  "footer.phone": "+40 758 154 490",
+  "footer.address": "123 Tech Park, Innovation Street, Business District, 10001",
+  "footer.phone": "+40 758 158 490",
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Services",
   "footer.software": "Software Development",
@@ -62,10 +84,10 @@ export default {
   "contact.subtitle": "Have a question or want to discuss a project? Get in touch with our team.",
   "contact.info": "Contact Information",
   "contact.address.title": "Address",
-  "contact.address.value": "Romania, Hunedoara",
-  "contact.address.city": "Petrosani, 332014",
+  "contact.address.value": "123 Tech Park, Innovation Street",
+  "contact.address.city": "Business District, 10001",
   "contact.phone.title": "Phone",
-  "contact.phone.value": "+40 758 154 490",
+  "contact.phone.value": "+40 758 158 490",
   "contact.email.title": "Email",
   "contact.email.value": "office@acl-smartsoftware.tech",
   "contact.form.name": "Name",

@@ -15,17 +15,10 @@ const ServiceDetail = () => {
 
   const services = {
     'software-development': {
-      icon: <Code className="h-12 w-12 text-gray-700" />,
+      icon: <Code className="h-12 w-12 text-blue-600" />,
       title: t('services.software.title'),
       description: t('services.software.description'),
       imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      technologies: [
-        { name: currentLanguage === 'en' ? "Java" : "Java", description: currentLanguage === 'en' ? "Enterprise-grade backend development" : "Dezvoltare backend de nivel enterprise" },
-        { name: currentLanguage === 'en' ? "Python" : "Python", description: currentLanguage === 'en' ? "Data processing and automation" : "Procesare date și automatizare" },
-        { name: currentLanguage === 'en' ? "C#/.NET" : "C#/.NET", description: currentLanguage === 'en' ? "Windows applications and services" : "Aplicații și servicii Windows" },
-        { name: currentLanguage === 'en' ? "Node.js" : "Node.js", description: currentLanguage === 'en' ? "Scalable web applications" : "Aplicații web scalabile" },
-        { name: currentLanguage === 'en' ? "React/Angular/Vue" : "React/Angular/Vue", description: currentLanguage === 'en' ? "Modern frontend frameworks" : "Framework-uri moderne pentru frontend" }
-      ],
       process: [
         { step: currentLanguage === 'en' ? "Requirements Analysis" : "Analiza Cerințelor", description: currentLanguage === 'en' ? "We work closely with you to understand your business needs and define clear requirements." : "Lucrăm îndeaproape cu dumneavoastră pentru a înțelege nevoile afacerii și a defini cerințe clare." },
         { step: currentLanguage === 'en' ? "Design & Architecture" : "Design și Arhitectură", description: currentLanguage === 'en' ? "Our architects design scalable, maintainable software solutions tailored to your needs." : "Arhitecții noștri proiectează soluții software scalabile și mentenabile, adaptate nevoilor dumneavoastră." },
@@ -49,17 +42,10 @@ const ServiceDetail = () => {
       ]
     },
     'consulting-architecture': {
-      icon: <Wrench className="h-12 w-12 text-gray-700" />,
+      icon: <Wrench className="h-12 w-12 text-purple-600" />,
       title: t('services.consulting.title'),
       description: t('services.consulting.description'),
       imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      technologies: [
-        { name: currentLanguage === 'en' ? "Cloud Architecture" : "Arhitectură Cloud", description: currentLanguage === 'en' ? "AWS, Azure, Google Cloud design and migration" : "Design și migrare AWS, Azure, Google Cloud" },
-        { name: currentLanguage === 'en' ? "Microservices" : "Microservicii", description: currentLanguage === 'en' ? "Distributed system architecture" : "Arhitectură de sistem distribuită" },
-        { name: currentLanguage === 'en' ? "DevOps" : "DevOps", description: currentLanguage === 'en' ? "CI/CD pipelines and infrastructure as code" : "Pipeline-uri CI/CD și infrastructură ca și cod" },
-        { name: currentLanguage === 'en' ? "Database Design" : "Design Baze de Date", description: currentLanguage === 'en' ? "SQL and NoSQL database architecture" : "Arhitectură baze de date SQL și NoSQL" },
-        { name: currentLanguage === 'en' ? "Security Architecture" : "Arhitectură de Securitate", description: currentLanguage === 'en' ? "Secure system design and implementation" : "Design și implementare de sisteme securizate" }
-      ],
       process: [
         { step: currentLanguage === 'en' ? "Assessment" : "Evaluare", description: currentLanguage === 'en' ? "We evaluate your current systems, processes, and challenges." : "Evaluăm sistemele, procesele și provocările dumneavoastră actuale." },
         { step: currentLanguage === 'en' ? "Strategy Development" : "Dezvoltarea Strategiei", description: currentLanguage === 'en' ? "We create a tailored technology strategy aligned with your business goals." : "Creăm o strategie tehnologică personalizată, aliniată cu obiectivele dumneavoastră de afaceri." },
@@ -83,17 +69,10 @@ const ServiceDetail = () => {
       ]
     },
     'web-solutions': {
-      icon: <Globe className="h-12 w-12 text-gray-700" />,
+      icon: <Globe className="h-12 w-12 text-green-600" />,
       title: t('services.web.title'),
       description: t('services.web.description'),
       imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      technologies: [
-        { name: currentLanguage === 'en' ? "React.js" : "React.js", description: currentLanguage === 'en' ? "Dynamic, responsive user interfaces" : "Interfețe utilizator dinamice și responsive" },
-        { name: currentLanguage === 'en' ? "Next.js" : "Next.js", description: currentLanguage === 'en' ? "Server-side rendering and static site generation" : "Randare server-side și generare de site-uri statice" },
-        { name: currentLanguage === 'en' ? "Node.js" : "Node.js", description: currentLanguage === 'en' ? "Scalable backend services" : "Servicii backend scalabile" },
-        { name: currentLanguage === 'en' ? "WordPress" : "WordPress", description: currentLanguage === 'en' ? "Content management systems" : "Sisteme de management al conținutului" },
-        { name: currentLanguage === 'en' ? "Shopify/WooCommerce" : "Shopify/WooCommerce", description: currentLanguage === 'en' ? "E-commerce platforms" : "Platforme de e-commerce" }
-      ],
       process: [
         { step: currentLanguage === 'en' ? "Discovery" : "Descoperire", description: currentLanguage === 'en' ? "We understand your brand, audience, and business objectives." : "Înțelegem marca, audiența și obiectivele dumneavoastră de afaceri." },
         { step: currentLanguage === 'en' ? "UX/UI Design" : "Design UX/UI", description: currentLanguage === 'en' ? "Our designers create intuitive, engaging user experiences." : "Designerii noștri creează experiențe de utilizator intuitive și atractive." },
@@ -117,17 +96,10 @@ const ServiceDetail = () => {
       ]
     },
     'support-maintenance': {
-      icon: <HeadsetHelp className="h-12 w-12 text-gray-700" />,
+      icon: <HeadsetHelp className="h-12 w-12 text-orange-600" />,
       title: t('services.support.title'),
       description: t('services.support.description'),
       imageUrl: "https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      technologies: [
-        { name: currentLanguage === 'en' ? "Monitoring Tools" : "Instrumente de Monitorizare", description: currentLanguage === 'en' ? "Proactive system monitoring and alerting" : "Monitorizare proactivă a sistemului și alertare" },
-        { name: currentLanguage === 'en' ? "Backup Solutions" : "Soluții de Backup", description: currentLanguage === 'en' ? "Secure data backup and recovery" : "Backup și recuperare securizată a datelor" },
-        { name: currentLanguage === 'en' ? "Security Tools" : "Instrumente de Securitate", description: currentLanguage === 'en' ? "Vulnerability scanning and protection" : "Scanare vulnerabilități și protecție" },
-        { name: currentLanguage === 'en' ? "Performance Optimization" : "Optimizare Performanță", description: currentLanguage === 'en' ? "System tuning and enhancement" : "Reglare și îmbunătățire sistem" },
-        { name: currentLanguage === 'en' ? "Help Desk Systems" : "Sisteme Help Desk", description: currentLanguage === 'en' ? "Ticket management and resolution tracking" : "Managementul tichetelor și urmărirea rezoluțiilor" }
-      ],
       process: [
         { step: currentLanguage === 'en' ? "Service Level Agreement" : "Acord de Nivel al Serviciilor", description: currentLanguage === 'en' ? "We establish clear expectations for support and response times." : "Stabilim așteptări clare pentru suport și timpii de răspuns." },
         { step: currentLanguage === 'en' ? "Monitoring Setup" : "Configurare Monitorizare", description: currentLanguage === 'en' ? "We implement proactive monitoring to identify issues before they impact users." : "Implementăm monitorizare proactivă pentru a identifica problemele înainte de a afecta utilizatorii." },
@@ -165,68 +137,66 @@ const ServiceDetail = () => {
     <div className="pt-24 pb-20 bg-gray-100">
       <div className="container mx-auto px-4">
         {/* Hero Section */}
-        <div className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-12">
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-12 shadow-xl transform hover:scale-[1.02] transition-all duration-500">
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/60 to-gray-900/80"></div>
           <img 
             src={service.imageUrl} 
             alt={service.title} 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                {service.icon}
+            <div className="text-center max-w-4xl px-4">
+              <div className="flex justify-center mb-6">
+                <div className="p-4 rounded-full bg-white/10 backdrop-blur-sm ring-2 ring-white/30">
+                  {service.icon}
+                </div>
               </div>
-              <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">{service.title}</h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">{service.title}</h1>
+              <p className="text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto">{service.description}</p>
             </div>
           </div>
         </div>
 
-        {/* Overview */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-          <h2 className="text-2xl font-bold mb-4">{currentLanguage === 'en' ? 'Overview' : 'Prezentare generală'}</h2>
-          <p className="text-gray-700 mb-6">{service.description}</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-3">{currentLanguage === 'en' ? 'Key Benefits' : 'Beneficii cheie'}</h3>
-              <ul className="list-disc pl-5 space-y-2">
-                {service.benefits.map((benefit, index) => (
-                  <li key={index} className="text-gray-700">{benefit}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-3">{currentLanguage === 'en' ? 'Technologies' : 'Tehnologii'}</h3>
-              <div className="space-y-3">
-                {service.technologies.map((tech, index) => (
-                  <div key={index} className="border-b border-gray-200 pb-2">
-                    <h4 className="font-medium">{tech.name}</h4>
-                    <p className="text-gray-600 text-sm">{tech.description}</p>
-                  </div>
-                ))}
+        {/* Benefits Section */}
+        <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-gray-800 flex items-center">
+            {currentLanguage === 'en' ? 'Key Benefits' : 'Beneficii cheie'}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {service.benefits.map((benefit, index) => (
+              <div 
+                key={index} 
+                className="flex items-start p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300"
+              >
+                <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-blue-500 mr-4"></div>
+                <p className="text-gray-700">{benefit}</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Process */}
-        <div className="bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-bold mb-6">{currentLanguage === 'en' ? 'Our Process' : 'Procesul nostru'}</h2>
-          <div className="space-y-8">
+        {/* Process Section */}
+        <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
+          <h2 className="text-2xl font-bold mb-12 text-gray-800 text-center">
+            {currentLanguage === 'en' ? 'Our Process' : 'Procesul nostru'}
+          </h2>
+          <div className="space-y-12">
             {service.process.map((step, index) => (
-              <div key={index} className="flex">
-                <div className="mr-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-700 text-white font-bold">
+              <div 
+                key={index} 
+                className="flex group hover:bg-gray-50 p-4 rounded-xl transition-all duration-300"
+              >
+                <div className="mr-6 relative">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white font-bold group-hover:bg-blue-600 transition-colors duration-300 shadow-lg">
                     {index + 1}
                   </div>
                   {index < service.process.length - 1 && (
-                    <div className="w-0.5 h-16 bg-gray-300 mx-auto my-2"></div>
+                    <div className="absolute left-1/2 top-12 bottom-0 w-0.5 bg-blue-200 transform -translate-x-1/2"></div>
                   )}
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold">{step.step}</h3>
-                  <p className="text-gray-700">{step.description}</p>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">{step.step}</h3>
+                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}

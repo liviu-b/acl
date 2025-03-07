@@ -21,8 +21,30 @@ export default {
   // Services
   "services.title": "Serviciile Noastre",
   "services.subtitle": "Oferim o gamă completă de servicii IT concepute pentru a ajuta afacerea dumneavoastră să prospere în era digitală.",
-  "services.software.title": "Dezvoltare Software",
-  "services.software.description": "Creăm aplicații personalizate adaptate cerințelor dumneavoastră specifice. Echipa noastră de dezvoltare excelează în construirea de soluții software scalabile și robuste folosind tehnologii și metodologii moderne. De la concept la implementare, ne asigurăm că software-ul dumneavoastră îndeplinește cele mai înalte standarde de calitate.",
+  
+  // Software Development Service
+  "services.software.title": "Servicii de Dezvoltare Software Personalizat",
+  "services.software.description": "Oferim soluții de dezvoltare software personalizate, perfect adaptate cerințelor și nevoilor dumneavoastră unice. Cu o abordare centrată pe client, transformăm ideile și provocările dumneavoastră în aplicații software eficiente și inovatoare.",
+  "services.software.whatWeOffer": "Ce oferim:",
+  "services.software.offerings": [
+    "Consultanță detaliată și analiza cerințelor",
+    "Dezvoltare de aplicații web, mobile și desktop",
+    "Integrare cu sisteme și platforme existente",
+    "Soluții scalabile și de înaltă performanță",
+    "Testare riguroasă și asigurarea calității",
+    "Suport tehnic și mentenanță post-implementare"
+  ],
+  "services.software.benefits": [
+    "Soluții perfect adaptate nevoilor dumneavoastră specifice",
+    "Tehnologii de ultimă generație",
+    "Echipă de experți cu experiență vastă",
+    "Comunicare transparentă și actualizări regulate",
+    "Flexibilitate și agilitate în dezvoltare",
+    "Rezultate de înaltă calitate, livrate la timp"
+  ],
+  "services.software.callToAction": "Fie că sunteți un startup inovator sau o companie consacrată, suntem pregătiți să vă transformăm viziunea în realitate digitală. Contactați-ne astăzi pentru a discuta despre proiectul dumneavoastră și pentru a descoperi cum putem crea împreună soluția software perfectă pentru afacerea dumneavoastră.",
+
+  // Other Services
   "services.consulting.title": "Consultanță și Arhitectură",
   "services.consulting.description": "Consultanții noștri experți oferă îndrumare strategică privind arhitectura software și deciziile tehnologice. Analizăm nevoile afacerii dumneavoastră și proiectăm structuri de sistem optime care se aliniază cu obiectivele dumneavoastră. Soluțiile noastre arhitecturale se concentrează pe scalabilitate, performanță și mentenabilitate.",
   "services.web.title": "Soluții Web",
@@ -33,8 +55,8 @@ export default {
   // Footer
   "footer.company": "ACL-Smart Software",
   "footer.tagline": "Soluții software inovatoare pentru afaceri moderne.",
-  "footer.address": "România, Hunedoara, Petroșani, 332014",
-  "footer.phone": "+40 758 154 490",
+  "footer.address": "123 Tech Park, Strada Inovației, Cartierul de Afaceri, 10001",
+  "footer.phone": "+40 758 158 490",
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Servicii",
   "footer.software": "Dezvoltare Software",
@@ -62,10 +84,10 @@ export default {
   "contact.subtitle": "Ai o întrebare sau vrei să discuți despre un proiect? Ia legătura cu echipa noastră.",
   "contact.info": "Informații de Contact",
   "contact.address.title": "Adresă",
-  "contact.address.value": "România, Hunedoara",
-  "contact.address.city": "Petroșani, 332014",
+  "contact.address.value": "123 Tech Park, Strada Inovației",
+  "contact.address.city": "Cartierul de Afaceri, 10001",
   "contact.phone.title": "Telefon",
-  "contact.phone.value": "+40 758 154 490",
+  "contact.phone.value": "+40 758 158 490",
   "contact.email.title": "Email",
   "contact.email.value": "office@acl-smartsoftware.tech",
   "contact.form.name": "Nume",
