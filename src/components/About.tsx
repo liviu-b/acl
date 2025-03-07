@@ -31,15 +31,15 @@ const About = () => {
           </div>
           
           <div className="lg:w-1/2">
-            <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
+            <h2 className="font-tech text-4xl font-bold mb-6 tech-gradient-text tracking-tight">
               {t('about.title')}
             </h2>
             
-            <p className="text-gray-300 mb-8 leading-relaxed">
+            <p className="text-gray-300 mb-8 leading-relaxed text-lg tracking-wide">
               {t('about.paragraph1')}
             </p>
             
-            <p className="text-gray-300 mb-10 leading-relaxed">
+            <p className="text-gray-300 mb-10 leading-relaxed text-lg tracking-wide">
               {t('about.paragraph2')}
             </p>
             
@@ -47,11 +47,11 @@ const About = () => {
               <div className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors duration-300">
                 <div className="flex items-center mb-4">
                   <Target className="h-8 w-8 text-blue-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="font-tech text-xl font-semibold text-white">
                     {t('about.mission.title')}
                   </h3>
                 </div>
-                <p className="text-gray-300">
+                <p className="text-gray-300 leading-relaxed tracking-wide">
                   {t('about.mission.text')}
                 </p>
               </div>
@@ -59,11 +59,11 @@ const About = () => {
               <div className="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors duration-300">
                 <div className="flex items-center mb-4">
                   <Eye className="h-8 w-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="font-tech text-xl font-semibold text-white">
                     {t('about.vision.title')}
                   </h3>
                 </div>
-                <p className="text-gray-300">
+                <p className="text-gray-300 leading-relaxed tracking-wide">
                   {t('about.vision.text')}
                 </p>
               </div>
