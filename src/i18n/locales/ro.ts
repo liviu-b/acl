@@ -23,34 +23,20 @@ export default {
   "services.subtitle": "Oferim o gamă completă de servicii IT concepute pentru a ajuta afacerea dumneavoastră să prospere în era digitală.",
   
   // Software Development Service
-  "services.software.title": "Servicii de Dezvoltare Software Personalizat",
-  "services.software.description": "Oferim soluții de dezvoltare software personalizate, perfect adaptate cerințelor și nevoilor dumneavoastră unice. Cu o abordare centrată pe client, transformăm ideile și provocările dumneavoastră în aplicații software eficiente și inovatoare.",
-  "services.software.whatWeOffer": "Ce oferim:",
-  "services.software.offerings": [
-    "Consultanță detaliată și analiza cerințelor",
-    "Dezvoltare de aplicații web, mobile și desktop",
-    "Integrare cu sisteme și platforme existente",
-    "Soluții scalabile și de înaltă performanță",
-    "Testare riguroasă și asigurarea calității",
-    "Suport tehnic și mentenanță post-implementare"
-  ],
-  "services.software.benefits": [
-    "Soluții perfect adaptate nevoilor dumneavoastră specifice",
-    "Tehnologii de ultimă generație",
-    "Echipă de experți cu experiență vastă",
-    "Comunicare transparentă și actualizări regulate",
-    "Flexibilitate și agilitate în dezvoltare",
-    "Rezultate de înaltă calitate, livrate la timp"
-  ],
-  "services.software.callToAction": "Fie că sunteți un startup inovator sau o companie consacrată, suntem pregătiți să vă transformăm viziunea în realitate digitală. Contactați-ne astăzi pentru a discuta despre proiectul dumneavoastră și pentru a descoperi cum putem crea împreună soluția software perfectă pentru afacerea dumneavoastră.",
+  "services.software.title": "Dezvoltare Software Personalizat",
+  "services.software.description": "Creăm aplicații personalizate adaptate cerințelor dumneavoastră specifice. Echipa noastră de dezvoltare excelează în construirea de soluții software scalabile și robuste folosind tehnologii și metodologii moderne.",
 
-  // Other Services
+  // Mobile Development Service
+  "services.mobile.title": "Dezvoltare Aplicații Mobile",
+  "services.mobile.description": "Creăm aplicații mobile de ultimă generație pentru platformele iOS și Android, oferind experiențe de utilizare perfecte și funcționalități puternice pentru nevoile afacerii dumneavoastră.",
+
+  // Consulting Service
   "services.consulting.title": "Consultanță și Arhitectură",
-  "services.consulting.description": "Consultanții noștri experți oferă îndrumare strategică privind arhitectura software și deciziile tehnologice. Analizăm nevoile afacerii dumneavoastră și proiectăm structuri de sistem optime care se aliniază cu obiectivele dumneavoastră. Soluțiile noastre arhitecturale se concentrează pe scalabilitate, performanță și mentenabilitate.",
+  "services.consulting.description": "Consultanții noștri experți oferă îndrumare strategică privind arhitectura software și deciziile tehnologice. Analizăm nevoile afacerii dumneavoastră și proiectăm structuri de sistem optime.",
+
+  // Web Solutions Service
   "services.web.title": "Soluții Web",
-  "services.web.description": "Dezvoltăm aplicații și platforme web responsive, ușor de utilizat, care îmbunătățesc prezența dumneavoastră online. Soluțiile noastre web se integrează perfect cu sistemele și API-urile existente, oferind o experiență digitală coerentă. De la site-uri web corporative la platforme complexe de e-commerce, oferim soluții web care generează rezultate.",
-  "services.support.title": "Suport și Mentenanță",
-  "services.support.description": "Oferim servicii complete de suport tehnic și mentenanță pentru a asigura că software-ul dumneavoastră rămâne operațional și actualizat. Echipa noastră monitorizează sistemele în mod continuu, implementează actualizări și rezolvă problemele prompt. De asemenea, oferim servicii de backup și recuperare a datelor pentru a vă proteja informațiile valoroase.",
+  "services.web.description": "Dezvoltăm aplicații și platforme web responsive, ușor de utilizat, care îmbunătățesc prezența dumneavoastră online. Soluțiile noastre web se integrează perfect cu sistemele existente.",
 
   // Footer
   "footer.company": "ACL-Smart Software",
@@ -60,47 +46,12 @@ export default {
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Servicii",
   "footer.software": "Dezvoltare Software",
+  "footer.mobile": "Dezvoltare Mobile",
   "footer.consulting": "Consultanță și Arhitectură",
   "footer.web": "Soluții Web",
-  "footer.support": "Suport și Mentenanță",
   "footer.legal": "Legal",
   "footer.privacy": "Politica de Confidențialitate",
   "footer.gdpr": "Conformitate GDPR",
   "footer.anpc": "ANPC",
-  "footer.copyright": "Toate drepturile rezervate.",
-
-  // WhatsApp Chat
-  "chat.title": "Discută cu noi",
-  "chat.message": "Bună! Cum te putem ajuta astăzi? Trimite-ne un mesaj și îți vom răspunde cât mai curând posibil.",
-  "chat.placeholder": "Scrie mesajul tău aici...",
-  "chat.button": "Discută pe WhatsApp",
-
-  // Language Switcher
-  "language.en": "Engleză",
-  "language.ro": "Română",
-
-  // Contact
-  "contact.title": "Contactează-ne",
-  "contact.subtitle": "Ai o întrebare sau vrei să discuți despre un proiect? Ia legătura cu echipa noastră.",
-  "contact.info": "Informații de Contact",
-  "contact.address.title": "Adresă",
-  "contact.address.value": "123 Tech Park, Strada Inovației",
-  "contact.address.city": "Cartierul de Afaceri, 10001",
-  "contact.phone.title": "Telefon",
-  "contact.phone.value": "+40 758 158 490",
-  "contact.email.title": "Email",
-  "contact.email.value": "office@acl-smartsoftware.tech",
-  "contact.form.name": "Nume",
-  "contact.form.email": "Email",
-  "contact.form.subject": "Subiect",
-  "contact.form.message": "Mesaj",
-  "contact.form.submit": "Trimite Mesaj",
-
-  // Privacy Policy
-  "privacy.title": "Politica de Confidențialitate pentru ACL-Smart Software",
-  "privacy.lastUpdated": "Ultima actualizare: 05.02.2025",
-
-  // GDPR Policy
-  "gdpr.title": "Politica GDPR pentru ACL-Smart Software",
-  "gdpr.lastUpdated": "Ultima actualizare: 05.02.2025"
+  "footer.copyright": "Toate drepturile rezervate."
 };

@@ -23,34 +23,20 @@ export default {
   "services.subtitle": "We offer a comprehensive range of IT services designed to help your business thrive in the digital age.",
   
   // Software Development Service
-  "services.software.title": "Custom Software Development Services",
-  "services.software.description": "We offer customized software development solutions, perfectly tailored to your unique requirements and needs. With a client-centered approach, we transform your ideas and challenges into efficient and innovative software applications.",
-  "services.software.whatWeOffer": "What we offer:",
-  "services.software.offerings": [
-    "Detailed consultation and requirements analysis",
-    "Web, mobile, and desktop application development",
-    "Integration with existing systems and platforms",
-    "Scalable and high-performance solutions",
-    "Rigorous testing and quality assurance",
-    "Post-implementation technical support and maintenance"
-  ],
-  "services.software.benefits": [
-    "Solutions perfectly adapted to your specific needs",
-    "Cutting-edge technologies",
-    "Team of experts with extensive experience",
-    "Transparent communication and regular updates",
-    "Flexibility and agility in development",
-    "High-quality results, delivered on time"
-  ],
-  "services.software.callToAction": "Whether you're an innovative startup or an established company, we're ready to turn your vision into digital reality. Contact us today to discuss your project and discover how we can create the perfect software solution for your business together.",
+  "services.software.title": "Custom Software Development",
+  "services.software.description": "We create custom applications tailored to your specific requirements. Our development team excels in building scalable, robust software solutions using modern technologies and methodologies.",
 
-  // Other Services
-  "services.consulting.title": "Consulting and Architecture",
-  "services.consulting.description": "Our expert consultants provide strategic guidance on software architecture and technology decisions. We analyze your business needs and design optimal system structures that align with your goals. Our architectural solutions focus on scalability, performance, and maintainability.",
+  // Mobile Development Service
+  "services.mobile.title": "Mobile App Development",
+  "services.mobile.description": "We create cutting-edge mobile applications for iOS and Android platforms, delivering seamless user experiences and powerful functionality for your business needs.",
+
+  // Consulting Service
+  "services.consulting.title": "Consulting & Architecture",
+  "services.consulting.description": "Our expert consultants provide strategic guidance on software architecture and technology decisions. We analyze your business needs and design optimal system structures that align with your goals.",
+
+  // Web Solutions Service
   "services.web.title": "Web Solutions",
-  "services.web.description": "We develop responsive, user-friendly web applications and platforms that enhance your online presence. Our web solutions integrate seamlessly with existing systems and APIs, providing a cohesive digital experience. From corporate websites to complex e-commerce platforms, we deliver web solutions that drive results.",
-  "services.support.title": "Support and Maintenance",
-  "services.support.description": "We provide comprehensive technical support and maintenance services to ensure your software remains operational and up-to-date. Our team monitors systems continuously, implements updates, and resolves issues promptly. We also offer data backup and recovery services to protect your valuable information.",
+  "services.web.description": "We develop responsive, user-friendly web applications and platforms that enhance your online presence. Our web solutions integrate seamlessly with existing systems and APIs.",
 
   // Footer
   "footer.company": "ACL-Smart Software",
@@ -60,47 +46,12 @@ export default {
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Services",
   "footer.software": "Software Development",
+  "footer.mobile": "Mobile Development",
   "footer.consulting": "Consulting & Architecture",
   "footer.web": "Web Solutions",
-  "footer.support": "Support & Maintenance",
   "footer.legal": "Legal",
   "footer.privacy": "Privacy Policy",
   "footer.gdpr": "GDPR Compliance",
   "footer.anpc": "ANPC",
-  "footer.copyright": "All rights reserved.",
-
-  // WhatsApp Chat
-  "chat.title": "Chat with us",
-  "chat.message": "Hello! How can we help you today? Send us a message and we'll get back to you as soon as possible.",
-  "chat.placeholder": "Type your message here...",
-  "chat.button": "Chat on WhatsApp",
-
-  // Language Switcher
-  "language.en": "English",
-  "language.ro": "Romanian",
-
-  // Contact
-  "contact.title": "Contact Us",
-  "contact.subtitle": "Have a question or want to discuss a project? Get in touch with our team.",
-  "contact.info": "Contact Information",
-  "contact.address.title": "Address",
-  "contact.address.value": "123 Tech Park, Innovation Street",
-  "contact.address.city": "Business District, 10001",
-  "contact.phone.title": "Phone",
-  "contact.phone.value": "+40 758 158 490",
-  "contact.email.title": "Email",
-  "contact.email.value": "office@acl-smartsoftware.tech",
-  "contact.form.name": "Name",
-  "contact.form.email": "Email",
-  "contact.form.subject": "Subject",
-  "contact.form.message": "Message",
-  "contact.form.submit": "Send Message",
-
-  // Privacy Policy
-  "privacy.title": "Privacy Policy for ACL-Smart Software",
-  "privacy.lastUpdated": "Last updated: 05.02.2025",
-
-  // GDPR Policy
-  "gdpr.title": "GDPR Policy for ACL-Smart Software",
-  "gdpr.lastUpdated": "Last updated: 05.02.2025"
+  "footer.copyright": "All rights reserved."
 };

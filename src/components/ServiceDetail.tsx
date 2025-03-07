@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Code, Wrench, Globe, Headset as HeadsetHelp } from 'lucide-react';
+import { Code, Wrench, Globe, Smartphone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const ServiceDetail = () => {
@@ -41,8 +41,35 @@ const ServiceDetail = () => {
         "Integrare cu sistemele existente"
       ]
     },
+    'mobile-development': {
+      icon: <Smartphone className="h-12 w-12 text-purple-600" />,
+      title: t('services.mobile.title'),
+      description: t('services.mobile.description'),
+      imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      process: [
+        { step: currentLanguage === 'en' ? "Market Research" : "Cercetare de Piață", description: currentLanguage === 'en' ? "We analyze your target market and competition to ensure your app stands out." : "Analizăm piața țintă și competiția pentru a ne asigura că aplicația dvs. se remarcă." },
+        { step: currentLanguage === 'en' ? "UX/UI Design" : "Design UX/UI", description: currentLanguage === 'en' ? "Creating intuitive and engaging user experiences for your mobile app." : "Creăm experiențe de utilizator intuitive și atractive pentru aplicația dvs. mobilă." },
+        { step: currentLanguage === 'en' ? "Development" : "Dezvoltare", description: currentLanguage === 'en' ? "Building your app using the latest mobile development technologies." : "Construim aplicația dvs. folosind cele mai recente tehnologii de dezvoltare mobilă." },
+        { step: currentLanguage === 'en' ? "Testing" : "Testare", description: currentLanguage === 'en' ? "Comprehensive testing across devices and operating systems." : "Testare completă pe diverse dispozitive și sisteme de operare." },
+        { step: currentLanguage === 'en' ? "App Store Optimization" : "Optimizare App Store", description: currentLanguage === 'en' ? "Maximizing your app's visibility in app stores." : "Maximizăm vizibilitatea aplicației dvs. în magazinele de aplicații." },
+        { step: currentLanguage === 'en' ? "Launch & Marketing" : "Lansare și Marketing", description: currentLanguage === 'en' ? "Strategic launch and ongoing marketing support." : "Lansare strategică și suport continuu de marketing." }
+      ],
+      benefits: currentLanguage === 'en' ? [
+        "Native and cross-platform development expertise",
+        "Engaging user experiences",
+        "Offline functionality",
+        "Push notifications and real-time updates",
+        "Analytics and performance monitoring"
+      ] : [
+        "Expertiză în dezvoltare nativă și cross-platform",
+        "Experiențe de utilizator captivante",
+        "Funcționalitate offline",
+        "Notificări push și actualizări în timp real",
+        "Analiză și monitorizare a performanței"
+      ]
+    },
     'consulting-architecture': {
-      icon: <Wrench className="h-12 w-12 text-purple-600" />,
+      icon: <Wrench className="h-12 w-12 text-emerald-600" />,
       title: t('services.consulting.title'),
       description: t('services.consulting.description'),
       imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
@@ -69,7 +96,7 @@ const ServiceDetail = () => {
       ]
     },
     'web-solutions': {
-      icon: <Globe className="h-12 w-12 text-green-600" />,
+      icon: <Globe className="h-12 w-12 text-amber-600" />,
       title: t('services.web.title'),
       description: t('services.web.description'),
       imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
@@ -93,33 +120,6 @@ const ServiceDetail = () => {
         "Pagini cu încărcare rapidă pentru o experiență îmbunătățită a utilizatorului",
         "Găzduire sigură și fiabilă",
         "Integrare de analize pentru decizii bazate pe date"
-      ]
-    },
-    'support-maintenance': {
-      icon: <HeadsetHelp className="h-12 w-12 text-orange-600" />,
-      title: t('services.support.title'),
-      description: t('services.support.description'),
-      imageUrl: "https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      process: [
-        { step: currentLanguage === 'en' ? "Service Level Agreement" : "Acord de Nivel al Serviciilor", description: currentLanguage === 'en' ? "We establish clear expectations for support and response times." : "Stabilim așteptări clare pentru suport și timpii de răspuns." },
-        { step: currentLanguage === 'en' ? "Monitoring Setup" : "Configurare Monitorizare", description: currentLanguage === 'en' ? "We implement proactive monitoring to identify issues before they impact users." : "Implementăm monitorizare proactivă pentru a identifica problemele înainte de a afecta utilizatorii." },
-        { step: currentLanguage === 'en' ? "Regular Maintenance" : "Mentenanță Regulată", description: currentLanguage === 'en' ? "We perform scheduled updates and optimizations to keep systems running smoothly." : "Efectuăm actualizări și optimizări programate pentru a menține sistemele funcționând fără probleme." },
-        { step: currentLanguage === 'en' ? "Issue Resolution" : "Rezolvarea Problemelor", description: currentLanguage === 'en' ? "Our team quickly addresses and resolves any problems that arise." : "Echipa noastră abordează și rezolvă rapid orice probleme care apar." },
-        { step: currentLanguage === 'en' ? "Security Updates" : "Actualizări de Securitate", description: currentLanguage === 'en' ? "We ensure your systems are protected against the latest threats." : "Ne asigurăm că sistemele dumneavoastră sunt protejate împotriva celor mai recente amenințări." },
-        { step: currentLanguage === 'en' ? "Performance Reviews" : "Revizuiri de Performanță", description: currentLanguage === 'en' ? "We regularly review system performance and recommend improvements." : "Revizuim în mod regulat performanța sistemului și recomandăm îmbunătățiri." }
-      ],
-      benefits: currentLanguage === 'en' ? [
-        "Reduced downtime and system interruptions",
-        "Proactive issue identification and resolution",
-        "Regular updates and security patches",
-        "Technical expertise on demand",
-        "Peace of mind knowing your systems are monitored 24/7"
-      ] : [
-        "Timp de nefuncționare și întreruperi de sistem reduse",
-        "Identificarea și rezolvarea proactivă a problemelor",
-        "Actualizări regulate și patch-uri de securitate",
-        "Expertiză tehnică la cerere",
-        "Liniște știind că sistemele dumneavoastră sunt monitorizate 24/7"
       ]
     }
   };
