@@ -17,7 +17,9 @@ const ServiceDetail = () => {
     'software-development': {
       icon: <Code className="h-12 w-12 text-blue-400" />,
       title: t('services.software.title'),
-      description: t('services.software.description'),
+      description: currentLanguage === 'en' 
+        ? "Custom software development that transforms your business. We build scalable, secure solutions to streamline operations and drive growth."
+        : "Dezvoltare software personalizată care vă transformă afacerea. Construim soluții scalabile și sigure pentru a eficientiza operațiunile.",
       imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       process: [
         { step: currentLanguage === 'en' ? "Requirements Analysis" : "Analiza Cerințelor", description: currentLanguage === 'en' ? "We work closely with you to understand your business needs and define clear requirements." : "Lucrăm îndeaproape cu dumneavoastră pentru a înțelege nevoile afacerii și a defini cerințe clare." },
@@ -44,7 +46,9 @@ const ServiceDetail = () => {
     'consulting-architecture': {
       icon: <Wrench className="h-12 w-12 text-emerald-400" />,
       title: t('services.consulting.title'),
-      description: t('services.consulting.description'),
+      description: currentLanguage === 'en'
+        ? "Expert tech consulting to elevate your strategy. We guide system design and implementation for robust, future-proof solutions."
+        : "Consultanță tehnică expertă pentru a vă ridica strategia. Ghidăm proiectarea și implementarea sistemelor pentru soluții robuste.",
       imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       process: [
         { step: currentLanguage === 'en' ? "Assessment" : "Evaluare", description: currentLanguage === 'en' ? "We evaluate your current systems, processes, and challenges." : "Evaluăm sistemele, procesele și provocările dumneavoastră actuale." },
@@ -71,7 +75,9 @@ const ServiceDetail = () => {
     'web-solutions': {
       icon: <Globe className="h-12 w-12 text-amber-400" />,
       title: t('services.web.title'),
-      description: t('services.web.description'),
+      description: currentLanguage === 'en'
+        ? "Build a powerful online presence with our web solutions. We create stunning, responsive websites that engage your audience."
+        : "Construiți o prezență online puternică cu soluțiile noastre web. Creăm site-uri web uimitoare și responsive care vă implică audiența.",
       imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       process: [
         { step: currentLanguage === 'en' ? "Discovery" : "Descoperire", description: currentLanguage === 'en' ? "We understand your brand, audience, and business objectives." : "Înțelegem marca, audiența și obiectivele dumneavoastră de afaceri." },
@@ -116,27 +122,24 @@ const ServiceDetail = () => {
 
       <div className="container mx-auto px-4 relative pb-20">
         {/* Hero Section */}
-        <div className="relative rounded-2xl overflow-hidden mb-12">
-          <div className="aspect-[21/9] md:aspect-[21/7]">
-            <img 
-              src={service.imageUrl} 
-              alt={service.title} 
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/80 to-gray-900/90"></div>
-          </div>
-          
+        <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-12">
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/80 to-gray-900/90"></div>
+          <img 
+            src={service.imageUrl} 
+            alt={service.title} 
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 flex items-center justify-center p-8">
-            <div className="text-center max-w-4xl">
-              <div className="flex justify-center mb-8">
+            <div className="text-center max-w-2xl">
+              <div className="flex justify-center mb-6">
                 <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg transform hover:scale-105 transition-transform duration-300">
                   {service.icon}
                 </div>
               </div>
-              <h1 className="font-tech text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tech-gradient-text">
+              <h1 className="font-tech text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tech-gradient-text">
                 {service.title}
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
                 {service.description}
               </p>
             </div>
