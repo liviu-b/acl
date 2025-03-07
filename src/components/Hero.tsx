@@ -47,7 +47,7 @@ const Hero = () => {
 
           {/* Title */}
           <div className="relative mb-8">
-            <h1 className="font-tech text-5xl md:text-7xl lg:text-8xl font-bold mb-8 tech-gradient-text relative z-10 tracking-tight">
+            <h1 className="font-tech text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tech-gradient-text relative z-10 tracking-tight">
               {t('hero.title')}
             </h1>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl -z-10 transform scale-150"></div>

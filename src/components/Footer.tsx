@@ -26,13 +26,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
           {/* Company Info */}
           <div className="flex flex-col items-center md:items-start">
-            <div className="flex items-center mb-6 group">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/50 to-purple-500/50 rounded-lg blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
-                <div className="relative p-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 transform group-hover:scale-110 transition-all duration-500">
-                  <Code className="h-8 w-8 text-blue-400 group-hover:text-blue-300 transition-colors duration-500" />
-                </div>
-              </div>
+            <div className="flex items-center mb-6">
+              <Code className="h-8 w-8 text-white" />
               <span className="ml-3 text-xl font-tech font-bold text-white">{t('footer.company')}</span>
             </div>
             
