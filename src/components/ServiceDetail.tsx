@@ -116,13 +116,16 @@ const ServiceDetail = () => {
 
       <div className="container mx-auto px-4 relative pb-20">
         {/* Hero Section */}
-        <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-12">
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/80 to-gray-900/90"></div>
-          <img 
-            src={service.imageUrl} 
-            alt={service.title} 
-            className="w-full h-full object-cover"
-          />
+        <div className="relative rounded-2xl overflow-hidden mb-12">
+          <div className="aspect-[21/9] md:aspect-[21/7]">
+            <img 
+              src={service.imageUrl} 
+              alt={service.title} 
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/80 to-gray-900/90"></div>
+          </div>
+          
           <div className="absolute inset-0 flex items-center justify-center p-8">
             <div className="text-center max-w-4xl">
               <div className="flex justify-center mb-8">
