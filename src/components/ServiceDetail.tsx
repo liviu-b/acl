@@ -134,7 +134,7 @@ const ServiceDetail = () => {
   }
 
   return (
-    <div className="pt-24 relative">
+    <div className="pt-24 relative min-h-screen">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
         <div className="absolute inset-0 pattern-grid opacity-20"></div>
       </div>
@@ -155,10 +155,10 @@ const ServiceDetail = () => {
                   {service.icon}
                 </div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
                 {service.title}
               </h1>
-              <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
                 {service.description}
               </p>
             </div>
@@ -166,45 +166,45 @@ const ServiceDetail = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 sm:p-8 mb-12">
+          <h2 className="text-xl sm:text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white">
             {currentLanguage === 'en' ? 'Key Benefits' : 'Beneficii cheie'}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {service.benefits.map((benefit, index) => (
               <div 
                 key={index} 
                 className="flex items-start p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors duration-300"
               >
                 <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-blue-400 mr-4"></div>
-                <p className="text-gray-300">{benefit}</p>
+                <p className="text-sm sm:text-base text-gray-300">{benefit}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Process Section */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
-          <h2 className="text-2xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white text-center">
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 sm:p-8">
+          <h2 className="text-xl sm:text-2xl font-bold mb-8 sm:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-white text-center">
             {currentLanguage === 'en' ? 'Our Process' : 'Procesul nostru'}
           </h2>
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {service.process.map((step, index) => (
               <div 
                 key={index} 
-                className="flex group hover:bg-white/5 p-4 rounded-xl transition-all duration-300"
+                className="flex flex-col sm:flex-row group hover:bg-white/5 p-4 rounded-xl transition-all duration-300"
               >
-                <div className="mr-6 relative">
+                <div className="mb-4 sm:mb-0 sm:mr-6 relative">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 border border-blue-400/20 text-blue-400 font-bold group-hover:bg-blue-500/30 transition-colors duration-300">
                     {index + 1}
                   </div>
                   {index < service.process.length - 1 && (
-                    <div className="absolute left-1/2 top-12 bottom-0 w-0.5 bg-blue-400/20 transform -translate-x-1/2"></div>
+                    <div className="hidden sm:block absolute left-1/2 top-12 bottom-0 w-0.5 bg-blue-400/20 transform -translate-x-1/2"></div>
                   )}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white mb-3">{step.step}</h3>
-                  <p className="text-gray-300 leading-relaxed">{step.description}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">{step.step}</h3>
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}
