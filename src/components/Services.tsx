@@ -7,12 +7,12 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
   return (
     <Link 
       to={`/services/${slug}`} 
-      className="group relative h-full focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-xl"
+      className="group relative focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-xl"
       aria-labelledby={`service-title-${index}`}
     >
-      <div className="relative h-full bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all duration-500 group-hover:border-white/20">
+      <div className="relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all duration-500 group-hover:border-white/20">
         {/* Image Container */}
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-36 overflow-hidden">
           <img 
             src={imageUrl} 
             alt={title} 
@@ -22,34 +22,34 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
         </div>
 
         {/* Content Container */}
-        <div className="relative p-5">
+        <div className="relative p-4">
           {/* Icon and Title */}
-          <div className="flex items-center mb-4">
-            <div className="p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-white/15 transition-colors duration-300">
+          <div className="flex items-center mb-2">
+            <div className="p-1.5 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-white/15 transition-colors duration-300">
               {icon}
             </div>
             <h3 
               id={`service-title-${index}`}
-              className="text-lg font-semibold ml-3 text-white group-hover:text-blue-300 transition-colors duration-300"
+              className="text-base font-semibold ml-2 text-white group-hover:text-blue-300 transition-colors duration-300"
             >
               {title}
             </h3>
           </div>
 
           {/* Description */}
-          <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2 group-hover:text-gray-200 transition-colors duration-300">
+          <p className="text-gray-300 text-sm leading-relaxed mb-3 line-clamp-2 group-hover:text-gray-200 transition-colors duration-300">
             {description}
           </p>
           
           {/* Features Grid */}
           {features && (
-            <div className="grid grid-cols-2 gap-2 mb-4">
+            <div className="grid grid-cols-2 gap-1.5 mb-3">
               {features.map((feature, idx) => (
                 <div 
                   key={idx} 
-                  className="flex items-center text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300"
+                  className="flex items-center text-gray-400 text-xs group-hover:text-gray-300 transition-colors duration-300"
                 >
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-400 mr-2 group-hover:bg-blue-300 transition-colors duration-300"></div>
+                  <div className="w-1 h-1 rounded-full bg-blue-400 mr-1.5 group-hover:bg-blue-300 transition-colors duration-300"></div>
                   <span className="truncate">{feature}</span>
                 </div>
               ))}
@@ -57,11 +57,11 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           )}
 
           {/* Learn More Link */}
-          <div className="flex items-center text-blue-400 text-sm font-medium group-hover:text-blue-300 transition-all duration-300">
-            <span className="mr-2">Learn more</span>
+          <div className="flex items-center text-blue-400 text-xs font-medium group-hover:text-blue-300 transition-all duration-300">
+            <span className="mr-1.5">Learn more</span>
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              className="h-4 w-4 transform transition-all duration-500 group-hover:translate-x-1" 
+              className="h-3.5 w-3.5 transform transition-all duration-500 group-hover:translate-x-1" 
               fill="none" 
               viewBox="0 0 24 24" 
               stroke="currentColor"
@@ -69,9 +69,6 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </div>
-
-          {/* Hover Effect Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
         </div>
       </div>
     </Link>
@@ -83,7 +80,7 @@ const Services = () => {
   
   const services = [
     {
-      icon: <Code className="h-5 w-5 text-blue-400" />,
+      icon: <Code className="h-4 w-4 text-blue-400" />,
       title: t('services.software.title'),
       description: t('services.software.description'),
       imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
@@ -96,7 +93,7 @@ const Services = () => {
       ]
     },
     {
-      icon: <Wrench className="h-5 w-5 text-emerald-400" />,
+      icon: <Wrench className="h-4 w-4 text-emerald-400" />,
       title: t('services.consulting.title'),
       description: t('services.consulting.description'),
       imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
@@ -109,7 +106,7 @@ const Services = () => {
       ]
     },
     {
-      icon: <Globe className="h-5 w-5 text-amber-400" />,
+      icon: <Globe className="h-4 w-4 text-amber-400" />,
       title: t('services.web.title'),
       description: t('services.web.description'),
       imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
@@ -139,7 +136,7 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard 
               key={index}
