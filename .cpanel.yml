@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/aclsmart/repositories/acl
+    - export DEPLOYPATH=/home/aclsmart/liviu-b/acl
     - /bin/cp -R * $DEPLOYPATH
