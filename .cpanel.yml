@@ -1,8 +1,9 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/aclsmart/repositories/acl
+    - export DEPLOYPATH=/home/aclsmart/public_html/
     - /bin/cp -R * $DEPLOYPATH
+
 exclude:
   - .env
   - node_modules/
