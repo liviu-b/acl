@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/aclsmart/repositories/acl
+    - export DEPLOYPATH=/home/aclsmart/public_html/acl
     - /bin/cp -R * $DEPLOYPATH
