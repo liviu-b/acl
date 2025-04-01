@@ -7,49 +7,49 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
   return (
     <Link 
       to={`/services/${slug}`} 
-      className="group relative focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-xl overflow-hidden h-full"
+      className="group relative focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-lg overflow-hidden h-full"
       aria-labelledby={`service-title-${index}`}
     >
-      <div className="relative bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 transition-all duration-500 group-hover:border-blue-400 group-hover:transform group-hover:-translate-y-1 shadow-lg group-hover:shadow-blue-500/30">
+      <div className="relative bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden border border-white/10 transition-all duration-500 group-hover:border-white/20 group-hover:transform group-hover:-translate-y-1">
         {/* Image Container */}
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-40 overflow-hidden rounded-t-lg"> {/* Reduced height */}
           <img 
             src={imageUrl} 
             alt={title} 
-            className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 rounded-t-xl" 
+            className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
         </div>
 
         {/* Content Container */}
-        <div className="relative p-6">
+        <div className="relative p-4"> {/* Reduced padding */}
           {/* Icon and Title */}
-          <div className="flex items-center mb-4">
-            <div className="p-3 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 shadow-md group-hover:shadow-lg transition-all duration-300">
+          <div className="flex items-center mb-3"> {/* Adjusted spacing */}
+            <div className="p-2 rounded-md bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-white/15 transition-colors duration-300">
               {icon}
             </div>
             <h3 
               id={`service-title-${index}`}
-              className="font-tech text-xl font-bold ml-3 text-white group-hover:text-blue-300 transition-colors duration-300"
+              className="font-tech text-lg font-semibold ml-2 text-white group-hover:text-blue-300 transition-colors duration-300"
             >
               {title}
             </h3>
           </div>
 
           {/* Description */}
-          <p className="text-gray-300 leading-relaxed mb-6 line-clamp-3 group-hover:text-gray-200 transition-colors duration-300">
+          <p className="text-gray-300 leading-relaxed mb-4 line-clamp-3 group-hover:text-gray-200 transition-colors duration-300 text-sm">
             {description}
           </p>
           
           {/* Features Grid */}
           {features && (
-            <div className="grid grid-cols-2 gap-3 mb-6">
+            <div className="grid grid-cols-2 gap-2 mb-4"> {/* Reduced gap */}
               {features.map((feature, idx) => (
                 <div 
                   key={idx} 
-                  className="flex items-center text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300"
+                  className="flex items-center text-gray-400 text-xs group-hover:text-gray-300 transition-colors duration-300"
                 >
-                  <div className="w-[6px] h-[6px] rounded-full bg-blue-400 mr-[6px] group-hover:bg-blue-300 transition-colors duration-300"></div>
+                  <div className="w-[5px] h-[5px] rounded-full bg-blue-400 mr-[6px] group-hover:bg-blue-300 transition-colors duration-300"></div>
                   <span className="truncate">{feature}</span>
                 </div>
               ))}
@@ -57,11 +57,11 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           )}
 
           {/* Learn More Link */}
-          <div className="flex items-center text-blue-400 font-tech text-sm font-medium group-hover:text-blue-300 transition-all duration-300">
-            <span className="mr-[8px]">Explore Service</span>
+          <div className="flex items-center text-blue-400 font-tech text-xs font-medium group-hover:text-blue-300 transition-all duration-300">
+            <span className="mr-[6px]">Explore Service</span>
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              className="h-[16px] w-[16px] transform transition-all duration-[500ms] group-hover:translate-x-[4px]" 
+              className="h-[14px] w-[14px] transform transition-all duration-[500ms] group-hover:translate-x-[4px]" 
               fill="none" 
               viewBox="0 0 24 24" 
               stroke="currentColor"
@@ -72,11 +72,12 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
         </div>
 
         {/* Animated border gradient */}
-        <div className="absolute inset-[1px] border-[2px] border-transparent bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-blue-500/0 group-hover:from-blue-500/20 group-hover:via-purple-500/20 group-hover:to-blue-500/20 transition-all duration-[500ms] rounded-xl -z-[10]"></div>
+        <div className="absolute inset-[1px] border-[1px] border-transparent bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-blue-500/0 group-hover:from-blue-500/20 group-hover:via-purple-500/20 group-hover:to-blue-500/20 transition-all duration-[500ms] rounded-lg -z-[10]"></div>
       </div>
     </Link>
   );
 };
+
 
 
 const Services = () => {
