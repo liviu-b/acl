@@ -11,8 +11,9 @@ export default {
 
   // About
   "about.title": "About ACL-Smart Software",
-  "about.paragraph1": "ACL-Smart Software operates in the IT sector, specializing in the development of innovative software solutions and complete IT services. We combine technical expertise with business acumen to deliver solutions that drive growth and efficiency.",
-  "about.paragraph2": "Our team of experienced developers, architects, and consultants work collaboratively to address complex challenges and create software that exceeds expectations. We pride ourselves on our agile approach, attention to detail, and commitment to quality.",
+  "about.paragraph1": "ACL-Smart Software operates within the IT sector, focusing on the development of innovative software solutions and comprehensive IT services. The company integrates technical expertise with business insight to provide solutions that enhance growth and efficiency.",
+  "about.paragraph2": "Offering a range of services, ACL-Smart Software addresses complex challenges through tailored software that meets and often exceeds client expectations. The company emphasizes an agile methodology, meticulous attention to detail, and a steadfast commitment to quality in all its offerings.",
+  "about.paragraph3": "Clients can expect a collaborative approach that ensures the delivery of effective solutions designed to drive operational success and adaptability in an ever-evolving digital landscape.",
   "about.mission.title": "Our Mission",
   "about.mission.text": "To empower businesses through innovative technology solutions that drive growth and efficiency.",
   "about.vision.title": "Our Vision",

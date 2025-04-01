@@ -16,8 +16,9 @@ const enTranslations = {
 
   // About
   "about.title": "About ACL-Smart Software",
-  "about.paragraph1": "ACL-Smart Software operates in the IT sector, specializing in the development of innovative software solutions and complete IT services. We combine technical expertise with business acumen to deliver solutions that drive growth and efficiency.",
-  "about.paragraph2": "Our team of experienced developers, architects, and consultants work collaboratively to address complex challenges and create software that exceeds expectations. We pride ourselves on our agile approach, attention to detail, and commitment to quality.",
+ "about.paragraph1": "ACL-Smart Software operates within the IT sector, focusing on the development of innovative software solutions and comprehensive IT services. The company integrates technical expertise with business insight to provide solutions that enhance growth and efficiency.",
+  "about.paragraph2": "Offering a range of services, ACL-Smart Software addresses complex challenges through tailored software that meets and often exceeds client expectations. The company emphasizes an agile methodology, meticulous attention to detail, and a steadfast commitment to quality in all its offerings.",
+  "about.paragraph3": "Clients can expect a collaborative approach that ensures the delivery of effective solutions designed to drive operational success and adaptability in an ever-evolving digital landscape.",
   "about.mission.title": "Our Mission",
   "about.mission.text": "To empower businesses through innovative technology solutions that drive growth and efficiency.",
   "about.vision.title": "Our Vision",
@@ -195,8 +196,9 @@ const roTranslations = {
 
   // About
   "about.title": "Despre ACL-Smart Software",
-  "about.paragraph1": "ACL-Smart Software operează în sectorul IT, specializându-se în dezvoltarea de soluții software inovatoare și servicii IT complete. Combinăm expertiza tehnică cu perspicacitatea în afaceri pentru a oferi soluții care stimulează creșterea și eficiența.",
-  "about.paragraph2": "Echipa noastră de dezvoltatori, arhitecți și consultanți cu experiență lucrează în colaborare pentru a aborda provocări complexe și a crea software care depășește așteptările. Ne mândrim cu abordarea noastră agilă, atenția la detalii și angajamentul față de calitate.",
+  "about.paragraph1": "Software-ul ACL-Smart operează în sectorul IT, concentrându-se pe dezvoltarea de soluții software inovatoare și servicii IT cuprinzătoare. Compania integrează expertiza tehnică cu perspectivele de afaceri pentru a oferi soluții care îmbunătățesc creșterea și eficiența.",
+"about.paragraph2": "Oferind o gamă variată de servicii, ACL-Smart Software abordează provocările complexe prin software personalizat care răspunde și deseori depășește așteptările clienților. Compania pune accent pe o metodologie agilă, atenție meticuloasă la detalii și un angajament ferm față de calitate în toate ofertele sale.",
+"about.paragraph3": "Clienții se pot aștepta la o abordare colaborativă care asigură livrarea unor soluții eficiente, concepute pentru a stimula succesul operațional și adaptabilitatea într-un peisaj digital în continuă schimbare.",
   "about.mission.title": "Misiunea Noastră",
   "about.mission.text": "Să capacităm afacerile prin soluții tehnologice inovatoare care stimulează creșterea și eficiența.",
   "about.vision.title": "Viziunea Noastră",
