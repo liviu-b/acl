@@ -26,7 +26,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           {/* Title overlaid on image */}
           <h2 
             id={`service-title-${index}`}
-            className="absolute bottom-4 left-4 right-4 font-bold text-xl text-white z-20
+            className="absolute bottom-4 left-4 right-4 font-bold text-xl text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text z-20
                        transition-transform duration-300 group-hover:translate-y-[-4px]"
           >
             {title}
