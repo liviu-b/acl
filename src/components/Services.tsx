@@ -7,61 +7,57 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
   return (
     <Link 
       to={`/services/${slug}`} 
-      className="group relative focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-lg overflow-hidden h-full"
+      className="group relative focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-lg overflow-hidden h-[400px] w-[300px] mx-auto"
       aria-labelledby={`service-title-${index}`}
     >
-      <div className="relative bg-white/5 backdrop-blur-sm rounded-lg overflow-hidden border border-white/10 transition-all duration-500 group-hover:border-white/20 group-hover:transform group-hover:-translate-y-1">
+      <div className="relative bg-white/10 backdrop-blur-md rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
         {/* Image Container */}
-        <div className="relative h-40 overflow-hidden rounded-t-lg"> {/* Reduced height */}
+        <div className="relative h-48 overflow-hidden rounded-t-lg">
           <img 
             src={imageUrl} 
             alt={title} 
-            className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" 
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
         </div>
 
         {/* Content Container */}
-        <div className="relative p-4"> {/* Reduced padding */}
-          {/* Icon and Title */}
-          <div className="flex items-center mb-3"> {/* Adjusted spacing */}
-            <div className="p-2 rounded-md bg-white/10 backdrop-blur-sm border border-white/20 group-hover:bg-white/15 transition-colors duration-300">
-              {icon}
-            </div>
-            <h3 
-              id={`service-title-${index}`}
-              className="font-tech text-lg font-semibold ml-2 text-white group-hover:text-blue-300 transition-colors duration-300"
-            >
-              {title}
-            </h3>
+        <div className="p-6 flex flex-col items-center text-center">
+          {/* Icon */}
+          <div className="p-3 rounded-full bg-white/20 shadow-inner mb-4">
+            {icon}
           </div>
 
+          {/* Title */}
+          <h3 
+            id={`service-title-${index}`}
+            className="font-tech text-lg font-bold text-white mb-2"
+          >
+            {title}
+          </h3>
+
           {/* Description */}
-          <p className="text-gray-300 leading-relaxed mb-4 line-clamp-3 group-hover:text-gray-200 transition-colors duration-300 text-sm">
+          <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
             {description}
           </p>
-          
-          {/* Features Grid */}
+
+          {/* Features */}
           {features && (
-            <div className="grid grid-cols-2 gap-2 mb-4"> {/* Reduced gap */}
+            <ul className="text-gray-400 text-xs space-y-2 mb-4">
               {features.map((feature, idx) => (
-                <div 
-                  key={idx} 
-                  className="flex items-center text-gray-400 text-xs group-hover:text-gray-300 transition-colors duration-300"
-                >
-                  <div className="w-[5px] h-[5px] rounded-full bg-blue-400 mr-[6px] group-hover:bg-blue-300 transition-colors duration-300"></div>
-                  <span className="truncate">{feature}</span>
-                </div>
+                <li key={idx} className="flex items-center justify-center space-x-2">
+                  <span className="w-[6px] h-[6px] bg-blue-400 rounded-full"></span>
+                  <span>{feature}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
 
           {/* Learn More Link */}
-          <div className="flex items-center text-blue-400 font-tech text-xs font-medium group-hover:text-blue-300 transition-all duration-300">
-            <span className="mr-[6px]">Explore Service</span>
+          <div className="text-blue-400 font-tech text-sm font-medium flex items-center space-x-2 group-hover:text-blue-300 transition-colors duration-300">
+            <span>Explore Service</span>
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              className="h-[14px] w-[14px] transform transition-all duration-[500ms] group-hover:translate-x-[4px]" 
+              className="h-[14px] w-[14px] transform transition-transform duration-300 group-hover:translate-x-[4px]" 
               fill="none" 
               viewBox="0 0 24 24" 
               stroke="currentColor"
@@ -70,13 +66,11 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
             </svg>
           </div>
         </div>
-
-        {/* Animated border gradient */}
-        <div className="absolute inset-[1px] border-[1px] border-transparent bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-blue-500/0 group-hover:from-blue-500/20 group-hover:via-purple-500/20 group-hover:to-blue-500/20 transition-all duration-[500ms] rounded-lg -z-[10]"></div>
       </div>
     </Link>
   );
 };
+
 
 
 
