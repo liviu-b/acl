@@ -30,7 +30,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           {/* Title */}
           <h3 
             id={`service-title-${index}`}
-            className="font-tech text-lg font-bold text-white mb-2"
+            className="font-tech text-lg font-bold text-white mb-1"
           >
             {title}
           </h3>
