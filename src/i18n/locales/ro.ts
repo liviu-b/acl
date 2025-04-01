@@ -24,15 +24,15 @@ export default {
   
   // Software Development Service
   "services.software.title": "Dezvoltare Software Personalizat",
-  "services.software.description": "Creăm aplicații personalizate adaptate cerințelor dumneavoastră specifice. Echipa noastră de dezvoltare excelează în construirea de soluții software scalabile și robuste folosind tehnologii și metodologii moderne.",
+  "services.software.description": "Dezvoltare software personalizată care vă transformă afacerea. Construim soluții scalabile și sigure pentru a eficientiza operațiunile.",
 
   // Consulting Service
   "services.consulting.title": "Consultanță și Arhitectură",
-  "services.consulting.description": "Consultanții noștri experți oferă îndrumare strategică privind arhitectura software și deciziile tehnologice. Analizăm nevoile afacerii dumneavoastră și proiectăm structuri de sistem optime.",
+  "services.consulting.description": "Consultanță tehnică expertă pentru a vă ridica strategia. Ghidăm proiectarea și implementarea sistemelor pentru soluții robuste.",
 
   // Web Solutions Service
   "services.web.title": "Soluții Web",
-  "services.web.description": "Dezvoltăm aplicații și platforme web responsive, ușor de utilizat, care îmbunătățesc prezența dumneavoastră online. Soluțiile noastre web se integrează perfect cu sistemele existente.",
+  "services.web.description": "Construiți o prezență online puternică cu soluțiile noastre web. Creăm site-uri web uimitoare și responsive care vă implică audiența.",
 
   // Footer
   "footer.company": "ACL-Smart Software",

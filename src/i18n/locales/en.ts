@@ -24,15 +24,15 @@ export default {
   
   // Software Development Service
   "services.software.title": "Custom Software Development",
-  "services.software.description": "We create custom applications tailored to your specific requirements. Our development team excels in building scalable, robust software solutions using modern technologies and methodologies.",
+  "services.software.description": "Custom software development that transforms your business. We build scalable, secure solutions to streamline operations and drive growth.",
 
   // Consulting Service
   "services.consulting.title": "Consulting & Architecture",
-  "services.consulting.description": "Our expert consultants provide strategic guidance on software architecture and technology decisions. We analyze your business needs and design optimal system structures that align with your goals.",
+  "services.consulting.description": "Expert tech consulting to elevate your strategy. We guide system design and implementation for robust, future-proof solutions.",
 
   // Web Solutions Service
   "services.web.title": "Web Solutions",
-  "services.web.description": "We develop responsive, user-friendly web applications and platforms that enhance your online presence. Our web solutions integrate seamlessly with existing systems and APIs.",
+  "services.web.description": "Build a powerful online presence with our web solutions. We create stunning, responsive websites that engage your audience.",
 
   // Footer
   "footer.company": "ACL-Smart Software",
