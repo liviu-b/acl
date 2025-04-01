@@ -7,12 +7,13 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
   return (
     <Link 
       to={`/services/${slug}`} 
-      className="group relative focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-lg overflow-hidden h-[400px] w-[300px] mx-auto"
+      className="group relative focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-lg overflow-hidden mx-auto 
+                 h-[400px] w-[300px] sm:h-[350px] sm:w-[260px] md:h-[380px] md:w-[280px] lg:h-[400px] lg:w-[300px]"
       aria-labelledby={`service-title-${index}`}
     >
       <div className="relative bg-white/10 backdrop-blur-md rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
         {/* Image Container */}
-        <div className="relative h-48 overflow-hidden rounded-t-lg">
+        <div className="relative h-48 sm:h-40 md:h-44 lg:h-48 overflow-hidden rounded-t-lg">
           <img 
             src={imageUrl} 
             alt={title} 
@@ -30,13 +31,13 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           {/* Title */}
           <h2 
             id={`service-title-${index}`}
-            className="font-tech text-lg font-bold text-white mb-2"
+            className="font-tech text-lg sm:text-base md:text-lg lg:text-xl font-bold text-white mb-2"
           >
             {title}
           </h2>
 
           {/* Description */}
-          <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
+          <p className="text-gray-300 text-sm sm:text-xs md:text-sm leading-relaxed mb-4 line-clamp-3">
             {description}
           </p>
 
@@ -70,6 +71,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
     </Link>
   );
 };
+
 
 
 
