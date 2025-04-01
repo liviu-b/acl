@@ -7,13 +7,13 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
   return (
     <Link 
       to={`/services/${slug}`} 
-      className="group relative focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-lg overflow-hidden mx-auto 
-                 h-[550px] w-[400px] box-border border-2 border-gray-300 shadow-lg m-4"
+      className="group relative focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-xl overflow-hidden mx-auto 
+                 h-[450px] w-[350px] bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300"
       aria-labelledby={`service-title-${index}`}
     >
-      <div className="relative bg-white/10 backdrop-blur-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <div className="flex flex-col h-full">
         {/* Image Container */}
-        <div className="relative h-64 overflow-hidden rounded-t-lg">
+        <div className="relative h-[200px] overflow-hidden rounded-t-xl">
           <img 
             src={imageUrl} 
             alt={title} 
@@ -22,28 +22,28 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
         </div>
 
         {/* Content Container */}
-        <div className="p-6 flex flex-col items-center text-center">
+        <div className="p-6 flex flex-col justify-between flex-grow">
           {/* Icon */}
-          <div className="p-3 rounded-full bg-white/20 shadow-inner mb-4">
+          <div className="p-4 rounded-full bg-blue-500/20 shadow-inner mx-auto mb-4">
             {icon}
           </div>
 
           {/* Title */}
           <h2 
             id={`service-title-${index}`}
-            className="font-tech text-xl font-bold text-white mb-2"
+            className="font-bold text-lg text-white text-center mb-4"
           >
             {title}
           </h2>
 
           {/* Description */}
-          <p className="text-gray-300 text-base leading-relaxed mb-4">
+          <p className="text-gray-300 text-sm leading-relaxed text-center mb-4">
             {description}
           </p>
 
           {/* Features */}
           {features && (
-            <ul className="text-gray-400 text-sm space-y-2 mb-4">
+            <ul className="text-gray-400 text-xs space-y-2 mb-4">
               {features.map((feature, idx) => (
                 <li key={idx} className="flex items-center justify-center space-x-2">
                   <span className="w-[6px] h-[6px] bg-blue-400 rounded-full"></span>
@@ -54,7 +54,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           )}
 
           {/* Learn More Link */}
-          <div className="text-blue-400 font-tech text-sm font-medium flex items-center space-x-2 group-hover:text-blue-300 transition-colors duration-300">
+          <div className="text-blue-400 font-medium text-sm flex items-center justify-center space-x-2 group-hover:text-blue-300 transition-colors duration-300">
             <span>Explore Service</span>
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -71,8 +71,6 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
     </Link>
   );
 };
-
-
 
 const Services = () => {
   const { t } = useTranslation();
@@ -109,7 +107,7 @@ const Services = () => {
       icon: <Smartphone className="h-5 w-5 text-purple-400" />,
       title: t('services.mobile.title'),
       description: t('services.mobile.description'),
-      imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      imageUrl: "https://www.istockphoto.com/photo/designers-drawing-website-ux-app-development-gm1202449143-348272264", // Updated image URL
       slug: "mobile-app-development",
       features: [
         "Native iOS/Android Apps",
@@ -118,6 +116,7 @@ const Services = () => {
         "App Maintenance"
       ]
     },
+  
 
     {
       icon: <Globe className="h-5 w-5 text-amber-400" />,
