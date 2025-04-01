@@ -21,7 +21,11 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
         </div>
 
         {/* Content Container */}
-       
+        <div className="p-6 flex flex-col items-center text-center">
+          {/* Icon */}
+          <div className="p-3 rounded-full bg-white/20 shadow-inner mb-4">
+            {icon}
+          </div>
 
           {/* Title */}
           <h3 
