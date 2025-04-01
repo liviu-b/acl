@@ -25,23 +25,19 @@ const About = () => {
       <div className="container mx-auto px-4 relative">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Image Section */}
-<div className="lg:w-1/2">
-  <div className="relative group">
-    {/* Glowing effect */}
-    <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-    
-    {/* Image Container */}
-    <div className="relative rounded-2xl overflow-hidden backdrop-blur-sm border border-white/20">
-      <img 
-        src="https://www.vecteezy.com/system/resources/previews/002/219/251/original/business-team-meeting-stock-photo.jpg" 
-        alt="Business Team" 
-        className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent"></div>
-    </div>
-  </div>
-</div>
-
+          <div className="lg:w-1/2">
+            <div className="relative group">
+              {/* Glowing effect */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              
+              {/* Image Container */}
+              <div className="relative rounded-2xl overflow-hidden backdrop-blur-sm border border-white/20">
+                <img 
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                  alt="Our Team" 
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent"></div>
                 
                 {/* Floating Icon */}
                 <div className="absolute bottom-6 right-6 p-4 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 transform group-hover:translate-y-[-8px] transition-all duration-500">
