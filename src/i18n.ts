@@ -16,7 +16,7 @@ const enTranslations = {
 
   // About
   "about.title": "About ACL-Smart Software",
- "about.paragraph1": "ACL-Smart Software operates within the IT sector, focusing on the development of innovative software solutions and comprehensive IT services. The company integrates technical expertise with business insight to provide solutions that enhance growth and efficiency.",
+ "about.paragraph1": "ACL-Smart Software company operates in Romania within the IT sector, focusing on the development of innovative software solutions and comprehensive IT services. The company integrates technical expertise with business insight to provide solutions that enhance growth and efficiency.",
   "about.paragraph2": "Offering a range of services, ACL-Smart Software addresses complex challenges through tailored software that meets and often exceeds client expectations. The company emphasizes an agile methodology, meticulous attention to detail, and a steadfast commitment to quality in all its offerings.",
   "about.mission.title": "Our Mission",
   "about.mission.text": "To empower businesses through innovative technology solutions that drive growth and efficiency.",
@@ -195,7 +195,7 @@ const roTranslations = {
 
   // About
   "about.title": "Despre ACL-Smart Software",
-  "about.paragraph1": "Software-ul ACL-Smart operează în sectorul IT, concentrându-se pe dezvoltarea de soluții software inovatoare și servicii IT cuprinzătoare. Compania integrează expertiza tehnică cu perspectivele de afaceri pentru a oferi soluții care îmbunătățesc creșterea și eficiența.",
+  "about.paragraph1": "Compania ACL-Smart Software operează în sectorul IT din România, concentrându-se pe dezvoltarea de soluții software inovatoare și servicii IT cuprinzătoare. Compania integrează expertiza tehnică cu perspectivele de afaceri pentru a oferi soluții care îmbunătățesc creșterea și eficiența.",
 "about.paragraph2": "Oferind o gamă variată de servicii, ACL-Smart Software abordează provocările complexe prin software personalizat care răspunde și deseori depășește așteptările clienților. Compania pune accent pe o metodologie agilă, atenție meticuloasă la detalii și un angajament ferm față de calitate în toate ofertele sale.",
   "about.mission.title": "Misiunea Noastră",
   "about.mission.text": "Să capacităm afacerile prin soluții tehnologice inovatoare care stimulează creșterea și eficiența.",

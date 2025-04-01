@@ -11,7 +11,7 @@ export default {
 
   // About
   "about.title": "About ACL-Smart Software",
-  "about.paragraph1": "ACL-Smart Software operates within the IT sector, focusing on the development of innovative software solutions and comprehensive IT services. The company integrates technical expertise with business insight to provide solutions that enhance growth and efficiency.",
+  "about.paragraph1": "ACL-Smart Software company operates in Romania within the IT sector, focusing on the development of innovative software solutions and comprehensive IT services. The company integrates technical expertise with business insight to provide solutions that enhance growth and efficiency.",
   "about.paragraph2": "Offering a range of services, ACL-Smart Software addresses complex challenges through tailored software that meets and often exceeds client expectations. The company emphasizes an agile methodology, meticulous attention to detail, and a steadfast commitment to quality in all its offerings.",
   "about.mission.title": "Our Mission",
   "about.mission.text": "To empower businesses through innovative technology solutions that drive growth and efficiency.",
