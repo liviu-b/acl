@@ -159,20 +159,20 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto overflow-x-auto">
-          {services.map((service, index) => (
-           <ServiceCard 
-            key={index}
-            icon={service.icon}
-            title={service.title}
-            description={service.description}
-          imageUrl={service.imageUrl}
-          index={index}
-          slug={service.slug}
-          features={service.features}
-        />
-    ))}
-  </div>
+        <div className="grid gap-8 max-w-7xl mx-auto" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
+  {services.map((service, index) => (
+    <ServiceCard 
+      key={index}
+      icon={service.icon}
+      title={service.title}
+      description={service.description}
+      imageUrl={service.imageUrl}
+      index={index}
+      slug={service.slug}
+      features={service.features}
+    />
+  ))}
+</div>
       </div>
     </section>
   );
