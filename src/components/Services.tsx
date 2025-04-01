@@ -12,19 +12,10 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
                 transition-all duration-300 hover:shadow-xl"
       aria-labelledby={`service-title-${index}`}
     >
-      {/* Corner ribbon */}
-      <div className="absolute top-0 right-0 -mt-1 -mr-1 w-24 h-24 overflow-hidden z-20">
-        <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold 
-                       py-1 px-8 transform rotate-45 translate-y-10 origin-bottom-left shadow-sm">
-          Service
-        </div>
-      </div>
-      
-      {/* Card header with image and overlapping icon */}
+      {/* Card header with image */}
       <div className="relative">
-        {/* Background image with overlay gradient */}
+        {/* Background image */}
         <div className="relative h-48 overflow-hidden rounded-t-2xl">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/10 z-10"></div>
           <img 
             src={imageUrl} 
             alt={title} 
@@ -41,8 +32,8 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           </h2>
         </div>
         
-        {/* Overlapping icon */}
-        <div className="absolute -bottom-8 right-8 w-16 h-16 rounded-full bg-blue-500 
+        {/* Overlapping icon (smaller size) */}
+        <div className="absolute -bottom-6 right-8 w-12 h-12 rounded-full bg-blue-500 
                      flex items-center justify-center shadow-lg border-4 border-gray-800 z-20">
           <div className="text-white">
             {icon}
@@ -51,7 +42,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
       </div>
       
       {/* Card body shifted down to accommodate overlapping icon */}
-      <div className="pt-12 px-6 pb-6">
+      <div className="pt-10 px-6 pb-6">
         {/* Description */}
         <p className="text-gray-300 text-sm leading-relaxed mb-6">
           {description}
@@ -75,12 +66,9 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
         )}
         
         {/* Explore button with animation */}
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-400">
-            Service #{index + 1}
-          </span>
+        <div className="flex items-center justify-end">
           <span className="inline-flex items-center text-blue-400 font-medium text-sm
-                         group-hover:text-blue-300 transition-colors duration-300">
+                         group-hover:text-blue-300 transition-colors duration-[300ms]">
             Explore Service
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -97,8 +85,6 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
     </Link>
   );
 };
-
-
 
 const Services = () => {
   const { t } = useTranslation();
