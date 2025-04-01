@@ -15,22 +15,21 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
       {/* Card header with image */}
       <div className="relative">
         {/* Background image */}
-        <div className="relative h-48 overflow-hidden rounded-t-2xl">
-          <img 
-            src={imageUrl} 
-            alt={title} 
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-          />
-          
-          {/* Title overlaid on image */}
-          <h2 
-            id={`service-title-${index}`}
-            className="absolute bottom-4 left-4 right-4 font-bold text-xl text-white z-20
-                     transition-transform duration-300 group-hover:translate-y-[-4px]"
-          >
-            {title}
-          </h2>
-        </div>
+        <div className="relative h-48 overflow-hidden rounded-t-2xl"
+     style={{
+       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${imageUrl})`,
+     }}
+>
+  {/* Title overlaid on image */}
+  <h2 
+    id={`service-title-${index}`}
+    className="absolute bottom-4 left-4 right-4 font-bold text-xl text-white z-20
+             transition-transform duration-300 group-hover:translate-y-[-4px]"
+  >
+    {title}
+  </h2>
+</div>
+
         
         {/* Overlapping icon (smaller size) */}
         <div className="absolute -bottom-6 right-8 w-12 h-12 rounded-full bg-blue-500 
