@@ -41,17 +41,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
             {description}
           </p>
 
-          {/* Features */}
-          {features && (
-            <ul className="text-gray-400 text-xs space-y-2 mb-4">
-              {features.map((feature, idx) => (
-                <li key={idx} className="flex items-center justify-center space-x-2">
-                  <span className="w-[6px] h-[6px] bg-blue-400 rounded-full"></span>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-          )}
+  
 
           {/* Learn More Link */}
           <div className="text-blue-400 font-tech text-sm font-medium flex items-center space-x-2 group-hover:text-blue-300 transition-colors duration-300">
