@@ -13,7 +13,6 @@ export default {
   "about.title": "Despre ACL-Smart Software",
   "about.paragraph1": "Software-ul ACL-Smart operează în sectorul IT, concentrându-se pe dezvoltarea de soluții software inovatoare și servicii IT cuprinzătoare. Compania integrează expertiza tehnică cu perspectivele de afaceri pentru a oferi soluții care îmbunătățesc creșterea și eficiența.",
 "about.paragraph2": "Oferind o gamă variată de servicii, ACL-Smart Software abordează provocările complexe prin software personalizat care răspunde și deseori depășește așteptările clienților. Compania pune accent pe o metodologie agilă, atenție meticuloasă la detalii și un angajament ferm față de calitate în toate ofertele sale.",
-"about.paragraph3": "Clienții se pot aștepta la o abordare colaborativă care asigură livrarea unor soluții eficiente, concepute pentru a stimula succesul operațional și adaptabilitatea într-un peisaj digital în continuă schimbare.",
   "about.mission.title": "Misiunea Noastră",
   "about.mission.text": "Să capacităm afacerile prin soluții tehnologice inovatoare care stimulează creșterea și eficiența.",
   "about.vision.title": "Viziunea Noastră",
