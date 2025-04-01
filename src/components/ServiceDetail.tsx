@@ -77,6 +77,39 @@ const ServiceDetail = () => {
         "Transfer de cunoștințe și împuternicirea echipei"
       ]
     },
+
+    'mobile-app-development': {
+  icon: <Smartphone className="h-12 w-12 text-purple-400" />,
+  title: t('services.mobile.title'),
+  description: currentLanguage === 'en'
+    ? "Build innovative mobile apps tailored to your business needs. We deliver user-friendly and scalable solutions for iOS and Android platforms."
+    : "Dezvoltăm aplicații mobile inovatoare adaptate nevoilor afacerii dumneavoastră. Livrăm soluții prietenoase și scalabile pentru platformele iOS și Android.",
+  imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+  process: [
+    { step: currentLanguage === 'en' ? "Requirements Gathering" : "Colectarea Cerințelor", description: currentLanguage === 'en' ? "We collaborate with you to define app requirements and objectives." : "Colaborăm cu dumneavoastră pentru a defini cerințele și obiectivele aplicației." },
+    { step: currentLanguage === 'en' ? "Design & Prototyping" : "Design și Prototipare", description: currentLanguage === 'en' ? "Our team creates wireframes and prototypes for your app." : "Echipa noastră creează wireframe-uri și prototipuri pentru aplicația dumneavoastră." },
+    { step: currentLanguage === 'en' ? "Development" : "Dezvoltare", description: currentLanguage === 'en' ? "We build your app using modern technologies and frameworks." : "Construim aplicația dumneavoastră folosind tehnologii și framework-uri moderne." },
+    { step: currentLanguage === 'en' ? "Testing & QA" : "Testare și QA", description: currentLanguage === 'en' ? "We rigorously test your app for functionality and performance." : "Testăm riguros aplicația dumneavoastră pentru funcționalitate și performanță." },
+    { step: currentLanguage === 'en' ? "Deployment" : "Implementare", description: currentLanguage === 'en' ? "We deploy your app to app stores or enterprise environments." : "Implementăm aplicația dumneavoastră în magazinele de aplicații sau mediile enterprise." },
+    { step: currentLanguage === 'en' ? "Support & Updates" : "Suport și Actualizări", description: currentLanguage === 'en' ? "We provide ongoing support and updates for your app." : "Oferim suport continuu și actualizări pentru aplicația dumneavoastră." }
+  ],
+  benefits: currentLanguage === 'en' ? [
+    "Custom mobile apps tailored to your business needs",
+    "Seamless user experience with intuitive UI/UX design",
+    "Cross-platform compatibility for broader reach",
+    "Robust security features to protect user data",
+    "Scalable architecture for future growth",
+    "Ongoing maintenance and support"
+  ] : [
+    "Aplicații mobile personalizate adaptate nevoilor afacerii dumneavoastră",
+    "Experiență de utilizator fără probleme cu design UI/UX intuitiv",
+    "Compatibilitate cross-platform pentru o acoperire mai largă",
+    "Caracteristici robuste de securitate pentru protejarea datelor utilizatorilor",
+    "Arhitectură scalabilă pentru creștere viitoare",
+    "Mentenanță și suport continuu"
+  ]
+},
+
     'web-solutions': {
       icon: <Globe className="h-12 w-12 text-amber-400" />,
       title: t('services.web.title'),
