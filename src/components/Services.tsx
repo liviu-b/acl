@@ -12,30 +12,34 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
                 transition-all duration-300 hover:shadow-xl"
       aria-labelledby={`service-title-${index}`}
     >
-      {/* Card header with dark gradient overlay */}
-      <div className="relative h-48 overflow-hidden rounded-t-2xl">
-        <img 
-          src={imageUrl} 
-          alt={title} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-70"></div>
-        
-        {/* Title overlaid on image */}
-        <h2 
-          id={`service-title-${index}`}
-          className="absolute bottom-4 left-4 right-4 font-bold text-xl text-white z-20
-                   transition-transform duration-300 group-hover:translate-y-[-4px]"
-        >
-          {title}
-        </h2>
-      </div>
-      
-      {/* Overlapping icon (smaller size) */}
-      <div className="absolute -bottom-6 right-8 w-12 h-12 rounded-full bg-blue-500 
-                   flex items-center justify-center shadow-lg border-4 border-gray-800 z-20">
-        <div className="text-white">
-          {icon}
+      {/* Card header with image */}
+      <div className="relative">
+        {/* Background image */}
+        <div className="relative h-48 overflow-hidden rounded-t-2xl">
+  <img 
+    src={imageUrl} 
+    alt={title} 
+    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+  />
+  <div className="absolute inset-0 bg-black opacity-30"></div>
+  
+  {/* Title overlaid on image */}
+  <h2 
+    id={`service-title-${index}`}
+    className="absolute bottom-4 left-4 right-4 font-bold text-xl text-white z-20
+             transition-transform duration-300 group-hover:translate-y-[-4px]"
+  >
+    {title}
+  </h2>
+</div>
+
+
+        {/* Overlapping icon (smaller size) */}
+        <div className="absolute -bottom-6 right-8 w-12 h-12 rounded-full bg-blue-500 
+                     flex items-center justify-center shadow-lg border-4 border-gray-800 z-20">
+          <div className="text-white">
+            {icon}
+          </div>
         </div>
       </div>
       
@@ -66,7 +70,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
         {/* Explore button with animation */}
         <div className="flex items-center justify-end">
           <span className="inline-flex items-center text-blue-400 font-medium text-sm
-                           group-hover:text-blue-300 transition-colors duration-[300ms]">
+                         group-hover:text-blue-300 transition-colors duration-[300ms]">
             Explore Service
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -83,7 +87,6 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
     </Link>
   );
 };
-
 
 const Services = () => {
   const { t } = useTranslation();
