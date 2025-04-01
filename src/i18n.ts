@@ -30,6 +30,8 @@ const enTranslations = {
   "services.software.description": "Custom software development that transforms your business. We build scalable, secure solutions to streamline operations and drive growth.",
   "services.consulting.title": "Consulting and Architecture",
   "services.consulting.description": "Expert tech consulting to elevate your strategy. We guide system design and implementation for robust, future-proof solutions.",
+  "services.mobile.title": "Mobile App Development",
+  "services.mobile.description": "Innovative mobile app solutions tailored to your business needs. We deliver user-friendly and scalable apps for iOS and Android platforms.",
   "services.web.title": "Web Solutions",
   "services.web.description": "Build a powerful online presence with our web solutions. We create stunning, responsive websites that engage your audience.",
 
@@ -207,6 +209,8 @@ const roTranslations = {
   "services.software.description": "Dezvoltare software personalizată care vă transformă afacerea. Construim soluții scalabile și sigure pentru a eficientiza operațiunile.",
   "services.consulting.title": "Consultanță și Arhitectură",
   "services.consulting.description": "Consultanță tehnică expertă pentru a vă ridica strategia. Ghidăm proiectarea și implementarea sistemelor pentru soluții robuste.",
+  "services.mobile.title": "Dezvoltare Aplicații Mobile",
+  "services.mobile.description": "Soluții inovatoare pentru aplicații mobile adaptate nevoilor afacerii dumneavoastră. Livrăm aplicații prietenoase și scalabile pentru platformele iOS și Android.",
   "services.web.title": "Soluții Web",
   "services.web.description": "Construiți o prezență online puternică cu soluțiile noastre web. Creăm site-uri web uimitoare și responsive care vă implică audiența.",
 

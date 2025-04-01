@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Wrench, Globe } from 'lucide-react';
+import { Code, Wrench, Smartphone, Globe } from 'lucide-react'; // Added Smartphone icon
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -111,6 +111,21 @@ const Services = () => {
         "Performance Tuning"
       ]
     },
+
+    {
+      icon: <Smartphone className="h-5 w-5 text-purple-400" />,
+      title: t('services.mobile.title'),
+      description: t('services.mobile.description'),
+      imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      slug: "mobile-app-development",
+      features: [
+        "Native iOS/Android Apps",
+        "Cross-Platform Solutions",
+        "UI/UX Design",
+        "App Maintenance"
+      ]
+    },
+
     {
       icon: <Globe className="h-5 w-5 text-amber-400" />,
       title: t('services.web.title'),

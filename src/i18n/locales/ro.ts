@@ -30,6 +30,10 @@ export default {
   "services.consulting.title": "Consultanță și Arhitectură",
   "services.consulting.description": "Consultanță tehnică expertă pentru a vă ridica strategia. Ghidăm proiectarea și implementarea sistemelor pentru soluții robuste.",
 
+  // Dezvoltare Aplicații Mobile
+  "services.mobile.title": "Dezvoltare Aplicații Mobile",
+  "services.mobile.description": "Soluții inovatoare pentru aplicații mobile adaptate nevoilor afacerii dumneavoastră. Livrăm aplicații prietenoase și scalabile pentru platformele iOS și Android.",
+
   // Web Solutions Service
   "services.web.title": "Soluții Web",
   "services.web.description": "Construiți o prezență online puternică cu soluțiile noastre web. Creăm site-uri web uimitoare și responsive care vă implică audiența.",

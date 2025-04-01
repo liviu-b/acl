@@ -30,6 +30,10 @@ export default {
   "services.consulting.title": "Consulting & Architecture",
   "services.consulting.description": "Expert tech consulting to elevate your strategy. We guide system design and implementation for robust, future-proof solutions.",
 
+  // Mobile Development
+  "services.mobile.title": "Mobile App Development",
+  "services.mobile.description": "Innovative mobile app solutions tailored to your business needs. We deliver user-friendly and scalable apps for iOS and Android platforms.",
+
   // Web Solutions Service
   "services.web.title": "Web Solutions",
   "services.web.description": "Build a powerful online presence with our web solutions. We create stunning, responsive websites that engage your audience.",
