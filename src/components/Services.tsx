@@ -159,8 +159,8 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid gap-8 max-w-7xl mx-auto" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
-  {services.map((service, index) => (
+        <div className="grid gap-8 max-w-7xl mx-auto" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gridAutoRows: '1fr' }}>
+         {services.map((service, index) => (
     <ServiceCard 
       key={index}
       icon={service.icon}
