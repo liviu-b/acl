@@ -8,13 +8,13 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
     <Link 
       to={`/services/${slug}`} 
       className="group block relative focus:outline-none overflow-hidden
-                w-full max-w-md mx-auto bg-white rounded-2xl shadow-md
+                w-full max-w-md mx-auto bg-gray-800 rounded-2xl shadow-md
                 transition-all duration-300 hover:shadow-xl"
       aria-labelledby={`service-title-${index}`}
     >
       {/* Corner ribbon */}
       <div className="absolute top-0 right-0 -mt-1 -mr-1 w-24 h-24 overflow-hidden z-20">
-        <div className="absolute top-0 right-0 bg-amber-500 text-white text-xs font-bold 
+        <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold 
                        py-1 px-8 transform rotate-45 translate-y-10 origin-bottom-left shadow-sm">
           Service
         </div>
@@ -42,8 +42,8 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
         </div>
         
         {/* Overlapping icon */}
-        <div className="absolute -bottom-8 right-8 w-16 h-16 rounded-full bg-amber-500 
-                     flex items-center justify-center shadow-lg border-4 border-white z-20">
+        <div className="absolute -bottom-8 right-8 w-16 h-16 rounded-full bg-blue-500 
+                     flex items-center justify-center shadow-lg border-4 border-gray-800 z-20">
           <div className="text-white">
             {icon}
           </div>
@@ -53,18 +53,18 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
       {/* Card body shifted down to accommodate overlapping icon */}
       <div className="pt-12 px-6 pb-6">
         {/* Description */}
-        <p className="text-gray-600 text-sm leading-relaxed mb-6">
+        <p className="text-gray-300 text-sm leading-relaxed mb-6">
           {description}
         </p>
         
         {/* Features with styled list */}
         {features && (
-          <div className="mb-6 bg-amber-50 rounded-lg p-4 border-l-4 border-amber-500">
-            <h4 className="text-amber-700 font-medium text-sm mb-2">Key Features</h4>
-            <ul className="text-gray-700 text-xs space-y-2">
+          <div className="mb-6 bg-gray-700 rounded-lg p-4 border-l-4 border-blue-500">
+            <h4 className="text-blue-400 font-medium text-sm mb-2">Key Features</h4>
+            <ul className="text-gray-300 text-xs space-y-2">
               {features.map((feature, idx) => (
                 <li key={idx} className="flex items-start">
-                  <svg className="w-4 h-4 text-amber-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-[14px] h-[14px] text-blue-400 mr-[6px] mt-[2px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                   </svg>
                   <span>{feature}</span>
@@ -76,15 +76,15 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
         
         {/* Explore button with animation */}
         <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-500">
+          <span className="text-sm text-gray-400">
             Service #{index + 1}
           </span>
-          <span className="inline-flex items-center text-amber-600 font-medium text-sm
-                         group-hover:text-amber-700 transition-colors duration-300">
+          <span className="inline-flex items-center text-blue-400 font-medium text-sm
+                         group-hover:text-blue-300 transition-colors duration-300">
             Explore Service
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              className="h-5 w-5 ml-1 transform transition-transform duration-300 group-hover:translate-x-1" 
+              className="h-[18px] w-[18px] ml-[6px] transform transition-transform duration-[300ms] group-hover:translate-x-[4px]" 
               fill="none" 
               viewBox="0 0 24 24" 
               stroke="currentColor"
@@ -97,6 +97,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
     </Link>
   );
 };
+
 
 
 const Services = () => {
