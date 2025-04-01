@@ -67,14 +67,12 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           </div>
         )}
         
-        {/* Explore button */}
+        {/* Arrow Button */}
         <div className="flex items-center justify-end">
-          <span className="inline-flex items-center text-blue-400 font-medium text-sm
-                           group-hover:text-blue-300 transition-colors duration-[300ms]">
-            Explore Service
+          <span className="inline-flex items-center text-blue-400 group-hover:text-blue-300 transition-colors duration-[300ms]">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              className="h-[18px] w-[18px] ml-[6px] transform transition-transform duration-[300ms] group-hover:translate-x-[4px]" 
+              className="h-[18px] w-[18px] transform transition-transform duration-[300ms] group-hover:translate-x-[4px]" 
               fill="none" 
               viewBox="0 0 24 24" 
               stroke="currentColor"
