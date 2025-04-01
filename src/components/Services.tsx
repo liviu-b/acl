@@ -50,22 +50,6 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           {description}
         </p>
         
-        {/* Features */}
-        {features && (
-          <div className="mb-6 bg-gray-700 rounded-lg p-4 border-l-4 border-blue-500">
-            <h4 className="text-blue-400 font-medium text-sm mb-2">Key Features</h4>
-            <ul className="text-gray-300 text-xs space-y-2">
-              {features.map((feature, idx) => (
-                <li key={idx} className="flex items-start">
-                  <svg className="w-[14px] h-[14px] text-blue-400 mr-[6px] mt-[2px] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                  </svg>
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
         
         {/* Arrow Button */}
         <div className="flex items-center justify-end">
