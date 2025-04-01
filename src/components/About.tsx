@@ -32,11 +32,12 @@ const About = () => {
               
               {/* Image Container */}
               <div className="relative rounded-2xl overflow-hidden backdrop-blur-sm border border-white/20">
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
-                  alt="Our Team" 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                />
+              <img 
+  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+  alt="Our Team" 
+  className="w-full h-[500px] md:h-[400px] lg:h-[600px] object-cover transform group-hover:scale-105 transition-transform duration-700"
+/>
+
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent"></div>
                 
                 {/* Floating Icon */}
