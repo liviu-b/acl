@@ -7,7 +7,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
   return (
     <Link 
       to={`/services/${slug}`} 
-      className="group relative focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-xl overflow-hidden"
+      className="group relative focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-xl overflow-hidden h-full"
       aria-labelledby={`service-title-${index}`}
     >
       <div className="relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 transition-all duration-500 group-hover:border-white/20 group-hover:transform group-hover:-translate-y-1">
@@ -159,7 +159,8 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid gap-8 max-w-7xl mx-auto" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gridAutoRows: '1fr' }}>
+        <div className="grid gap-8 max-w-7xl mx-auto" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
+
          {services.map((service, index) => (
     <ServiceCard 
       key={index}
