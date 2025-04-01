@@ -8,12 +8,12 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
     <Link 
       to={`/services/${slug}`} 
       className="group relative focus:outline-none focus:ring-2 focus:ring-blue-500/50 rounded-lg overflow-hidden mx-auto 
-                 h-[500px] w-[350px] sm:h-[450px] sm:w-[300px] md:h-[480px] md:w-[320px] lg:h-[500px] lg:w-[350px]"
+                 h-[550px] w-[400px] box-border border-2 border-gray-300 shadow-lg m-4"
       aria-labelledby={`service-title-${index}`}
     >
-      <div className="relative bg-white/10 backdrop-blur-md rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+      <div className="relative bg-white/10 backdrop-blur-md rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
         {/* Image Container */}
-        <div className="relative h-60 sm:h-48 md:h-56 lg:h-60 overflow-hidden rounded-t-lg">
+        <div className="relative h-64 overflow-hidden rounded-t-lg">
           <img 
             src={imageUrl} 
             alt={title} 
@@ -31,17 +31,27 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           {/* Title */}
           <h2 
             id={`service-title-${index}`}
-            className="font-tech text-xl sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2"
+            className="font-tech text-xl font-bold text-white mb-2"
           >
             {title}
           </h2>
 
           {/* Description */}
-          <p className="text-gray-300 text-sm sm:text-xs md:text-sm lg:text-base leading-relaxed mb-4">
+          <p className="text-gray-300 text-base leading-relaxed mb-4">
             {description}
           </p>
 
-  
+          {/* Features */}
+          {features && (
+            <ul className="text-gray-400 text-sm space-y-2 mb-4">
+              {features.map((feature, idx) => (
+                <li key={idx} className="flex items-center justify-center space-x-2">
+                  <span className="w-[6px] h-[6px] bg-blue-400 rounded-full"></span>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          )}
 
           {/* Learn More Link */}
           <div className="text-blue-400 font-tech text-sm font-medium flex items-center space-x-2 group-hover:text-blue-300 transition-colors duration-300">
@@ -61,6 +71,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
     </Link>
   );
 };
+
 
 
 const Services = () => {
