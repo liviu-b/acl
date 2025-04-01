@@ -28,12 +28,12 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           </div>
 
           {/* Title */}
-          <h3 
+          <h2 
             id={`service-title-${index}`}
             className="font-tech text-lg font-bold text-white mb-2"
           >
             {title}
-          </h3>
+          </h2>
 
           {/* Description */}
           <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
