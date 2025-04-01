@@ -8,49 +8,48 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
     <Link 
       to={`/services/${slug}`} 
       className="group block relative focus:outline-none overflow-hidden
-                w-full max-w-md mx-auto bg-gray-800 rounded-2xl shadow-md
-                transition-all duration-300 hover:shadow-xl"
+                w-full max-w-md mx-auto bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10
+                transition-all duration-300 hover:bg-white/10 shadow-md hover:shadow-xl"
       aria-labelledby={`service-title-${index}`}
     >
       {/* Card header with image */}
       <div className="relative">
         {/* Background image */}
         <div className="relative h-48 overflow-hidden rounded-t-2xl">
-  <img 
-    src={imageUrl} 
-    alt={title} 
-    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-  />
-  <div className="absolute inset-0 bg-black opacity-30"></div>
-  
-  {/* Title overlaid on image */}
-  <h2 
-    id={`service-title-${index}`}
-    className="absolute bottom-4 left-4 right-4 font-bold text-xl text-white z-20
-             transition-transform duration-300 group-hover:translate-y-[-4px]"
-  >
-    {title}
-  </h2>
-</div>
+          <img 
+            src={imageUrl} 
+            alt={title} 
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+          />
+          <div className="absolute inset-0 bg-black opacity-30"></div>
+          
+          {/* Title overlaid on image */}
+          <h2 
+            id={`service-title-${index}`}
+            className="absolute bottom-4 left-4 right-4 font-bold text-xl text-white z-20
+                       transition-transform duration-300 group-hover:translate-y-[-4px]"
+          >
+            {title}
+          </h2>
+        </div>
 
-
-        {/* Overlapping icon (smaller size) */}
-        <div className="absolute -bottom-6 right-8 w-12 h-12 rounded-full bg-blue-500 
-                     flex items-center justify-center shadow-lg border-4 border-gray-800 z-20">
-          <div className="text-white">
+        {/* Overlapping icon */}
+        <div className="absolute -bottom-6 right-8 w-12 h-12 rounded-full bg-blue-500/20 border border-blue-400/30
+                       flex items-center justify-center shadow-lg group-hover:bg-blue-500/30 transition-colors duration-300">
+          <div className="text-blue-400">
             {icon}
           </div>
         </div>
       </div>
       
-      {/* Card body shifted down to accommodate overlapping icon */}
+      {/* Card body */}
       <div className="pt-10 px-6 pb-6">
         {/* Description */}
-        <p className="text-gray-300 text-sm leading-relaxed mb-6">
+        <p className="text-gray-300 text-sm leading-relaxed mb-6 group-hover:text-gray-200 transition-colors duration-300">
           {description}
         </p>
         
-        {/* Features with styled list */}
+        {/* Features */}
         {features && (
           <div className="mb-6 bg-gray-700 rounded-lg p-4 border-l-4 border-blue-500">
             <h4 className="text-blue-400 font-medium text-sm mb-2">Key Features</h4>
@@ -67,10 +66,10 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           </div>
         )}
         
-        {/* Explore button with animation */}
+        {/* Explore button */}
         <div className="flex items-center justify-end">
           <span className="inline-flex items-center text-blue-400 font-medium text-sm
-                         group-hover:text-blue-300 transition-colors duration-[300ms]">
+                           group-hover:text-blue-300 transition-colors duration-[300ms]">
             Explore Service
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
@@ -87,6 +86,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
     </Link>
   );
 };
+
 
 const Services = () => {
   const { t } = useTranslation();
