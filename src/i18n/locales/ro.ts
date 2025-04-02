@@ -46,7 +46,7 @@ export default {
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Servicii",
   "footer.software": "Dezvoltare Software",
-  "footer.mobile": "Dezvoltare Mobile",
+  "footer.mobile": "Dezvoltare Aplicații Mobile",
   "footer.consulting": "Consultanță și Arhitectură",
   "footer.web": "Soluții Web",
   "footer.legal": "Legal",
