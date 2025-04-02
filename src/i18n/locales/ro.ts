@@ -6,7 +6,7 @@ export default {
 
   // Hero
   "hero.title": "Soluții Software Inovatoare",
-  "hero.subtitle": "ACL-Smart Software oferă soluții tehnologice de ultimă generație adaptate nevoilor afacerii dumneavoastră.",
+  "hero.subtitle": "Transformarea ideilor în soluții software inovatoare.",
   "hero.cta": "Explorează Serviciile Noastre",
 
   // About

@@ -11,7 +11,7 @@ const enTranslations = {
 
   // Hero
   "hero.title": "Innovative Software Solutions",
-  "hero.subtitle": "ACL-Smart Software delivers cutting-edge technology solutions tailored to your business needs.",
+  "hero.subtitle": "Transforming ideas into innovative software solutions.",
   "hero.cta": "Explore Our Services",
 
   // About
@@ -191,7 +191,7 @@ const roTranslations = {
 
   // Hero
   "hero.title": "Soluții Software Inovatoare",
-  "hero.subtitle": "ACL-Smart Software oferă soluții tehnologice de ultimă generație adaptate nevoilor afacerii dumneavoastră.",
+  "hero.subtitle": "Transformarea ideilor în soluții software inovatoare.",
   "hero.cta": "Explorează Serviciile Noastre",
 
   // About
