@@ -20,7 +20,7 @@ export default {
 
   // Services
   "services.title": "Serviciile Noastre",
-  "services.subtitle": "Oferim o gamă completă de servicii IT concepute pentru a ajuta afacerea dumneavoastră să prospere în era digitală.",
+  "services.subtitle": "ACL-Smart Software oferă o gamă completă de servicii IT concepute pentru a permite întreprinderilor să exceleze în era digitală.",
   
   // Software Development Service
   "services.software.title": "Dezvoltare Software Personalizat",

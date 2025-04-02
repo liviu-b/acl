@@ -20,7 +20,7 @@ export default {
 
   // Services
   "services.title": "Our Services",
-  "services.subtitle": "We offer a comprehensive range of IT services designed to help your business thrive in the digital age.",
+  "services.subtitle": "ACL-Smart Software delivers a comprehensive range of IT services designed to empower businesses to excel in the digital age.",
   
   // Software Development Service
   "services.software.title": "Custom Software Development",

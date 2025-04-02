@@ -25,7 +25,7 @@ const enTranslations = {
 
   // Services
   "services.title": "Our Services",
-  "services.subtitle": "We offer a comprehensive range of IT services designed to help your business thrive in the digital age.",
+  "services.subtitle": "ACL-Smart Software delivers a comprehensive range of IT services designed to empower businesses to excel in the digital age.",
   "services.software.title": "Software Development",
   "services.software.description": "Custom software development that transforms your business. We build scalable, secure solutions to streamline operations and drive growth.",
   "services.consulting.title": "Consulting and Architecture",
@@ -205,7 +205,7 @@ const roTranslations = {
 
   // Services
   "services.title": "Serviciile Noastre",
-  "services.subtitle": "Oferim o gamă completă de servicii IT concepute pentru a ajuta afacerea dumneavoastră să prospere în era digitală.",
+  "services.subtitle": "ACL-Smart Software oferă o gamă completă de servicii IT concepute pentru a permite întreprinderilor să exceleze în era digitală.",
   "services.software.title": "Dezvoltare Software",
   "services.software.description": "Dezvoltare software personalizată care vă transformă afacerea. Construim soluții scalabile și sigure pentru a eficientiza operațiunile.",
   "services.consulting.title": "Consultanță și Arhitectură",
