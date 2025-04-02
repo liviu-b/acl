@@ -84,7 +84,7 @@ const ServiceDetail = () => {
   description: currentLanguage === 'en'
     ? "Build innovative mobile apps tailored to your business needs. We deliver user-friendly and scalable solutions for iOS and Android platforms."
     : "Dezvoltăm aplicații mobile inovatoare adaptate nevoilor afacerii dumneavoastră. Livrăm soluții prietenoase și scalabile pentru platformele iOS și Android.",
-  imageUrl: "https://unsplash.com/photos/space-gray-iphone-x-9e9PD9blAto",
+  imageUrl: "https://images.unsplash.com/photo-1485727749690-d091e8284ef5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
   process: [
     { step: currentLanguage === 'en' ? "Requirements Gathering" : "Colectarea Cerințelor", description: currentLanguage === 'en' ? "We collaborate with you to define app requirements and objectives." : "Colaborăm cu dumneavoastră pentru a defini cerințele și obiectivele aplicației." },
     { step: currentLanguage === 'en' ? "Design & Prototyping" : "Design și Prototipare", description: currentLanguage === 'en' ? "Our team creates wireframes and prototypes for your app." : "Echipa noastră creează wireframe-uri și prototipuri pentru aplicația dumneavoastră." },

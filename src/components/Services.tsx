@@ -106,7 +106,7 @@ const Services = () => {
       icon: <Smartphone className="h-5 w-5 text-purple-400" />,
       title: t('services.mobile.title'),
       description: t('services.mobile.description'),
-      imageUrl: "https://unsplash.com/photos/space-gray-iphone-x-9e9PD9blAto",
+      imageUrl: "https://images.unsplash.com/photo-1485727749690-d091e8284ef5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       slug: "mobile-app-development",
       features: [
         "Native iOS/Android Apps",
