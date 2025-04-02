@@ -19,10 +19,10 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           <img 
             src={imageUrl} 
             alt={title} 
-            className="w-full h-full object-cover brightness-30 transition-transform duration-700 group-hover:scale-110" 
+            className="w-full h-full object-cover brightness-50 transition-transform duration-700 group-hover:scale-110" 
           />
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="absolute inset-0 bg-black opacity-60"></div>
           
           {/* Title overlaid on image */}
           <h2 
