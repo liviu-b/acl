@@ -178,7 +178,7 @@ const ServiceDetail = () => {
           <div className="absolute inset-0 flex items-center justify-center p-8">
             <div className="text-center max-w-2xl">
               <div className="flex justify-center mb-6">
-                <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <div className="p-6 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg transform hover:scale-105 transition-transform duration-300">
                   {service.icon}
                 </div>
               </div>
