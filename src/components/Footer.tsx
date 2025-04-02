@@ -57,38 +57,47 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Services */}
-          <div className="flex flex-col items-center">
-            <h3 className="text-lg font-tech font-semibold mb-6 tech-gradient-text">
-              {t('footer.services')}
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <button 
-                  onClick={() => navigateToService('software-development')} 
-                  className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
-                >
-                  {t('footer.software')}
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => navigateToService('consulting-architecture')} 
-                  className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
-                >
-                  {t('footer.consulting')}
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => navigateToService('web-solutions')} 
-                  className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
-                >
-                  {t('footer.web')}
-                </button>
-              </li>
-            </ul>
-          </div>
+         {/* Services */}
+<div className="flex flex-col items-center">
+  <h3 className="text-lg font-tech font-semibold mb-6 tech-gradient-text">
+    {t('footer.services')}
+  </h3>
+  <ul className="space-y-3">
+    <li>
+      <button 
+        onClick={() => navigateToService('software-development')} 
+        className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
+      >
+        {t('footer.software')}
+      </button>
+    </li>
+    <li>
+      <button 
+        onClick={() => navigateToService('consulting-architecture')} 
+        className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
+      >
+        {t('footer.consulting')}
+      </button>
+    </li>
+    <li>
+    <button 
+        onClick={() => navigateToService('mobile-app-development')} 
+        className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
+      >
+        {t('footer.mobile')}
+      </button>
+    </li>
+    <li>
+    <button 
+        onClick={() => navigateToService('web-solutions')} 
+        className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
+      >
+        {t('footer.web')}
+      </button>
+    </li>
+  </ul>
+</div>
+
           
           {/* Legal */}
           <div className="flex flex-col items-center">
