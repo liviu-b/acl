@@ -29,6 +29,9 @@ const ServiceDetail = () => {
         { step: currentLanguage === 'en' ? "Deployment" : "Implementare", description: currentLanguage === 'en' ? "We handle deployment to your preferred environment, ensuring smooth transitions." : "Gestionăm implementarea în mediul preferat, asigurând tranziții line." },
         { step: currentLanguage === 'en' ? "Maintenance & Support" : "Mentenanță și Suport", description: currentLanguage === 'en' ? "Ongoing support and updates keep your software running optimally." : "Suportul și actualizările continue mențin software-ul dumneavoastră funcționând optim." }
       ],
+      priceRange: currentLanguage === 'en' 
+      ? "Price starts from €1000 and goes up to €5000"
+      : "Prețul începe de la 1000 € și ajunge până la 5000 €",
       benefits: currentLanguage === 'en' ? [
         "Custom-tailored solutions that perfectly match your business requirements",
         "Scalable architecture designed for future growth and expansion",
@@ -61,6 +64,9 @@ const ServiceDetail = () => {
         { step: currentLanguage === 'en' ? "Knowledge Transfer" : "Transfer de Cunoștințe", description: currentLanguage === 'en' ? "We ensure your team understands the architecture and can maintain it." : "Ne asigurăm că echipa dumneavoastră înțelege arhitectura și o poate menține." },
         { step: currentLanguage === 'en' ? "Ongoing Support" : "Suport Continuu", description: currentLanguage === 'en' ? "We provide continued guidance as your business evolves." : "Oferim îndrumare continuă pe măsură ce afacerea dumneavoastră evoluează." }
       ],
+      priceRange: currentLanguage === 'en' 
+        ? "Price starts from €700 and goes up to €2000"
+        : "Prețul începe de la 700 € și ajunge până la 2000 €",
       benefits: currentLanguage === 'en' ? [
         "Strategic technology roadmap aligned with business goals",
         "Optimized system architecture for maximum performance",
@@ -93,6 +99,9 @@ const ServiceDetail = () => {
     { step: currentLanguage === 'en' ? "Deployment" : "Implementare", description: currentLanguage === 'en' ? "We deploy your app to app stores or enterprise environments." : "Implementăm aplicația dumneavoastră în magazinele de aplicații sau mediile enterprise." },
     { step: currentLanguage === 'en' ? "Support & Updates" : "Suport și Actualizări", description: currentLanguage === 'en' ? "We provide ongoing support and updates for your app." : "Oferim suport continuu și actualizări pentru aplicația dumneavoastră." }
   ],
+  priceRange: currentLanguage === 'en' 
+        ? "Price starts from €500 and goes up to €3000"
+        : "Prețul începe de la 500 € și ajunge până la 3000 €",
   benefits: currentLanguage === 'en' ? [
     "Custom mobile apps tailored to your business needs",
     "Seamless user experience with intuitive UI/UX design",
@@ -125,6 +134,9 @@ const ServiceDetail = () => {
         { step: currentLanguage === 'en' ? "Testing" : "Testare", description: currentLanguage === 'en' ? "We test across devices and browsers to ensure consistent performance." : "Testăm pe diverse dispozitive și browsere pentru a asigura o performanță consistentă." },
         { step: currentLanguage === 'en' ? "Launch & Optimization" : "Lansare și Optimizare", description: currentLanguage === 'en' ? "We deploy your solution and provide ongoing optimization." : "Implementăm soluția dumneavoastră și oferim optimizare continuă." }
       ],
+      priceRange: currentLanguage === 'en' 
+        ? "Price starts from €500 and goes up to €4000"
+        : "Prețul începe de la 500 € și ajunge până la 4000 €",
       benefits: currentLanguage === 'en' ? [
         "Responsive design that works flawlessly across all devices",
         "Advanced SEO optimization for improved visibility",
@@ -175,6 +187,16 @@ const ServiceDetail = () => {
             alt={service.title} 
             className="w-full h-full object-cover"
           />
+           <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/20 p-6 md:p-8 mb-8 hover:bg-white/10 transition-colors duration-300">
+          <h2 className="font-tech text-xl md:text-2xl font-semibold text-gray-200 mb-4">
+            {currentLanguage === 'en' ? 'Pricing Information' : 'Informații despre prețuri'}
+          </h2>
+          <p className="text-gray-300 leading-relaxed">
+            {service.priceRange}
+          </p>
+        </div>
+
+
           <div className="absolute inset-0 flex items-center justify-center p-8">
             <div className="text-center max-w-2xl">
               <div className="flex justify-center mb-6">
