@@ -59,7 +59,7 @@ const Footer = () => {
           
          {/* Services */}
 <div className="flex flex-col items-center">
-  <h3 className="text-lg font-tech font-semibold mb-6 tech-gradient-text">
+  <h3 className="text-xl font-tech font-semibold mb-6 tech-gradient-text">
     {t('footer.services')}
   </h3>
   <ul className="space-y-3">
@@ -101,7 +101,7 @@ const Footer = () => {
           
           {/* Legal */}
           <div className="flex flex-col items-center">
-            <h3 className="text-lg font-tech font-semibold mb-6 tech-gradient-text">
+            <h3 className="text-xl font-tech font-semibold mb-6 tech-gradient-text">
               {t('footer.legal')}
             </h3>
             <ul className="space-y-3">
