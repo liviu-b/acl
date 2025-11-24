@@ -1,3 +1,4 @@
+// src/i18n/locales/en.ts
 export default {
   // Header
   "nav.home": "Home",
@@ -18,25 +19,33 @@ export default {
   "about.vision.title": "Our Vision",
   "about.vision.text": "To be the leading provider of custom software solutions that transform businesses in the digital age.",
 
-  // Services
-  "services.title": "Our Services",
-  "services.subtitle": "ACL-Smart Software delivers a comprehensive range of IT services designed to empower businesses to excel in the digital age.",
+  // Services Section Title
+  "services.title": "Our Expertise",
+  "services.subtitle": "Comprehensive technology solutions tailored to drive your digital transformation.",
   
-  // Software Development Service
+  // 1. Custom Web & Mobile Apps
+  "services.webmobile.title": "Custom Web & Mobile Apps",
+  "services.webmobile.description": "Unified digital experiences across all devices. We build high-performance web platforms and native mobile applications.",
+
+  // 2. Custom Software Development
   "services.software.title": "Custom Software Development",
-  "services.software.description": "Custom software development that transforms your business. We build scalable, secure solutions to streamline operations and drive growth.",
+  "services.software.description": "Tailored enterprise software designed to solve your specific business challenges with scalability and security at the core.",
 
-  // Consulting Service
-  "services.consulting.title": "Consulting & Architecture",
-  "services.consulting.description": "Expert tech consulting to elevate your strategy. We guide system design and implementation for robust, future-proof solutions.",
+  // 3. SaaS Development
+  "services.saas.title": "SaaS Development",
+  "services.saas.description": "End-to-end product development for startups and enterprises. We build multi-tenant, cloud-ready SaaS architectures.",
 
-  // Mobile Development
-  "services.mobile.title": "Mobile App Development",
-  "services.mobile.description": "Innovative mobile app solutions tailored to your business needs. We deliver user-friendly and scalable apps for iOS and Android platforms.",
+  // 4. AI & Automation
+  "services.ai.title": "AI & Automation",
+  "services.ai.description": "Intelligent solutions that automate workflows and unlock insights. Leverage machine learning to future-proof your operations.",
 
-  // Web Solutions Service
-  "services.web.title": "Web Solutions",
-  "services.web.description": "Build a powerful online presence with our web solutions. We create stunning, responsive websites that engage your audience.",
+  // 5. API Integrations
+  "services.api.title": "API Integrations",
+  "services.api.description": "Seamless connectivity between your systems. We design and implement robust APIs for smooth data synchronization.",
+
+  // 6. Software Consulting & Architecture
+  "services.consulting.title": "Software Consulting & Architecture",
+  "services.consulting.description": "Strategic technical guidance. We design scalable system architectures and provide roadmaps for digital success.",
 
   // Footer
   "footer.company": "ACL-Smart Software",
