@@ -1,245 +1,357 @@
 import React, { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Code, Wrench, Globe, Smartphone } from 'lucide-react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { 
+  ArrowLeft, 
+  CheckCircle2, 
+  Globe, 
+  Code, 
+  Cloud, 
+  Cpu, 
+  Network, 
+  Layers,
+  Zap,
+  Shield,
+  BarChart
+} from 'lucide-react';
 
 const ServiceDetail = () => {
-  const { serviceSlug } = useParams();
-  const navigate = useNavigate();
+  const { slug } = useParams();
   const { t, i18n } = useTranslation();
-  const currentLanguage = i18n.language;
-  
+  const navigate = useNavigate();
+
+  // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [slug]);
 
-  const services = {
-    'software-development': {
-      icon: <Code className="h-12 w-12 text-blue-400" />,
-      title: t('services.software.title'),
-      description: currentLanguage === 'en' 
-        ? "Custom software development that transforms your business. We build scalable, secure solutions to streamline operations and drive growth."
-        : "Dezvoltare software personalizată care vă transformă afacerea. Construim soluții scalabile și sigure pentru a eficientiza operațiunile.",
-      imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      process: [
-        { step: currentLanguage === 'en' ? "Requirements Analysis" : "Analiza Cerințelor", description: currentLanguage === 'en' ? "We work closely with you to understand your business needs and define clear requirements." : "Lucrăm îndeaproape cu dumneavoastră pentru a înțelege nevoile afacerii și a defini cerințe clare." },
-        { step: currentLanguage === 'en' ? "Design & Architecture" : "Design și Arhitectură", description: currentLanguage === 'en' ? "Our architects design scalable, maintainable software solutions tailored to your needs." : "Arhitecții noștri proiectează soluții software scalabile și mentenabile, adaptate nevoilor dumneavoastră." },
-        { step: currentLanguage === 'en' ? "Development" : "Dezvoltare", description: currentLanguage === 'en' ? "Using agile methodologies, we develop your solution with regular feedback cycles." : "Folosind metodologii agile, dezvoltăm soluția dumneavoastră cu cicluri regulate de feedback." },
-        { step: currentLanguage === 'en' ? "Testing & QA" : "Testare și QA", description: currentLanguage === 'en' ? "Rigorous testing ensures your software meets the highest quality standards." : "Testarea riguroasă asigură că software-ul dumneavoastră îndeplinește cele mai înalte standarde de calitate." },
-        { step: currentLanguage === 'en' ? "Deployment" : "Implementare", description: currentLanguage === 'en' ? "We handle deployment to your preferred environment, ensuring smooth transitions." : "Gestionăm implementarea în mediul preferat, asigurând tranziții line." },
-        { step: currentLanguage === 'en' ? "Maintenance & Support" : "Mentenanță și Suport", description: currentLanguage === 'en' ? "Ongoing support and updates keep your software running optimally." : "Suportul și actualizările continue mențin software-ul dumneavoastră funcționând optim." }
-      ],
-      benefits: currentLanguage === 'en' ? [
-        "Custom-tailored solutions that perfectly match your business requirements",
-        "Scalable architecture designed for future growth and expansion",
-        "Enhanced operational efficiency through process automation",
-        "Robust security measures protecting your valuable data",
-        "Seamless integration with existing systems and workflows",
-        "Reduced operational costs through optimized processes"
-      ] : [
-        "Soluții personalizate care se potrivesc perfect cerințelor afacerii dumneavoastră",
-        "Arhitectură scalabilă proiectată pentru creștere și expansiune viitoare",
-        "Eficiență operațională îmbunătățită prin automatizarea proceselor",
-        "Măsuri robuste de securitate care vă protejează datele valoroase",
-        "Integrare perfectă cu sistemele și fluxurile de lucru existente",
-        "Costuri operaționale reduse prin procese optimizate"
-      ]
-    },
-    
-    'consulting-architecture': {
-      icon: <Wrench className="h-12 w-12 text-emerald-400" />,
-      title: t('services.consulting.title'),
-      description: currentLanguage === 'en'
-        ? "Expert tech consulting to elevate your strategy. We guide system design and implementation for robust, future-proof solutions."
-        : "Consultanță tehnică expertă pentru a vă ridica strategia. Ghidăm proiectarea și implementarea sistemelor pentru soluții robuste.",
-      imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      process: [
-        { step: currentLanguage === 'en' ? "Assessment" : "Evaluare", description: currentLanguage === 'en' ? "We evaluate your current systems, processes, and challenges." : "Evaluăm sistemele, procesele și provocările dumneavoastră actuale." },
-        { step: currentLanguage === 'en' ? "Strategy Development" : "Dezvoltarea Strategiei", description: currentLanguage === 'en' ? "We create a tailored technology strategy aligned with your business goals." : "Creăm o strategie tehnologică personalizată, aliniată cu obiectivele dumneavoastră de afaceri." },
-        { step: currentLanguage === 'en' ? "Architecture Design" : "Design Arhitectural", description: currentLanguage === 'en' ? "Our experts design optimal system architectures for your needs." : "Experții noștri proiectează arhitecturi de sistem optime pentru nevoile dumneavoastră." },
-        { step: currentLanguage === 'en' ? "Implementation Planning" : "Planificarea Implementării", description: currentLanguage === 'en' ? "We develop detailed roadmaps for implementing recommended solutions." : "Dezvoltăm foi de parcurs detaliate pentru implementarea soluțiilor recomandate." },
-        { step: currentLanguage === 'en' ? "Knowledge Transfer" : "Transfer de Cunoștințe", description: currentLanguage === 'en' ? "We ensure your team understands the architecture and can maintain it." : "Ne asigurăm că echipa dumneavoastră înțelege arhitectura și o poate menține." },
-        { step: currentLanguage === 'en' ? "Ongoing Support" : "Suport Continuu", description: currentLanguage === 'en' ? "We provide continued guidance as your business evolves." : "Oferim îndrumare continuă pe măsură ce afacerea dumneavoastră evoluează." }
-      ],
-      benefits: currentLanguage === 'en' ? [
-        "Strategic technology roadmap aligned with business goals",
-        "Optimized system architecture for maximum performance",
-        "Reduced technical debt and maintenance costs",
-        "Enhanced security and risk management",
-        "Improved scalability and system reliability",
-        "Knowledge transfer and team empowerment"
-      ] : [
-        "Plan tehnologic strategic aliniat cu obiectivele de afaceri",
-        "Arhitectură de sistem optimizată pentru performanță maximă",
-        "Reducerea datoriei tehnice și a costurilor de întreținere",
-        "Securitate și management al riscurilor îmbunătățite",
-        "Scalabilitate și fiabilitate îmbunătățite ale sistemului",
-        "Transfer de cunoștințe și împuternicirea echipei"
-      ]
-    },
+  // Definim datele detaliate pentru fiecare serviciu.
+  // Folosim cheile de traducere existente pentru titlu/descriere,
+  // iar pentru liste (features/benefits) definim conținutul aici pentru a evita modificări masive în fișierele locale.
+  const getServiceData = (slug: string) => {
+    const isRo = i18n.language === 'ro';
 
-    'mobile-app-development': {
-  icon: <Smartphone className="h-12 w-12 text-purple-400" />,
-  title: t('services.mobile.title'),
-  description: currentLanguage === 'en'
-    ? "Build innovative mobile apps tailored to your business needs. We deliver user-friendly and scalable solutions for iOS and Android platforms."
-    : "Dezvoltăm aplicații mobile inovatoare adaptate nevoilor afacerii dumneavoastră. Livrăm soluții prietenoase și scalabile pentru platformele iOS și Android.",
-  imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-  process: [
-    { step: currentLanguage === 'en' ? "Requirements Gathering" : "Colectarea Cerințelor", description: currentLanguage === 'en' ? "We collaborate with you to define app requirements and objectives." : "Colaborăm cu dumneavoastră pentru a defini cerințele și obiectivele aplicației." },
-    { step: currentLanguage === 'en' ? "Design & Prototyping" : "Design și Prototipare", description: currentLanguage === 'en' ? "Our team creates wireframes and prototypes for your app." : "Echipa noastră creează wireframe-uri și prototipuri pentru aplicația dumneavoastră." },
-    { step: currentLanguage === 'en' ? "Development" : "Dezvoltare", description: currentLanguage === 'en' ? "We build your app using modern technologies and frameworks." : "Construim aplicația dumneavoastră folosind tehnologii și framework-uri moderne." },
-    { step: currentLanguage === 'en' ? "Testing & QA" : "Testare și QA", description: currentLanguage === 'en' ? "We rigorously test your app for functionality and performance." : "Testăm riguros aplicația dumneavoastră pentru funcționalitate și performanță." },
-    { step: currentLanguage === 'en' ? "Deployment" : "Implementare", description: currentLanguage === 'en' ? "We deploy your app to app stores or enterprise environments." : "Implementăm aplicația dumneavoastră în magazinele de aplicații sau mediile enterprise." },
-    { step: currentLanguage === 'en' ? "Support & Updates" : "Suport și Actualizări", description: currentLanguage === 'en' ? "We provide ongoing support and updates for your app." : "Oferim suport continuu și actualizări pentru aplicația dumneavoastră." }
-  ],
-  benefits: currentLanguage === 'en' ? [
-    "Custom mobile apps tailored to your business needs",
-    "Seamless user experience with intuitive UI/UX design",
-    "Cross-platform compatibility for broader reach",
-    "Robust security features to protect user data",
-    "Scalable architecture for future growth",
-    "Ongoing maintenance and support"
-  ] : [
-    "Aplicații mobile personalizate adaptate nevoilor afacerii dumneavoastră",
-    "Experiență de utilizator fără probleme cu design UI/UX intuitiv",
-    "Compatibilitate cross-platform pentru o acoperire mai largă",
-    "Caracteristici robuste de securitate pentru protejarea datelor utilizatorilor",
-    "Arhitectură scalabilă pentru creștere viitoare",
-    "Mentenanță și suport continuu"
-  ]
-},
+    const commonData = {
+      'web-mobile-apps': {
+        icon: <Globe className="w-12 h-12 text-blue-400" />,
+        color: "blue",
+        gradient: "from-blue-400 to-cyan-400",
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80",
+        features: isRo ? [
+          "Design Responsive & UI/UX Modern",
+          "Aplicații Native iOS & Android",
+          "Soluții Cross-Platform (React Native/Flutter)",
+          "Progressive Web Apps (PWA)",
+          "Panouri de Administrare Personalizate"
+        ] : [
+          "Responsive Design & Modern UI/UX",
+          "Native iOS & Android Apps",
+          "Cross-Platform Solutions (React Native/Flutter)",
+          "Progressive Web Apps (PWA)",
+          "Custom Admin Dashboards"
+        ],
+        benefits: isRo ? [
+          "Experiență de utilizare fluidă",
+          "Acoperire maximă a pieței (Web & Mobile)",
+          "Performanță și viteză optimizate"
+        ] : [
+          "Seamless User Experience",
+          "Maximum Market Reach (Web & Mobile)",
+          "Optimized Performance & Speed"
+        ]
+      },
+      'custom-software': {
+        icon: <Code className="w-12 h-12 text-indigo-400" />,
+        color: "indigo",
+        gradient: "from-indigo-400 to-violet-400",
+        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80",
+        features: isRo ? [
+          "Dezvoltare Enterprise (ERP, CRM)",
+          "Modernizarea Sistemelor Legacy",
+          "Arhitectură Microservices",
+          "Soluții Cloud-Native",
+          "Baze de Date Scalabile"
+        ] : [
+          "Enterprise Development (ERP, CRM)",
+          "Legacy System Modernization",
+          "Microservices Architecture",
+          "Cloud-Native Solutions",
+          "Scalable Databases"
+        ],
+        benefits: isRo ? [
+          "Automatizarea proceselor de business",
+          "Securitate sporită a datelor",
+          "Scalabilitate pe termen lung"
+        ] : [
+          "Business Process Automation",
+          "Enhanced Data Security",
+          "Long-term Scalability"
+        ]
+      },
+      'saas-development': {
+        icon: <Cloud className="w-12 h-12 text-cyan-400" />,
+        color: "cyan",
+        gradient: "from-cyan-400 to-teal-400",
+        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80",
+        features: isRo ? [
+          "Arhitectură Multi-tenant",
+          "Managementul Abonamentelor (Stripe/PayPal)",
+          "Dezvoltare MVP Rapidă",
+          "API-uri Publice & Documentație",
+          "Infrastructură Serverless"
+        ] : [
+          "Multi-tenant Architecture",
+          "Subscription Management (Stripe/PayPal)",
+          "Rapid MVP Development",
+          "Public APIs & Documentation",
+          "Serverless Infrastructure"
+        ],
+        benefits: isRo ? [
+          "Lansare rapidă pe piață",
+          "Costuri operaționale reduse",
+          "Model de venit recurent"
+        ] : [
+          "Fast Time-to-Market",
+          "Reduced Operational Costs",
+          "Recurring Revenue Model"
+        ]
+      },
+      'ai-automation': {
+        icon: <Cpu className="w-12 h-12 text-purple-400" />,
+        color: "purple",
+        gradient: "from-purple-400 to-fuchsia-400",
+        image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80",
+        features: isRo ? [
+          "Chatboți & Asistenți Virtuali",
+          "Analiză Predictivă de Date",
+          "Automatizarea Fluxurilor de Lucru (RPA)",
+          "Procesare de Limbaj Natural (NLP)",
+          "Computer Vision"
+        ] : [
+          "Chatbots & Virtual Assistants",
+          "Predictive Data Analytics",
+          "Workflow Automation (RPA)",
+          "Natural Language Processing (NLP)",
+          "Computer Vision"
+        ],
+        benefits: isRo ? [
+          "Eficiență operațională crescută",
+          "Reducerea erorilor umane",
+          "Insights valoroase din date"
+        ] : [
+          "Increased Operational Efficiency",
+          "Reduced Human Error",
+          "Valuable Data Insights"
+        ]
+      },
+      'api-integrations': {
+        icon: <Network className="w-12 h-12 text-pink-400" />,
+        color: "pink",
+        gradient: "from-pink-400 to-rose-400",
+        image: "https://images.unsplash.com/photo-1558494949-efc0257bb3af?auto=format&fit=crop&q=80",
+        features: isRo ? [
+          "Dezvoltare API REST & GraphQL",
+          "Integrări Third-party (plăți, social, maps)",
+          "API Gateway & Management",
+          "Securitate OAuth2 & JWT",
+          "Sincronizare Date în Timp Real"
+        ] : [
+          "REST & GraphQL API Development",
+          "Third-party Integrations (payments, social, maps)",
+          "API Gateway & Management",
+          "OAuth2 & JWT Security",
+          "Real-time Data Synchronization"
+        ],
+        benefits: isRo ? [
+          "Conectivitate perfectă între sisteme",
+          "Extinderea funcționalităților existente",
+          "Schimb sigur de date"
+        ] : [
+          "Seamless System Connectivity",
+          "Extended Functionality",
+          "Secure Data Exchange"
+        ]
+      },
+      'consulting-architecture': {
+        icon: <Layers className="w-12 h-12 text-emerald-400" />,
+        color: "emerald",
+        gradient: "from-emerald-400 to-green-400",
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80",
+        features: isRo ? [
+          "Audit Tehnic & Code Review",
+          "Design de Arhitectură Scalabilă",
+          "Strategie DevOps & CI/CD",
+          "Consultanță Transformare Digitală",
+          "Selecție Stack Tehnologic"
+        ] : [
+          "Technical Audit & Code Review",
+          "Scalable Architecture Design",
+          "DevOps Strategy & CI/CD",
+          "Digital Transformation Consulting",
+          "Tech Stack Selection"
+        ],
+        benefits: isRo ? [
+          "Decizii tehnice informate",
+          "Minimizarea riscurilor tehnice",
+          "Planificare strategică clară"
+        ] : [
+          "Informed Technical Decisions",
+          "Minimized Technical Risks",
+          "Clear Strategic Planning"
+        ]
+      }
+    };
 
-    'web-solutions': {
-      icon: <Globe className="h-12 w-12 text-amber-400" />,
-      title: t('services.web.title'),
-      description: currentLanguage === 'en'
-        ? "Build a powerful online presence with our web solutions. We create stunning, responsive websites that engage your audience."
-        : "Construiți o prezență online puternică cu soluțiile noastre web. Creăm site-uri web uimitoare și responsive care vă implică audiența.",
-      imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      process: [
-        { step: currentLanguage === 'en' ? "Discovery" : "Descoperire", description: currentLanguage === 'en' ? "We understand your brand, audience, and business objectives." : "Înțelegem marca, audiența și obiectivele dumneavoastră de afaceri." },
-        { step: currentLanguage === 'en' ? "UX/UI Design" : "Design UX/UI", description: currentLanguage === 'en' ? "Our designers create intuitive, engaging user experiences." : "Designerii noștri creează experiențe de utilizator intuitive și atractive." },
-        { step: currentLanguage === 'en' ? "Development" : "Dezvoltare", description: currentLanguage === 'en' ? "We build responsive, accessible web solutions using modern technologies." : "Construim soluții web responsive și accesibile folosind tehnologii moderne." },
-        { step: currentLanguage === 'en' ? "Content Integration" : "Integrare Conținut", description: currentLanguage === 'en' ? "We integrate your content and ensure it's optimized for search engines." : "Integrăm conținutul dumneavoastră și ne asigurăm că este optimizat pentru motoarele de căutare." },
-        { step: currentLanguage === 'en' ? "Testing" : "Testare", description: currentLanguage === 'en' ? "We test across devices and browsers to ensure consistent performance." : "Testăm pe diverse dispozitive și browsere pentru a asigura o performanță consistentă." },
-        { step: currentLanguage === 'en' ? "Launch & Optimization" : "Lansare și Optimizare", description: currentLanguage === 'en' ? "We deploy your solution and provide ongoing optimization." : "Implementăm soluția dumneavoastră și oferim optimizare continuă." }
-      ],
-      benefits: currentLanguage === 'en' ? [
-        "Responsive design that works flawlessly across all devices",
-        "Advanced SEO optimization for improved visibility",
-        "Lightning-fast loading speeds for better user experience",
-        "Secure hosting with 99.9% uptime guarantee",
-        "Comprehensive analytics and performance monitoring",
-        "Regular updates and security maintenance"
-      ] : [
-        "Design responsive care funcționează impecabil pe toate dispozitivele",
-        "Optimizare SEO avansată pentru vizibilitate îmbunătățită",
-        "Viteze de încărcare rapide pentru o experiență mai bună",
-        "Găzduire sigură cu garanție de uptime de 99.9%",
-        "Analize comprehensive și monitorizarea performanței",
-        "Actualizări regulate și mentenanță de securitate"
-      ]
-    }
+    // Mapping slugs to translation keys
+    const translationMap: Record<string, { title: string, description: string }> = {
+      'web-mobile-apps': { title: 'services.webmobile.title', description: 'services.webmobile.description' },
+      'custom-software': { title: 'services.software.title', description: 'services.software.description' },
+      'saas-development': { title: 'services.saas.title', description: 'services.saas.description' },
+      'ai-automation': { title: 'services.ai.title', description: 'services.ai.description' },
+      'api-integrations': { title: 'services.api.title', description: 'services.api.description' },
+      'consulting-architecture': { title: 'services.consulting.title', description: 'services.consulting.description' }
+    };
+
+    if (!slug || !commonData[slug as keyof typeof commonData]) return null;
+
+    const key = slug as keyof typeof commonData;
+    const transKey = translationMap[key];
+
+    return {
+      ...commonData[key],
+      title: t(transKey.title),
+      description: t(transKey.description)
+    };
   };
 
-  const service = services[serviceSlug];
+  const service = getServiceData(slug || '');
 
   if (!service) {
-    useEffect(() => {
-      navigate('/');
-    }, [navigate]);
-    return null;
+    return (
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl text-white mb-4">Service not found</h2>
+          <Link to="/" className="text-blue-400 hover:text-blue-300">Return Home</Link>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div className="pt-24 relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/10 to-transparent opacity-50"></div>
-        <div className="absolute inset-0 pattern-grid opacity-20"></div>
-      </div>
-
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -inset-[10px] opacity-50">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 relative pb-20">
-        <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-12">
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/80 to-gray-900/90"></div>
+    <div className="min-h-screen bg-gray-900 font-sans selection:bg-blue-500/30">
+      {/* Hero Section */}
+      <div className="relative h-[60vh] overflow-hidden">
+        <div className="absolute inset-0">
           <img 
-            src={service.imageUrl} 
+            src={service.image} 
             alt={service.title} 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 flex items-center justify-center p-8">
-            <div className="text-center max-w-2xl">
-              <div className="flex justify-center mb-6">
-                <div className="p-6 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg transform hover:scale-105 transition-transform duration-300">
-                  {service.icon}
-                </div>
+          <div className="absolute inset-0 bg-gray-900/90 backdrop-blur-sm"></div>
+          <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900`}></div>
+        </div>
+
+        <div className="relative container mx-auto px-4 h-full flex flex-col justify-center pt-20">
+          <Link 
+            to="/#services" 
+            className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors group w-fit"
+          >
+            <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
+            {i18n.language === 'ro' ? 'Înapoi la Servicii' : 'Back to Services'}
+          </Link>
+
+          <div className="max-w-4xl animate-fade-in-up">
+            <div className={`inline-flex p-3 rounded-2xl bg-${service.color}-500/10 border border-${service.color}-500/20 mb-6 backdrop-blur-md`}>
+              {service.icon}
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-tech tracking-tight">
+              {service.title}
+            </h1>
+            <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
+              {service.description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div className="container mx-auto px-4 py-20 relative z-10 -mt-20">
+        <div className="grid lg:grid-cols-3 gap-8">
+          
+          {/* Main Features Column */}
+          <div className="lg:col-span-2 space-y-8">
+            <div className="bg-gray-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:border-white/20 transition-all shadow-2xl">
+              <h2 className="text-2xl font-bold text-white mb-8 flex items-center">
+                <Zap className={`w-6 h-6 mr-3 text-${service.color}-400`} />
+                {i18n.language === 'ro' ? 'Capabilități Cheie' : 'Key Capabilities'}
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {service.features.map((feature, idx) => (
+                  <div key={idx} className="flex items-start group">
+                    <div className={`mt-1 mr-4 w-6 h-6 rounded-full bg-${service.color}-500/20 flex items-center justify-center shrink-0 group-hover:bg-${service.color}-500/30 transition-colors`}>
+                      <div className={`w-2 h-2 rounded-full bg-${service.color}-400`}></div>
+                    </div>
+                    <span className="text-gray-300 group-hover:text-white transition-colors">{feature}</span>
+                  </div>
+                ))}
               </div>
-              <h1 className="font-tech text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tech-gradient-text">
-                {service.title}
-              </h1>
-              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                {service.description}
-              </p>
+            </div>
+
+            <div className="bg-gray-800/50 backdrop-blur-xl border border-white/10 rounded-3xl p-8">
+              <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
+                <BarChart className={`w-6 h-6 mr-3 text-${service.color}-400`} />
+                {i18n.language === 'ro' ? 'Impactul asupra Afacerii' : 'Business Impact'}
+              </h2>
+              <div className="space-y-4">
+                {service.benefits.map((benefit, idx) => (
+                  <div key={idx} className="flex items-center p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                    <CheckCircle2 className={`w-5 h-5 mr-4 text-${service.color}-400`} />
+                    <span className="text-lg text-gray-200">{benefit}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-8 md:p-10 mb-12 hover:bg-white/10 transition-colors duration-300">
-          <h2 className="font-tech text-3xl font-bold mb-10 tech-gradient-text">
-            {currentLanguage === 'en' ? 'Key Benefits' : 'Beneficii cheie'}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {service.benefits.map((benefit, index) => (
-              <div 
-                key={index} 
-                className="flex items-start p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-              >
-                <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-blue-400 mr-4 group-hover:bg-blue-300 transition-colors duration-300"></div>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                  {benefit}
+          {/* Sidebar / CTA */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-24 space-y-6">
+              <div className={`bg-gradient-to-br ${service.gradient} rounded-3xl p-1`}>
+                <div className="bg-gray-900/90 backdrop-blur-xl rounded-[22px] p-8 text-center h-full">
+                  <h3 className="text-xl font-bold text-white mb-4">
+                    {i18n.language === 'ro' ? 'Pregătit să începi?' : 'Ready to start?'}
+                  </h3>
+                  <p className="text-gray-400 mb-8 text-sm">
+                    {i18n.language === 'ro' 
+                      ? 'Transformă ideea ta în realitate cu expertiza noastră tehnică.' 
+                      : 'Transform your idea into reality with our technical expertise.'}
+                  </p>
+                  <Link 
+                    to="/#contact" 
+                    className={`block w-full py-4 px-6 rounded-xl bg-gradient-to-r ${service.gradient} text-white font-bold hover:shadow-lg hover:shadow-${service.color}-500/25 transition-all transform hover:-translate-y-1`}
+                  >
+                    {i18n.language === 'ro' ? 'Contactează-ne' : 'Get in Touch'}
+                  </Link>
+                </div>
+              </div>
+
+              <div className="p-6 rounded-3xl bg-gray-800/30 border border-white/5 backdrop-blur-sm">
+                <div className="flex items-center space-x-4 mb-4">
+                  <Shield className="w-8 h-8 text-green-400" />
+                  <div>
+                    <h4 className="font-bold text-white">Quality Guarantee</h4>
+                    <p className="text-xs text-gray-500">ISO 9001 Certified Standards</p>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-400">
+                  {i18n.language === 'ro'
+                    ? 'Ne angajăm să livrăm cod curat, securizat și scalabil pentru toate proiectele.'
+                    : 'We are committed to delivering clean, secure, and scalable code for all projects.'}
                 </p>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
 
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-8 md:p-10 hover:bg-white/10 transition-colors duration-300">
-          <h2 className="font-tech text-3xl font-bold mb-12 tech-gradient-text text-center">
-            {currentLanguage === 'en' ? 'Our Process' : 'Procesul nostru'}
-          </h2>
-          <div className="space-y-8">
-            {service.process.map((step, index) => (
-              <div 
-                key={index} 
-                className="flex group hover:bg-white/5 p-6 rounded-xl transition-all duration-300"
-              >
-                <div className="mr-8 relative">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-blue-500/20 border border-blue-400/30 text-blue-300 font-tech text-xl font-bold group-hover:bg-blue-500/30 transition-all duration-300">
-                    {index + 1}
-                  </div>
-                  {index < service.process.length - 1 && (
-                    <div className="absolute left-1/2 top-16 bottom-0 w-0.5 bg-blue-400/20 transform -translate-x-1/2"></div>
-                  )}
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-tech text-2xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
-                    {step.step}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>
