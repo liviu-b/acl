@@ -1,4 +1,3 @@
-// src/i18n/locales/ro.ts
 export default {
   // Header
   "nav.home": "Acasă",
@@ -13,39 +12,31 @@ export default {
   // About
   "about.title": "Despre ACL-Smart Software",
   "about.paragraph1": "Compania ACL-Smart Software operează în sectorul IT din România, concentrându-se pe dezvoltarea de soluții software inovatoare și servicii IT cuprinzătoare. Compania integrează expertiza tehnică cu perspectivele de afaceri pentru a oferi soluții care îmbunătățesc creșterea și eficiența.",
-  "about.paragraph2": "Oferind o gamă variată de servicii, ACL-Smart Software abordează provocările complexe prin software personalizat care răspunde și deseori depășește așteptările clienților. Compania pune accent pe o metodologie agilă, atenție meticuloasă la detalii și un angajament ferm față de calitate în toate ofertele sale.",
+"about.paragraph2": "Oferind o gamă variată de servicii, ACL-Smart Software abordează provocările complexe prin software personalizat care răspunde și deseori depășește așteptările clienților. Compania pune accent pe o metodologie agilă, atenție meticuloasă la detalii și un angajament ferm față de calitate în toate ofertele sale.",
   "about.mission.title": "Misiunea Noastră",
   "about.mission.text": "Să capacităm afacerile prin soluții tehnologice inovatoare care stimulează creșterea și eficiența.",
   "about.vision.title": "Viziunea Noastră",
   "about.vision.text": "Să fim furnizorul principal de soluții software personalizate care transformă afacerile în era digitală.",
 
-  // Services Section
-  "services.title": "Expertiza Noastră",
-  "services.subtitle": "Soluții tehnologice complete, adaptate pentru a stimula transformarea digitală a afacerii tale.",
+  // Services
+  "services.title": "Serviciile Noastre",
+  "services.subtitle": "ACL-Smart Software oferă o gamă completă de servicii IT concepute pentru a permite întreprinderilor să exceleze în era digitală.",
   
-  // 1. Custom Web & Mobile Apps
-  "services.webmobile.title": "Aplicații Web & Mobile",
-  "services.webmobile.description": "Experiențe digitale unificate pe toate dispozitivele. Construim platforme web performante și aplicații mobile native.",
-
-  // 2. Custom Software Development
+  // Software Development Service
   "services.software.title": "Dezvoltare Software Personalizat",
-  "services.software.description": "Software enterprise adaptat, conceput pentru a rezolva provocările specifice afacerii tale, având la bază scalabilitatea și securitatea.",
+  "services.software.description": "Dezvoltare software personalizată care vă transformă afacerea. Construim soluții scalabile și sigure pentru a eficientiza operațiunile.",
 
-  // 3. SaaS Development
-  "services.saas.title": "Dezvoltare SaaS",
-  "services.saas.description": "Dezvoltare de produs end-to-end pentru startup-uri și companii. Construim arhitecturi SaaS multi-tenant, pregătite pentru cloud.",
+  // Consulting Service
+  "services.consulting.title": "Consultanță și Arhitectură",
+  "services.consulting.description": "Consultanță tehnică expertă pentru a vă ridica strategia. Ghidăm proiectarea și implementarea sistemelor pentru soluții robuste.",
 
-  // 4. AI & Automation
-  "services.ai.title": "AI & Automatizare",
-  "services.ai.description": "Soluții inteligente care automatizează fluxurile de lucru. Folosiți machine learning pentru a vă pregăti operațiunile pentru viitor.",
+  // Dezvoltare Aplicații Mobile
+  "services.mobile.title": "Dezvoltare Aplicații Mobile",
+  "services.mobile.description": "Soluții inovatoare pentru aplicații mobile adaptate nevoilor afacerii dumneavoastră. Livrăm aplicații prietenoase și scalabile pentru platformele iOS și Android.",
 
-  // 5. API Integrations
-  "services.api.title": "Integrări API",
-  "services.api.description": "Conectivitate perfectă între sistemele tale. Proiectăm și implementăm API-uri robuste pentru o sincronizare fluidă a datelor.",
-
-  // 6. Software Consulting & Architecture
-  "services.consulting.title": "Consultanță & Arhitectură Software",
-  "services.consulting.description": "Ghidare tehnică strategică. Proiectăm arhitecturi de sistem scalabile și oferim planuri concrete pentru succesul digital.",
+  // Web Solutions Service
+  "services.web.title": "Soluții Web",
+  "services.web.description": "Construiți o prezență online puternică cu soluțiile noastre web. Creăm site-uri web uimitoare și responsive care vă implică audiența.",
 
   // Footer
   "footer.company": "ACL-Smart Software",
