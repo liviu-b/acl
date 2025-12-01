@@ -77,10 +77,15 @@ export default {
   "footer.phone": "+40 758 158 490",
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Services",
-  "footer.software": "Software Development",
-  "footer.mobile": "Mobile App Development",
-  "footer.consulting": "Consulting & Architecture",
-  "footer.web": "Web Solutions",
+  
+  // Footer Service Links (NEW)
+  "footer.apps": "Web & Mobile Apps",
+  "footer.custom": "Custom Software",
+  "footer.saas": "SaaS Development",
+  "footer.ai": "AI & Automation",
+  "footer.api": "API Integrations",
+  "footer.consulting": "Consulting",
+
   "footer.legal": "Legal",
   "footer.privacy": "Privacy Policy",
   "footer.gdpr": "GDPR Compliance",

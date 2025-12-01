@@ -12,6 +12,16 @@ const Footer = () => {
     window.scrollTo(0, 0);
   };
 
+  // Lista cu noile servicii pentru a le mapa usor
+  const footerServices = [
+    { key: 'footer.apps', slug: 'custom-web-mobile-apps' },
+    { key: 'footer.custom', slug: 'custom-software-development' },
+    { key: 'footer.saas', slug: 'saas-development' },
+    { key: 'footer.ai', slug: 'ai-automation' },
+    { key: 'footer.api', slug: 'api-integrations' },
+    { key: 'footer.consulting', slug: 'software-consulting' },
+  ];
+
   return (
     <footer className="relative overflow-hidden">
       {/* Background Elements */}
@@ -45,7 +55,7 @@ const Footer = () => {
               <div className="flex items-center justify-center group">
                 <Phone className="h-5 w-5 text-blue-400 mr-3 group-hover:text-blue-300 transition-colors duration-300" />
                 <span className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
-                  +40 758 154 490
+                  {t('footer.phone')}
                 </span>
               </div>
               <div className="flex items-center justify-center group">
@@ -57,48 +67,25 @@ const Footer = () => {
             </div>
           </div>
           
-         {/* Services */}
-<div className="flex flex-col items-center">
-  <h3 className="text-xl font-tech font-semibold mb-6 tech-gradient-text">
-    {t('footer.services')}
-  </h3>
-  <ul className="space-y-3">
-    <li>
-      <button 
-        onClick={() => navigateToService('software-development')} 
-        className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
-      >
-        {t('footer.software')}
-      </button>
-    </li>
-    <li>
-      <button 
-        onClick={() => navigateToService('consulting-architecture')} 
-        className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
-      >
-        {t('footer.consulting')}
-      </button>
-    </li>
-    <li>
-    <button 
-        onClick={() => navigateToService('mobile-app-development')} 
-        className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
-      >
-        {t('footer.mobile')}
-      </button>
-    </li>
-    <li>
-    <button 
-        onClick={() => navigateToService('web-solutions')} 
-        className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
-      >
-        {t('footer.web')}
-      </button>
-    </li>
-  </ul>
-</div>
+          {/* Services */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-xl font-tech font-semibold mb-6 tech-gradient-text">
+              {t('footer.services')}
+            </h3>
+            <ul className="space-y-3">
+              {footerServices.map((service, index) => (
+                <li key={index}>
+                  <button 
+                    onClick={() => navigateToService(service.slug)} 
+                    className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
+                  >
+                    {t(service.key)}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          
           {/* Legal */}
           <div className="flex flex-col items-center">
             <h3 className="text-xl font-tech font-semibold mb-6 tech-gradient-text">
