@@ -84,7 +84,7 @@ export default {
   "footer.saas": "SaaS Development",
   "footer.ai": "AI & Automation",
   "footer.api": "API Integrations",
-  "footer.consulting": "Consulting",
+  "footer.consulting": "Software Consulting",
 
   "footer.legal": "Legal",
   "footer.privacy": "Privacy Policy",

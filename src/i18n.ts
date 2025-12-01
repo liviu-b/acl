@@ -1,7 +1,5 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-// Putem elimina LanguageDetector deoarece nu mai avem nevoie de detecție
-// Importăm doar traducerile pentru engleză
 import enTranslations from './i18n/locales/en';
 
 i18n
