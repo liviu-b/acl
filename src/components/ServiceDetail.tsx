@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Code, Wrench, Globe, Smartphone } from 'lucide-react';
+import { Code, Wrench, Globe, Smartphone, Cloud, Cpu, Network } from 'lucide-react'; // Am adaugat iconitele lipsa
 import { useTranslation } from 'react-i18next';
 
 const ServiceDetail = () => {
@@ -11,143 +11,214 @@ const ServiceDetail = () => {
   
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [serviceSlug]);
 
   const services = {
-    'software-development': {
-      icon: <Code className="h-12 w-12 text-blue-400" />,
-      title: t('services.software.title'),
+    // 1. Custom Web & Mobile Apps
+    'custom-web-mobile-apps': {
+      icon: <Smartphone className="h-12 w-12 text-blue-400" />,
+      title: "Custom Web & Mobile Apps",
       description: currentLanguage === 'en' 
-        ? "Custom software development that transforms your business. We build scalable, secure solutions to streamline operations and drive growth."
-        : "Dezvoltare software personalizată care vă transformă afacerea. Construim soluții scalabile și sigure pentru a eficientiza operațiunile.",
+        ? "We design and develop tailored applications that fit your business needs perfectly — fast, intuitive, secure, and ready to scale."
+        : "Proiectăm și dezvoltăm aplicații personalizate care se potrivesc perfect nevoilor afacerii tale — rapide, intuitive, sigure și gata de scalare.",
+      imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      process: [
+        { step: currentLanguage === 'en' ? "Discovery & Strategy" : "Descoperire și Strategie", description: currentLanguage === 'en' ? "We define user personas, core features, and the technical roadmap." : "Definim profilul utilizatorilor, funcționalitățile de bază și foaia de parcurs tehnică." },
+        { step: currentLanguage === 'en' ? "UI/UX Design" : "Design UI/UX", description: currentLanguage === 'en' ? "Creating intuitive wireframes and high-fidelity prototypes." : "Crearea de wireframe-uri intuitive și prototipuri de înaltă fidelitate." },
+        { step: currentLanguage === 'en' ? "Cross-Platform Dev" : "Dezvoltare Multi-Platformă", description: currentLanguage === 'en' ? "Building for Web, iOS, and Android using unified technologies." : "Construim pentru Web, iOS și Android folosind tehnologii unificate." },
+        { step: currentLanguage === 'en' ? "Testing & QA" : "Testare și QA", description: currentLanguage === 'en' ? "Rigorous testing on multiple devices to ensure a bug-free experience." : "Testare riguroasă pe mai multe dispozitive pentru a asigura o experiență fără erori." },
+        { step: currentLanguage === 'en' ? "App Store Launch" : "Lansare în Store", description: currentLanguage === 'en' ? "Handling the submission process to Apple App Store and Google Play." : "Gestionarea procesului de publicare în Apple App Store și Google Play." },
+        { step: currentLanguage === 'en' ? "Growth & Updates" : "Creștere și Actualizări", description: currentLanguage === 'en' ? "Monitoring analytics and pushing feature updates." : "Monitorizarea analizelor și lansarea actualizărilor de funcționalități." }
+      ],
+      benefits: currentLanguage === 'en' ? [
+        "Native performance with cross-platform efficiency",
+        "Seamless user experience across all devices",
+        "Scalable backend architecture",
+        "Offline capabilities and data synchronization",
+        "Push notifications for higher engagement",
+        "Secure data handling and compliance"
+      ] : [
+        "Performanță nativă cu eficiență multi-platformă",
+        "Experiență de utilizare fluidă pe toate dispozitivele",
+        "Arhitectură backend scalabilă",
+        "Capabilități offline și sincronizare date",
+        "Notificări push pentru implicare crescută",
+        "Gestionarea securizată a datelor și conformitate"
+      ]
+    },
+
+    // 2. Custom Software Development
+    'custom-software-development': {
+      icon: <Code className="h-12 w-12 text-emerald-400" />,
+      title: "Custom Software Development",
+      description: currentLanguage === 'en' 
+        ? "From internal tools to enterprise-grade systems, we build software engineered around your processes, not the other way around."
+        : "De la instrumente interne la sisteme enterprise, construim software proiectat în jurul proceselor tale, nu invers.",
       imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       process: [
-        { step: currentLanguage === 'en' ? "Requirements Analysis" : "Analiza Cerințelor", description: currentLanguage === 'en' ? "We work closely with you to understand your business needs and define clear requirements." : "Lucrăm îndeaproape cu dumneavoastră pentru a înțelege nevoile afacerii și a defini cerințe clare." },
-        { step: currentLanguage === 'en' ? "Design & Architecture" : "Design și Arhitectură", description: currentLanguage === 'en' ? "Our architects design scalable, maintainable software solutions tailored to your needs." : "Arhitecții noștri proiectează soluții software scalabile și mentenabile, adaptate nevoilor dumneavoastră." },
-        { step: currentLanguage === 'en' ? "Development" : "Dezvoltare", description: currentLanguage === 'en' ? "Using agile methodologies, we develop your solution with regular feedback cycles." : "Folosind metodologii agile, dezvoltăm soluția dumneavoastră cu cicluri regulate de feedback." },
-        { step: currentLanguage === 'en' ? "Testing & QA" : "Testare și QA", description: currentLanguage === 'en' ? "Rigorous testing ensures your software meets the highest quality standards." : "Testarea riguroasă asigură că software-ul dumneavoastră îndeplinește cele mai înalte standarde de calitate." },
-        { step: currentLanguage === 'en' ? "Deployment" : "Implementare", description: currentLanguage === 'en' ? "We handle deployment to your preferred environment, ensuring smooth transitions." : "Gestionăm implementarea în mediul preferat, asigurând tranziții line." },
-        { step: currentLanguage === 'en' ? "Maintenance & Support" : "Mentenanță și Suport", description: currentLanguage === 'en' ? "Ongoing support and updates keep your software running optimally." : "Suportul și actualizările continue mențin software-ul dumneavoastră funcționând optim." }
+        { step: currentLanguage === 'en' ? "Requirement Analysis" : "Analiza Cerințelor", description: currentLanguage === 'en' ? "Mapping out your complex business logic and workflows." : "Maparea logicii complexe de afaceri și a fluxurilor de lucru." },
+        { step: currentLanguage === 'en' ? "System Architecture" : "Arhitectura Sistemului", description: currentLanguage === 'en' ? "Designing a robust database and server structure." : "Proiectarea unei structuri robuste de baze de date și servere." },
+        { step: currentLanguage === 'en' ? "Agile Development" : "Dezvoltare Agile", description: currentLanguage === 'en' ? "Iterative coding sprints with regular demos and feedback." : "Sprint-uri iterative de codare cu demo-uri regulate și feedback." },
+        { step: currentLanguage === 'en' ? "Integration" : "Integrare", description: currentLanguage === 'en' ? "Connecting the new software with your existing legacy systems." : "Conectarea noului software cu sistemele vechi existente." },
+        { step: currentLanguage === 'en' ? "Deployment" : "Implementare", description: currentLanguage === 'en' ? "Secure rollout to your infrastructure (On-premise or Cloud)." : "Lansare securizată pe infrastructura ta (On-premise sau Cloud)." },
+        { step: currentLanguage === 'en' ? "Long-term Support" : "Suport pe termen lung", description: currentLanguage === 'en' ? "SLA-based maintenance and rapid bug fixing." : "Mentenanță bazată pe SLA și rezolvare rapidă a erorilor." }
       ],
       benefits: currentLanguage === 'en' ? [
-        "Custom-tailored solutions that perfectly match your business requirements",
-        "Scalable architecture designed for future growth and expansion",
-        "Enhanced operational efficiency through process automation",
-        "Robust security measures protecting your valuable data",
-        "Seamless integration with existing systems and workflows",
-        "Reduced operational costs through optimized processes"
+        "Software aimed 100% at your specific business problems",
+        "Full ownership of the source code and IP",
+        "Elimination of manual errors through automation",
+        "High security standards for sensitive corporate data",
+        "Integration with existing ERP/CRM systems",
+        "Scalability to handle enterprise-level loads"
       ] : [
-        "Soluții personalizate care se potrivesc perfect cerințelor afacerii dumneavoastră",
-        "Arhitectură scalabilă proiectată pentru creștere și expansiune viitoare",
-        "Eficiență operațională îmbunătățită prin automatizarea proceselor",
-        "Măsuri robuste de securitate care vă protejează datele valoroase",
-        "Integrare perfectă cu sistemele și fluxurile de lucru existente",
-        "Costuri operaționale reduse prin procese optimizate"
+        "Software orientat 100% spre problemele specifice afacerii",
+        "Proprietate completă asupra codului sursă și IP-ului",
+        "Eliminarea erorilor manuale prin automatizare",
+        "Standarde înalte de securitate pentru date corporative sensibile",
+        "Integrare cu sistemele ERP/CRM existente",
+        "Scalabilitate pentru a gestiona volume enterprise"
       ]
     },
-    
-    'consulting-architecture': {
-      icon: <Wrench className="h-12 w-12 text-emerald-400" />,
-      title: t('services.consulting.title'),
-      description: currentLanguage === 'en'
-        ? "Expert tech consulting to elevate your strategy. We guide system design and implementation for robust, future-proof solutions."
-        : "Consultanță tehnică expertă pentru a vă ridica strategia. Ghidăm proiectarea și implementarea sistemelor pentru soluții robuste.",
-      imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+
+    // 3. SaaS Development
+    'saas-development': {
+      icon: <Cloud className="h-12 w-12 text-sky-400" />,
+      title: "SaaS Development",
+      description: currentLanguage === 'en' 
+        ? "We transform concepts into full SaaS products — architecture, multi-tenancy, subscription logic, deployment, and long-term scalability."
+        : "Transformăm conceptele în produse SaaS complete — arhitectură, multi-tenancy, logică de abonament, implementare și scalabilitate.",
+      imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
       process: [
-        { step: currentLanguage === 'en' ? "Assessment" : "Evaluare", description: currentLanguage === 'en' ? "We evaluate your current systems, processes, and challenges." : "Evaluăm sistemele, procesele și provocările dumneavoastră actuale." },
-        { step: currentLanguage === 'en' ? "Strategy Development" : "Dezvoltarea Strategiei", description: currentLanguage === 'en' ? "We create a tailored technology strategy aligned with your business goals." : "Creăm o strategie tehnologică personalizată, aliniată cu obiectivele dumneavoastră de afaceri." },
-        { step: currentLanguage === 'en' ? "Architecture Design" : "Design Arhitectural", description: currentLanguage === 'en' ? "Our experts design optimal system architectures for your needs." : "Experții noștri proiectează arhitecturi de sistem optime pentru nevoile dumneavoastră." },
-        { step: currentLanguage === 'en' ? "Implementation Planning" : "Planificarea Implementării", description: currentLanguage === 'en' ? "We develop detailed roadmaps for implementing recommended solutions." : "Dezvoltăm foi de parcurs detaliate pentru implementarea soluțiilor recomandate." },
-        { step: currentLanguage === 'en' ? "Knowledge Transfer" : "Transfer de Cunoștințe", description: currentLanguage === 'en' ? "We ensure your team understands the architecture and can maintain it." : "Ne asigurăm că echipa dumneavoastră înțelege arhitectura și o poate menține." },
-        { step: currentLanguage === 'en' ? "Ongoing Support" : "Suport Continuu", description: currentLanguage === 'en' ? "We provide continued guidance as your business evolves." : "Oferim îndrumare continuă pe măsură ce afacerea dumneavoastră evoluează." }
+        { step: currentLanguage === 'en' ? "MVP Definition" : "Definire MVP", description: currentLanguage === 'en' ? "Identifying the core features to launch fast and validate the market." : "Identificarea funcționalităților de bază pentru lansare rapidă și validare." },
+        { step: currentLanguage === 'en' ? "Multi-tenant Arch" : "Arhitectură Multi-tenant", description: currentLanguage === 'en' ? "Structuring data so clients are securely separated but share resources." : "Structurarea datelor astfel încât clienții să fie separați sigur, dar să partajeze resurse." },
+        { step: currentLanguage === 'en' ? "Billing Integration" : "Integrare Plăți", description: currentLanguage === 'en' ? "Setting up Stripe/PayPal for recurring subscriptions." : "Configurarea Stripe/PayPal pentru abonamente recurente." },
+        { step: currentLanguage === 'en' ? "Cloud DevOps" : "Cloud DevOps", description: currentLanguage === 'en' ? "Setting up CI/CD pipelines and auto-scaling infrastructure." : "Configurarea pipeline-urilor CI/CD și a infrastructurii auto-scalabile." },
+        { step: currentLanguage === 'en' ? "API Development" : "Dezvoltare API", description: currentLanguage === 'en' ? "Creating public APIs for your SaaS users to consume." : "Crearea de API-uri publice pentru utilizatorii SaaS." },
+        { step: currentLanguage === 'en' ? "Monitoring" : "Monitorizare", description: currentLanguage === 'en' ? "Real-time dashboards for system health and user behavior." : "Dashboard-uri în timp real pentru sănătatea sistemului și comportamentul utilizatorilor." }
       ],
       benefits: currentLanguage === 'en' ? [
-        "Strategic technology roadmap aligned with business goals",
-        "Optimized system architecture for maximum performance",
+        "Rapid time-to-market with MVP approach",
+        "Secure multi-tenancy architecture",
+        "Automated subscription management and billing",
+        "Infinite scalability using Cloud Native tech",
+        "Global availability (CDN & Edge Computing)",
+        "Reduced infrastructure costs through optimization"
+      ] : [
+        "Timp rapid de lansare cu abordarea MVP",
+        "Arhitectură multi-tenancy sigură",
+        "Management automat al abonamentelor și plăților",
+        "Scalabilitate infinită folosind tehnologii Cloud Native",
+        "Disponibilitate globală (CDN & Edge Computing)",
+        "Costuri reduse de infrastructură prin optimizare"
+      ]
+    },
+
+    // 4. AI & Automation
+    'ai-automation': {
+      icon: <Cpu className="h-12 w-12 text-purple-400" />,
+      title: "AI & Automation",
+      description: currentLanguage === 'en' 
+        ? "We integrate intelligent automation and AI-driven workflows that unlock efficiency, reduce manual effort, and enhance decision-making."
+        : "Integrăm automatizări inteligente și fluxuri de lucru bazate pe AI care deblochează eficiența, reduc efortul manual și îmbunătățesc deciziile.",
+      imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      process: [
+        { step: currentLanguage === 'en' ? "Process Audit" : "Audit Procese", description: currentLanguage === 'en' ? "Identifying bottlenecks suitable for AI or automation." : "Identificarea blocajelor potrivite pentru AI sau automatizare." },
+        { step: currentLanguage === 'en' ? "Data Prep" : "Pregătire Date", description: currentLanguage === 'en' ? "Cleaning and structuring data for machine learning models." : "Curățarea și structurarea datelor pentru modelele de machine learning." },
+        { step: currentLanguage === 'en' ? "Model Selection" : "Selecție Modele", description: currentLanguage === 'en' ? "Choosing between OpenAI, custom ML models, or RPA bots." : "Alegerea între OpenAI, modele ML personalizate sau boți RPA." },
+        { step: currentLanguage === 'en' ? "Integration" : "Integrare", description: currentLanguage === 'en' ? "Embedding the AI solution into your existing dashboard." : "Încorporarea soluției AI în dashboard-ul existent." },
+        { step: currentLanguage === 'en' ? "Testing & Tuning" : "Testare și Ajustare", description: currentLanguage === 'en' ? "Refining the model accuracy and reducing hallucinations/errors." : "Rafinarea acurateței modelului și reducerea erorilor." },
+        { step: currentLanguage === 'en' ? "Deployment" : "Lansare", description: currentLanguage === 'en' ? "Live implementation with monitoring for drift." : "Implementare live cu monitorizare pentru deviații." }
+      ],
+      benefits: currentLanguage === 'en' ? [
+        "Drastic reduction in manual data entry work",
+        "24/7 operations with Chatbots and Auto-responders",
+        "Predictive insights for better business decisions",
+        "Error reduction in repetitive tasks",
+        "Personalized user experiences at scale",
+        "Competitive advantage through latest tech"
+      ] : [
+        "Reducere drastică a introducerii manuale de date",
+        "Operațiuni 24/7 cu Chatboți și Răspunsuri Automate",
+        "Perspective predictive pentru decizii de afaceri mai bune",
+        "Reducerea erorilor în sarcini repetitive",
+        "Experiențe personalizate pentru utilizatori la scară",
+        "Avantaj competitiv prin tehnologie de ultimă oră"
+      ]
+    },
+
+    // 5. API Integrations
+    'api-integrations': {
+      icon: <Network className="h-12 w-12 text-amber-400" />,
+      title: "API Integrations & Automation",
+      description: currentLanguage === 'en' 
+        ? "Seamless system-to-system communication: we connect platforms, streamline operations, and build reliable automation pipelines."
+        : "Comunicare perfectă între sisteme: conectăm platforme, eficientizăm operațiunile și construim fluxuri de automatizare fiabile.",
+      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      process: [
+        { step: currentLanguage === 'en' ? "System Audit" : "Audit Sisteme", description: currentLanguage === 'en' ? "Reviewing endpoints and documentation of all tools involved." : "Revizuirea endpoint-urilor și documentației tuturor uneltelor implicate." },
+        { step: currentLanguage === 'en' ? "Data Mapping" : "Maparea Datelor", description: currentLanguage === 'en' ? "Defining how data fields translate between System A and System B." : "Definirea modului în care câmpurile de date se traduc între Sistemul A și B." },
+        { step: currentLanguage === 'en' ? "Middleware Dev" : "Dezvoltare Middleware", description: currentLanguage === 'en' ? "Building the secure bridge that handles the data transfer." : "Construirea punții securizate care gestionează transferul de date." },
+        { step: currentLanguage === 'en' ? "Error Handling" : "Gestionare Erori", description: currentLanguage === 'en' ? "Creating retry logic for when APIs are down or rate-limited." : "Crearea logicii de reîncercare pentru când API-urile sunt jos sau limitate." },
+        { step: currentLanguage === 'en' ? "Security Check" : "Verificare Securitate", description: currentLanguage === 'en' ? "Implementing OAuth, Keys, and encryption." : "Implementarea OAuth, Chei și criptare." },
+        { step: currentLanguage === 'en' ? "Live Sync" : "Sincronizare Live", description: currentLanguage === 'en' ? "Launching the automated pipeline." : "Lansarea pipeline-ului automatizat." }
+      ],
+      benefits: currentLanguage === 'en' ? [
+        "Real-time data synchronization across platforms",
+        "Elimination of double data entry",
+        "Unified view of customer data (Single Source of Truth)",
+        "Automated workflows (e.g., Lead -> CRM -> Email)",
+        "Legacy system connectivity with modern tools",
+        "Robust error handling and logging"
+      ] : [
+        "Sincronizare de date în timp real între platforme",
+        "Eliminarea introducerii duble a datelor",
+        "Vedere unificată a datelor clienților (Sursă Unică de Adevăr)",
+        "Fluxuri automate (ex: Lead -> CRM -> Email)",
+        "Conectivitate sisteme vechi cu instrumente moderne",
+        "Gestionare robustă a erorilor și jurnalizare"
+      ]
+    },
+
+    // 6. Software Consulting
+    'software-consulting': {
+      icon: <Wrench className="h-12 w-12 text-rose-400" />,
+      title: "Software Consulting & Architecture",
+      description: currentLanguage === 'en'
+        ? "We provide strategic technical guidance, system architecture, and technology roadmaps that help companies build future-proof solutions."
+        : "Oferim ghidare tehnică strategică, arhitectură de sistem și foi de parcurs tehnologice care ajută companiile să construiască soluții de viitor.",
+      imageUrl: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      process: [
+        { step: currentLanguage === 'en' ? "Tech Audit" : "Audit Tehnic", description: currentLanguage === 'en' ? "Analyzing your current code, security, and infrastructure." : "Analiza codului actual, a securității și a infrastructurii." },
+        { step: currentLanguage === 'en' ? "Gap Analysis" : "Analiza Lipsurilor", description: currentLanguage === 'en' ? "Identifying where your tech stack fails to meet business goals." : "Identificarea zonelor unde stiva tehnică nu îndeplinește obiectivele." },
+        { step: currentLanguage === 'en' ? "Architecture Design" : "Design Arhitectural", description: currentLanguage === 'en' ? "Blueprinting the ideal Microservices or Monolith structure." : "Schițarea structurii ideale de Microservicii sau Monolit." },
+        { step: currentLanguage === 'en' ? "Tech Selection" : "Selecție Tehnologie", description: currentLanguage === 'en' ? "Recommending the best languages and clouds for your budget." : "Recomandarea celor mai bune limbaje și cloud-uri pentru bugetul tău." },
+        { step: currentLanguage === 'en' ? "Team Guidance" : "Ghidare Echipă", description: currentLanguage === 'en' ? "Mentoring your internal developers on best practices." : "Mentorarea dezvoltatorilor interni privind cele mai bune practici." },
+        { step: currentLanguage === 'en' ? "Roadmap" : "Foaie de Parcurs", description: currentLanguage === 'en' ? "Delivering a clear step-by-step plan for modernization." : "Livrarea unui plan clar pas cu pas pentru modernizare." }
+      ],
+      benefits: currentLanguage === 'en' ? [
+        "Clear technical roadmap aligned with business goals",
         "Reduced technical debt and maintenance costs",
-        "Enhanced security and risk management",
-        "Improved scalability and system reliability",
-        "Knowledge transfer and team empowerment"
+        "Objective third-party opinion on technology choices",
+        "Enhanced security and compliance posture",
+        "Scalable architecture prepared for high growth",
+        "Improved team velocity and code quality"
       ] : [
-        "Plan tehnologic strategic aliniat cu obiectivele de afaceri",
-        "Arhitectură de sistem optimizată pentru performanță maximă",
-        "Reducerea datoriei tehnice și a costurilor de întreținere",
-        "Securitate și management al riscurilor îmbunătățite",
-        "Scalabilitate și fiabilitate îmbunătățite ale sistemului",
-        "Transfer de cunoștințe și împuternicirea echipei"
-      ]
-    },
-
-    'mobile-app-development': {
-  icon: <Smartphone className="h-12 w-12 text-purple-400" />,
-  title: t('services.mobile.title'),
-  description: currentLanguage === 'en'
-    ? "Build innovative mobile apps tailored to your business needs. We deliver user-friendly and scalable solutions for iOS and Android platforms."
-    : "Dezvoltăm aplicații mobile inovatoare adaptate nevoilor afacerii dumneavoastră. Livrăm soluții prietenoase și scalabile pentru platformele iOS și Android.",
-  imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-  process: [
-    { step: currentLanguage === 'en' ? "Requirements Gathering" : "Colectarea Cerințelor", description: currentLanguage === 'en' ? "We collaborate with you to define app requirements and objectives." : "Colaborăm cu dumneavoastră pentru a defini cerințele și obiectivele aplicației." },
-    { step: currentLanguage === 'en' ? "Design & Prototyping" : "Design și Prototipare", description: currentLanguage === 'en' ? "Our team creates wireframes and prototypes for your app." : "Echipa noastră creează wireframe-uri și prototipuri pentru aplicația dumneavoastră." },
-    { step: currentLanguage === 'en' ? "Development" : "Dezvoltare", description: currentLanguage === 'en' ? "We build your app using modern technologies and frameworks." : "Construim aplicația dumneavoastră folosind tehnologii și framework-uri moderne." },
-    { step: currentLanguage === 'en' ? "Testing & QA" : "Testare și QA", description: currentLanguage === 'en' ? "We rigorously test your app for functionality and performance." : "Testăm riguros aplicația dumneavoastră pentru funcționalitate și performanță." },
-    { step: currentLanguage === 'en' ? "Deployment" : "Implementare", description: currentLanguage === 'en' ? "We deploy your app to app stores or enterprise environments." : "Implementăm aplicația dumneavoastră în magazinele de aplicații sau mediile enterprise." },
-    { step: currentLanguage === 'en' ? "Support & Updates" : "Suport și Actualizări", description: currentLanguage === 'en' ? "We provide ongoing support and updates for your app." : "Oferim suport continuu și actualizări pentru aplicația dumneavoastră." }
-  ],
-  benefits: currentLanguage === 'en' ? [
-    "Custom mobile apps tailored to your business needs",
-    "Seamless user experience with intuitive UI/UX design",
-    "Cross-platform compatibility for broader reach",
-    "Robust security features to protect user data",
-    "Scalable architecture for future growth",
-    "Ongoing maintenance and support"
-  ] : [
-    "Aplicații mobile personalizate adaptate nevoilor afacerii dumneavoastră",
-    "Experiență de utilizator fără probleme cu design UI/UX intuitiv",
-    "Compatibilitate cross-platform pentru o acoperire mai largă",
-    "Caracteristici robuste de securitate pentru protejarea datelor utilizatorilor",
-    "Arhitectură scalabilă pentru creștere viitoare",
-    "Mentenanță și suport continuu"
-  ]
-},
-
-    'web-solutions': {
-      icon: <Globe className="h-12 w-12 text-amber-400" />,
-      title: t('services.web.title'),
-      description: currentLanguage === 'en'
-        ? "Build a powerful online presence with our web solutions. We create stunning, responsive websites that engage your audience."
-        : "Construiți o prezență online puternică cu soluțiile noastre web. Creăm site-uri web uimitoare și responsive care vă implică audiența.",
-      imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      process: [
-        { step: currentLanguage === 'en' ? "Discovery" : "Descoperire", description: currentLanguage === 'en' ? "We understand your brand, audience, and business objectives." : "Înțelegem marca, audiența și obiectivele dumneavoastră de afaceri." },
-        { step: currentLanguage === 'en' ? "UX/UI Design" : "Design UX/UI", description: currentLanguage === 'en' ? "Our designers create intuitive, engaging user experiences." : "Designerii noștri creează experiențe de utilizator intuitive și atractive." },
-        { step: currentLanguage === 'en' ? "Development" : "Dezvoltare", description: currentLanguage === 'en' ? "We build responsive, accessible web solutions using modern technologies." : "Construim soluții web responsive și accesibile folosind tehnologii moderne." },
-        { step: currentLanguage === 'en' ? "Content Integration" : "Integrare Conținut", description: currentLanguage === 'en' ? "We integrate your content and ensure it's optimized for search engines." : "Integrăm conținutul dumneavoastră și ne asigurăm că este optimizat pentru motoarele de căutare." },
-        { step: currentLanguage === 'en' ? "Testing" : "Testare", description: currentLanguage === 'en' ? "We test across devices and browsers to ensure consistent performance." : "Testăm pe diverse dispozitive și browsere pentru a asigura o performanță consistentă." },
-        { step: currentLanguage === 'en' ? "Launch & Optimization" : "Lansare și Optimizare", description: currentLanguage === 'en' ? "We deploy your solution and provide ongoing optimization." : "Implementăm soluția dumneavoastră și oferim optimizare continuă." }
-      ],
-      benefits: currentLanguage === 'en' ? [
-        "Responsive design that works flawlessly across all devices",
-        "Advanced SEO optimization for improved visibility",
-        "Lightning-fast loading speeds for better user experience",
-        "Secure hosting with 99.9% uptime guarantee",
-        "Comprehensive analytics and performance monitoring",
-        "Regular updates and security maintenance"
-      ] : [
-        "Design responsive care funcționează impecabil pe toate dispozitivele",
-        "Optimizare SEO avansată pentru vizibilitate îmbunătățită",
-        "Viteze de încărcare rapide pentru o experiență mai bună",
-        "Găzduire sigură cu garanție de uptime de 99.9%",
-        "Analize comprehensive și monitorizarea performanței",
-        "Actualizări regulate și mentenanță de securitate"
+        "Foaie de parcurs tehnică clară aliniată cu afacerea",
+        "Reducerea datoriei tehnice și a costurilor de mentenanță",
+        "Opinie obiectivă externă privind alegerile tehnologice",
+        "Securitate și conformitate îmbunătățite",
+        "Arhitectură scalabilă pregătită pentru creștere rapidă",
+        "Viteză îmbunătățită a echipei și calitate a codului"
       ]
     }
   };
 
   const service = services[serviceSlug];
 
+  // Redirectionare daca slug-ul nu exista
   if (!service) {
     useEffect(() => {
-      navigate('/');
+      navigate('/#services');
     }, [navigate]);
     return null;
   }
@@ -168,7 +239,7 @@ const ServiceDetail = () => {
       </div>
 
       <div className="container mx-auto px-4 relative pb-20">
-        <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-12">
+        <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-12 shadow-2xl border border-white/10">
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/80 to-gray-900/90"></div>
           <img 
             src={service.imageUrl} 
@@ -176,34 +247,34 @@ const ServiceDetail = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 flex items-center justify-center p-8">
-            <div className="text-center max-w-2xl">
+            <div className="text-center max-w-3xl">
               <div className="flex justify-center mb-6">
                 <div className="p-6 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 shadow-lg transform hover:scale-105 transition-transform duration-300">
                   {service.icon}
                 </div>
               </div>
-              <h1 className="font-tech text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tech-gradient-text">
+              <h1 className="font-tech text-3xl md:text-5xl lg:text-6xl font-bold mb-6 tech-gradient-text tracking-tight">
                 {service.title}
               </h1>
-              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+              <p className="text-base md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
                 {service.description}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-8 md:p-10 mb-12 hover:bg-white/10 transition-colors duration-300">
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-8 md:p-10 mb-12 hover:bg-white/10 transition-colors duration-300 shadow-xl">
           <h2 className="font-tech text-3xl font-bold mb-10 tech-gradient-text">
-            {currentLanguage === 'en' ? 'Key Benefits' : 'Beneficii cheie'}
+            {currentLanguage === 'en' ? 'Key Benefits' : 'Beneficii Cheie'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {service.benefits.map((benefit, index) => (
               <div 
                 key={index} 
-                className="flex items-start p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                className="flex items-start p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-300 group"
               >
-                <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-blue-400 mr-4 group-hover:bg-blue-300 transition-colors duration-300"></div>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">
+                <div className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-blue-400 mr-4 group-hover:bg-blue-300 group-hover:scale-125 transition-all duration-300"></div>
+                <p className="text-gray-300 group-hover:text-gray-100 transition-colors duration-300 text-lg">
                   {benefit}
                 </p>
               </div>
@@ -211,29 +282,30 @@ const ServiceDetail = () => {
           </div>
         </div>
 
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-8 md:p-10 hover:bg-white/10 transition-colors duration-300">
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-8 md:p-10 hover:bg-white/10 transition-colors duration-300 shadow-xl">
           <h2 className="font-tech text-3xl font-bold mb-12 tech-gradient-text text-center">
-            {currentLanguage === 'en' ? 'Our Process' : 'Procesul nostru'}
+            {currentLanguage === 'en' ? 'Our Process' : 'Procesul Nostru'}
           </h2>
           <div className="space-y-8">
             {service.process.map((step, index) => (
               <div 
                 key={index} 
-                className="flex group hover:bg-white/5 p-6 rounded-xl transition-all duration-300"
+                className="flex flex-col md:flex-row group hover:bg-white/5 p-6 rounded-xl transition-all duration-300 border border-transparent hover:border-white/5"
               >
-                <div className="mr-8 relative">
-                  <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-blue-500/20 border border-blue-400/30 text-blue-300 font-tech text-xl font-bold group-hover:bg-blue-500/30 transition-all duration-300">
+                <div className="mr-0 md:mr-8 mb-4 md:mb-0 relative">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-blue-500/20 border border-blue-400/30 text-blue-300 font-tech text-xl font-bold group-hover:bg-blue-500/30 group-hover:scale-110 transition-all duration-300 shadow-lg">
                     {index + 1}
                   </div>
+                  {/* Linie verticala intre pasi, vizibila doar pe desktop */}
                   {index < service.process.length - 1 && (
-                    <div className="absolute left-1/2 top-16 bottom-0 w-0.5 bg-blue-400/20 transform -translate-x-1/2"></div>
+                    <div className="hidden md:block absolute left-1/2 top-16 bottom-[-32px] w-0.5 bg-blue-400/20 transform -translate-x-1/2"></div>
                   )}
                 </div>
                 <div className="flex-1">
                   <h3 className="font-tech text-2xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
                     {step.step}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                  <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300 text-lg">
                     {step.description}
                   </p>
                 </div>
