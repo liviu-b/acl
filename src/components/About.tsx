@@ -50,7 +50,7 @@ const About = () => {
           
           {/* Content Section */}
           <div className="lg:w-1/2">
-            <h2 className="font-tech text-5xl font-bold mb-8 tech-gradient-text tracking-tight">
+            <h2 className="font-tech text-4xl font-bold mb-8 tech-gradient-text tracking-tight">
               {t('about.title')}
             </h2>
             
