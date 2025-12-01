@@ -12,31 +12,63 @@ export default {
   // About
   "about.title": "Despre ACL-Smart Software",
   "about.paragraph1": "Compania ACL-Smart Software operează în sectorul IT din România, concentrându-se pe dezvoltarea de soluții software inovatoare și servicii IT cuprinzătoare. Compania integrează expertiza tehnică cu perspectivele de afaceri pentru a oferi soluții care îmbunătățesc creșterea și eficiența.",
-"about.paragraph2": "Oferind o gamă variată de servicii, ACL-Smart Software abordează provocările complexe prin software personalizat care răspunde și deseori depășește așteptările clienților. Compania pune accent pe o metodologie agilă, atenție meticuloasă la detalii și un angajament ferm față de calitate în toate ofertele sale.",
+  "about.paragraph2": "Oferind o gamă variată de servicii, ACL-Smart Software abordează provocările complexe prin software personalizat care răspunde și deseori depășește așteptările clienților. Compania pune accent pe o metodologie agilă, atenție meticuloasă la detalii și un angajament ferm față de calitate în toate ofertele sale.",
   "about.mission.title": "Misiunea Noastră",
   "about.mission.text": "Să capacităm afacerile prin soluții tehnologice inovatoare care stimulează creșterea și eficiența.",
   "about.vision.title": "Viziunea Noastră",
   "about.vision.text": "Să fim furnizorul principal de soluții software personalizate care transformă afacerile în era digitală.",
 
-  // Services
+  // Services Main
   "services.title": "Serviciile Noastre",
   "services.subtitle": "ACL-Smart Software oferă o gamă completă de servicii IT concepute pentru a permite întreprinderilor să exceleze în era digitală.",
   
-  // Software Development Service
-  "services.software.title": "Dezvoltare Software Personalizat",
-  "services.software.description": "Dezvoltare software personalizată care vă transformă afacerea. Construim soluții scalabile și sigure pentru a eficientiza operațiunile.",
+  // 1. Apps
+  "services.apps.title": "Aplicații Web și Mobile",
+  "services.apps.description": "Proiectăm și dezvoltăm aplicații personalizate care se potrivesc perfect nevoilor afacerii — rapide, intuitive, sigure și gata de scalare.",
+  "services.apps.f1": "Nativ iOS/Android",
+  "services.apps.f2": "React Native",
+  "services.apps.f3": "Web Responsiv",
+  "services.apps.f4": "Design UI/UX",
 
-  // Consulting Service
+  // 2. Custom Software
+  "services.custom.title": "Dezvoltare Software Personalizat",
+  "services.custom.description": "De la instrumente interne la sisteme enterprise, construim software proiectat în jurul proceselor tale, nu invers.",
+  "services.custom.f1": "ERP Enterprise",
+  "services.custom.f2": "Instrumente Interne",
+  "services.custom.f3": "Modernizare Legacy",
+  "services.custom.f4": "Arhitectură Scalabilă",
+
+  // 3. SaaS
+  "services.saas.title": "Dezvoltare SaaS",
+  "services.saas.description": "Transformăm conceptele în produse SaaS complete — arhitectură, multi-tenancy, logică de abonament, implementare și scalabilitate.",
+  "services.saas.f1": "Multi-tenancy",
+  "services.saas.f2": "Facturare Abonamente",
+  "services.saas.f3": "Cloud Native",
+  "services.saas.f4": "Microservicii",
+
+  // 4. AI
+  "services.ai.title": "AI și Automatizare",
+  "services.ai.description": "Integrăm automatizări inteligente și fluxuri de lucru bazate pe AI care deblochează eficiența, reduc efortul manual și îmbunătățesc deciziile.",
+  "services.ai.f1": "Machine Learning",
+  "services.ai.f2": "Chatboți & NLP",
+  "services.ai.f3": "Analiză Predictivă",
+  "services.ai.f4": "Automatizare Procese",
+
+  // 5. API
+  "services.api.title": "Integrări API și Automatizări",
+  "services.api.description": "Comunicare perfectă între sisteme: conectăm platforme, eficientizăm operațiunile și construim fluxuri de automatizare fiabile.",
+  "services.api.f1": "REST/GraphQL API",
+  "services.api.f2": "Integrare Terțe Părți",
+  "services.api.f3": "Webhooks",
+  "services.api.f4": "Sincronizare Date",
+
+  // 6. Consulting
   "services.consulting.title": "Consultanță și Arhitectură",
-  "services.consulting.description": "Consultanță tehnică expertă pentru a vă ridica strategia. Ghidăm proiectarea și implementarea sistemelor pentru soluții robuste.",
-
-  // Dezvoltare Aplicații Mobile
-  "services.mobile.title": "Dezvoltare Aplicații Mobile",
-  "services.mobile.description": "Soluții inovatoare pentru aplicații mobile adaptate nevoilor afacerii dumneavoastră. Livrăm aplicații prietenoase și scalabile pentru platformele iOS și Android.",
-
-  // Web Solutions Service
-  "services.web.title": "Soluții Web",
-  "services.web.description": "Construiți o prezență online puternică cu soluțiile noastre web. Creăm site-uri web uimitoare și responsive care vă implică audiența.",
+  "services.consulting.description": "Oferim ghidare tehnică strategică, arhitectură de sistem și foi de parcurs tehnologice care ajută companiile să construiască soluții de viitor.",
+  "services.consulting.f1": "Audit Tehnic",
+  "services.consulting.f2": "Strategie Cloud",
+  "services.consulting.f3": "Code Review",
+  "services.consulting.f4": "CTO as a Service",
 
   // Footer
   "footer.company": "ACL-Smart Software",
@@ -45,10 +77,6 @@ export default {
   "footer.phone": "+40 758 158 490",
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Servicii",
-  "footer.software": "Dezvoltare Software",
-  "footer.mobile": "Dezvoltare Aplicații Mobile",
-  "footer.consulting": "Consultanță și Arhitectură",
-  "footer.web": "Soluții Web",
   "footer.legal": "Legal",
   "footer.privacy": "Politica de Confidențialitate",
   "footer.gdpr": "Conformitate GDPR",

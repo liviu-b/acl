@@ -18,25 +18,57 @@ export default {
   "about.vision.title": "Our Vision",
   "about.vision.text": "To be the leading provider of custom software solutions that transform businesses in the digital age.",
 
-  // Services
+  // Services Page Main Title
   "services.title": "Our Services",
   "services.subtitle": "ACL-Smart Software delivers a comprehensive range of IT services designed to empower businesses to excel in the digital age.",
   
-  // Software Development Service
-  "services.software.title": "Custom Software Development",
-  "services.software.description": "Custom software development that transforms your business. We build scalable, secure solutions to streamline operations and drive growth.",
+  // 1. Custom Web & Mobile Apps
+  "services.apps.title": "Custom Web & Mobile Apps",
+  "services.apps.description": "We design and develop tailored applications that fit your business needs perfectly — fast, intuitive, secure, and ready to scale.",
+  "services.apps.f1": "Native iOS/Android",
+  "services.apps.f2": "React Native",
+  "services.apps.f3": "Responsive Web",
+  "services.apps.f4": "UI/UX Design",
 
-  // Consulting Service
-  "services.consulting.title": "Consulting & Architecture",
-  "services.consulting.description": "Expert tech consulting to elevate your strategy. We guide system design and implementation for robust, future-proof solutions.",
+  // 2. Custom Software Development
+  "services.custom.title": "Custom Software Development",
+  "services.custom.description": "From internal tools to enterprise-grade systems, we build software engineered around your processes, not the other way around.",
+  "services.custom.f1": "Enterprise ERP",
+  "services.custom.f2": "Internal Tools",
+  "services.custom.f3": "Legacy Modernization",
+  "services.custom.f4": "Scalable Architecture",
 
-  // Mobile Development
-  "services.mobile.title": "Mobile App Development",
-  "services.mobile.description": "Innovative mobile app solutions tailored to your business needs. We deliver user-friendly and scalable apps for iOS and Android platforms.",
+  // 3. SaaS Development
+  "services.saas.title": "SaaS Development",
+  "services.saas.description": "We transform concepts into full SaaS products — architecture, multi-tenancy, subscription logic, deployment, and long-term scalability.",
+  "services.saas.f1": "Multi-tenancy",
+  "services.saas.f2": "Subscription Billing",
+  "services.saas.f3": "Cloud Native",
+  "services.saas.f4": "Microservices",
 
-  // Web Solutions Service
-  "services.web.title": "Web Solutions",
-  "services.web.description": "Build a powerful online presence with our web solutions. We create stunning, responsive websites that engage your audience.",
+  // 4. AI & Automation
+  "services.ai.title": "AI & Automation",
+  "services.ai.description": "We integrate intelligent automation and AI-driven workflows that unlock efficiency, reduce manual effort, and enhance decision-making.",
+  "services.ai.f1": "Machine Learning",
+  "services.ai.f2": "Chatbots & NLP",
+  "services.ai.f3": "Predictive Analytics",
+  "services.ai.f4": "Process Automation",
+
+  // 5. API Integrations
+  "services.api.title": "API Integrations & Automation",
+  "services.api.description": "Seamless system-to-system communication: we connect platforms, streamline operations, and build reliable automation pipelines.",
+  "services.api.f1": "REST/GraphQL API",
+  "services.api.f2": "Third-party Integration",
+  "services.api.f3": "Webhooks",
+  "services.api.f4": "Data Sync",
+
+  // 6. Consulting
+  "services.consulting.title": "Software Consulting & Architecture",
+  "services.consulting.description": "We provide strategic technical guidance, system architecture, and technology roadmaps that help companies build future-proof solutions.",
+  "services.consulting.f1": "Tech Audit",
+  "services.consulting.f2": "Cloud Strategy",
+  "services.consulting.f3": "Code Review",
+  "services.consulting.f4": "CTO as a Service",
 
   // Footer
   "footer.company": "ACL-Smart Software",
@@ -45,10 +77,6 @@ export default {
   "footer.phone": "+40 758 158 490",
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Services",
-  "footer.software": "Software Development",
-  "footer.mobile": "Mobile App Development",
-  "footer.consulting": "Consulting & Architecture",
-  "footer.web": "Web Solutions",
   "footer.legal": "Legal",
   "footer.privacy": "Privacy Policy",
   "footer.gdpr": "GDPR Compliance",
