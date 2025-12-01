@@ -11,11 +11,9 @@ const WhatsAppChat = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Afișează butonul după 1 secundă
     const timer = setTimeout(() => {
       setIsVisible(true);
-      // Afișează o notificare mică după încă 2 secunde
-      setTimeout(() => setShowNotification(true), 2000);
+      setTimeout(() => setShowNotification(true), 1000);
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
@@ -28,7 +26,6 @@ const WhatsAppChat = () => {
     const encodedMessage = encodeURIComponent(message);
     
     // Deschide WhatsApp Web/App
-    // NOTA: Înlocuiește numărul cu cel corect dacă e diferit
     window.open(`https://wa.me/40758154490?text=${encodedMessage}`, '_blank');
     
     setMessage('');
