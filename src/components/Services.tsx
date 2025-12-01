@@ -1,5 +1,4 @@
 import React from 'react';
-// Am adaugat iconite noi potrivite pentru AI, Cloud/SaaS si API
 import { Code, Wrench, Smartphone, Globe, Cloud, Cpu, Network, Zap } from 'lucide-react'; 
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
@@ -74,14 +73,13 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
 const Services = () => {
   const { t } = useTranslation();
   
-  // Aici am actualizat lista cu cele 6 servicii noi
   const services = [
     {
       icon: <Smartphone className="h-5 w-5 text-blue-400" />,
       title: "Custom Web & Mobile Apps",
       description: "We design and develop tailored applications that fit your business needs perfectly — fast, intuitive, secure, and ready to scale.",
-      // Imagine cu telefoane/tablete
-      imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      // Imagine: Mobile/Tablet usage
+      imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "custom-web-mobile-apps",
       features: ["Native iOS/Android", "React Native", "Responsive Web", "UI/UX Design"]
     },
@@ -89,8 +87,8 @@ const Services = () => {
       icon: <Code className="h-5 w-5 text-emerald-400" />,
       title: "Custom Software Development",
       description: "From internal tools to enterprise-grade systems, we build software engineered around your processes, not the other way around.",
-      // Imagine cu cod
-      imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      // Imagine: Code/Programming
+      imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "custom-software-development",
       features: ["Enterprise ERP", "Internal Tools", "Legacy Modernization", "Scalable Architecture"]
     },
@@ -98,8 +96,8 @@ const Services = () => {
       icon: <Cloud className="h-5 w-5 text-sky-400" />,
       title: "SaaS Development",
       description: "We transform concepts into full SaaS products — architecture, multi-tenancy, subscription logic, deployment, and long-term scalability.",
-      // Imagine cloud/server
-      imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      // Imagine: Dashboard/Analytics
+      imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "saas-development",
       features: ["Multi-tenancy", "Subscription Billing", "Cloud Native", "Microservices"]
     },
@@ -107,17 +105,17 @@ const Services = () => {
       icon: <Cpu className="h-5 w-5 text-purple-400" />,
       title: "AI & Automation",
       description: "We integrate intelligent automation and AI-driven workflows that unlock efficiency, reduce manual effort, and enhance decision-making.",
-      // Imagine AI/Brain/Futuristic
-      imageUrl: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      // Imagine: Neural Network / Digital Brain (CHANGED)
+      imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "ai-automation",
       features: ["Machine Learning", "Chatbots & NLP", "Predictive Analytics", "Process Automation"]
     },
     {
-      icon: <Network className="h-5 w-5 text-amber-400" />, // Sau Zap
+      icon: <Network className="h-5 w-5 text-amber-400" />, 
       title: "API Integrations & Automation",
       description: "Seamless system-to-system communication: we connect platforms, streamline operations, and build reliable automation pipelines.",
-      // Imagine conexiuni/noduri
-      imageUrl: "https://images.unsplash.com/photo-1558494949-efc02570fbc9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      // Imagine: Circuitry / Connectivity / Nodes (CHANGED)
+      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "api-integrations",
       features: ["REST/GraphQL API", "Third-party Integration", "Webhooks", "Data Sync"]
     },
@@ -125,8 +123,8 @@ const Services = () => {
       icon: <Wrench className="h-5 w-5 text-rose-400" />,
       title: "Software Consulting & Architecture",
       description: "We provide strategic technical guidance, system architecture, and technology roadmaps that help companies build future-proof solutions.",
-      // Imagine meeting/planning
-      imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      // Imagine: Blueprint / Planning / Strategy (CHANGED)
+      imageUrl: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "software-consulting",
       features: ["Tech Audit", "Cloud Strategy", "Code Review", "CTO as a Service"]
     }
@@ -150,7 +148,6 @@ const Services = () => {
           </p>
         </div>
         
-        {/* Grid-ul se adapteaza automat la numarul de carduri */}
         <div className="grid gap-8 max-w-7xl mx-auto" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
           {services.map((service, index) => (
             <ServiceCard 
