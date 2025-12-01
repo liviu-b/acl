@@ -93,12 +93,11 @@ export default {
   "footer.copyright": "All rights reserved.",
 
   // WhatsApp Chat Widget
-  "chat.title": "Chat with Support",
-  "chat.welcome.title": "Hi there! 👋",
-  "chat.welcome.message": "Need help with a project? Chat with us directly on WhatsApp!",
+  "chat.title": "Support",
+  "chat.welcome.title": "Chat with us! 👋",
   "chat.placeholder": "Type your message...",
-  "chat.button": "Start Chat",
-  "chat.agent.name": "ACL AI",
-  "chat.agent.status": "Online",
-  "chat.intro": "Hello! How can we help you transform your business today?"
+  "chat.button": "Send Message",
+  "chat.agent.name": "ACL Support",
+  "chat.agent.status": "Typically replies instantly",
+  "chat.intro": "Hello! 👋 How can we help you with your project today?",
 };

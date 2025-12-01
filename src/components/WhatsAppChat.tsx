@@ -1,177 +1,178 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MessageCircle, X, Send, Paperclip, Smile } from 'lucide-react';
+import { MessageCircle, X, Send, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const WhatsAppChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [isVisible, setIsVisible] = useState(false);
-  const [showWelcome, setShowWelcome] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
   const { t } = useTranslation();
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Afișează butonul și apoi bula de bun venit
   useEffect(() => {
-    const buttonTimer = setTimeout(() => {
+    // Afișează butonul după 1 secundă
+    const timer = setTimeout(() => {
       setIsVisible(true);
-      setTimeout(() => {
-        setShowWelcome(true);
-      }, 1000);
-    }, 2000);
-    
-    return () => {
-      clearTimeout(buttonTimer);
-    };
+      // Afișează o notificare mică după încă 2 secunde
+      setTimeout(() => setShowNotification(true), 2000);
+    }, 1000);
+    return () => clearTimeout(timer);
   }, []);
-
-  // Auto-resize pentru textarea
-  useEffect(() => {
-    if (textareaRef.current) {
-      textareaRef.current.style.height = 'auto';
-      textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
-    }
-  }, [message]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!message.trim()) return;
     
+    // Mesajul scris de utilizator
     const encodedMessage = encodeURIComponent(message);
-    // Numărul tău de telefon
+    
+    // Deschide WhatsApp Web/App
+    // NOTA: Înlocuiește numărul cu cel corect dacă e diferit
     window.open(`https://wa.me/40758154490?text=${encodedMessage}`, '_blank');
+    
     setMessage('');
     setIsOpen(false);
   };
 
-  const handleOpen = () => {
-    setIsOpen(true);
-    setShowWelcome(false); // Ascunde bula mică când deschizi chat-ul mare
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) setShowNotification(false);
   };
 
   if (!isVisible) return null;
 
   return (
-    <>
-      {/* 1. Welcome Bubble (Bula mică deasupra butonului) */}
-      {showWelcome && !isOpen && (
-        <div 
-          className="fixed bottom-24 right-6 z-40 max-w-[250px] animate-fade-in-up origin-bottom-right"
-        >
-          <div className="bg-white text-gray-800 p-4 rounded-xl shadow-xl border border-gray-100 relative">
-            <button 
-              onClick={(e) => { e.stopPropagation(); setShowWelcome(false); }}
-              className="absolute -top-2 -right-2 bg-gray-200 hover:bg-gray-300 rounded-full p-1 transition-colors text-gray-600 shadow-sm"
-            >
-              <X className="h-3 w-3" />
-            </button>
-            <div className="flex items-start gap-3">
-              <div className="bg-green-100 p-2 rounded-full">
-                <MessageCircle className="h-5 w-5 text-green-600" />
-              </div>
-              <div>
-                <h4 className="font-bold text-sm text-gray-900 mb-1">{t('chat.welcome.title')}</h4>
-                <p className="text-xs text-gray-600 leading-relaxed">{t('chat.welcome.message')}</p>
-              </div>
-            </div>
-            {/* Săgeata bulei */}
-            <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white border-b border-r border-gray-100 transform rotate-45"></div>
-          </div>
-        </div>
-      )}
+    <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-4 font-sans">
+      
+      {/* --- Fereastra de Chat (Modern Glass Card) --- */}
+      <div 
+        className={`
+          w-[360px] bg-white/90 backdrop-blur-xl border border-white/40 shadow-2xl rounded-3xl overflow-hidden
+          transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] origin-bottom-right
+          ${isOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-90 translate-y-10 pointer-events-none absolute bottom-0 right-0'}
+        `}
+      >
+        {/* Header cu Gradient */}
+        <div className="bg-gradient-to-r from-emerald-500 to-teal-600 p-6 pb-8 relative overflow-hidden">
+          {/* Cercuri decorative background */}
+          <div className="absolute top-[-20%] right-[-10%] w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-[-10%] left-[-10%] w-24 h-24 bg-black/5 rounded-full blur-xl"></div>
 
-      {/* 2. Chat Window (Fereastra principală) */}
-      <div className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ease-out transform ${isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-95 opacity-0 translate-y-10 pointer-events-none'}`}>
-        <div className="bg-[#E5DDD5] w-[350px] sm:w-[380px] rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[500px]">
-          
-          {/* Header - Stil WhatsApp */}
-          <div className="bg-[#008069] p-4 flex justify-between items-center text-white shadow-md z-10">
-            <div className="flex items-center gap-3">
+          <div className="flex justify-between items-start relative z-10">
+            <div className="flex items-center gap-4">
+              {/* Avatar Agent */}
               <div className="relative">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  A
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border-2 border-white/30 text-white font-bold text-lg shadow-lg">
+                  <span className="animate-pulse">👋</span>
                 </div>
-                <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-[#008069] rounded-full"></div>
+                {/* Status Dot */}
+                <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-400 border-2 border-emerald-600 rounded-full"></div>
               </div>
-              <div>
-                <h3 className="font-bold text-base">{t('chat.agent.name')}</h3>
-                <p className="text-xs text-green-100 opacity-90">{t('chat.agent.status')}</p>
+              
+              <div className="text-white">
+                <h3 className="font-bold text-lg leading-tight">{t('chat.agent.name')}</h3>
+                <p className="text-emerald-100 text-xs font-medium bg-white/10 px-2 py-0.5 rounded-full inline-block mt-1">
+                  {t('chat.agent.status')}
+                </p>
               </div>
             </div>
+
             <button 
               onClick={() => setIsOpen(false)}
-              className="text-white/80 hover:text-white transition-colors p-1"
+              className="text-white/70 hover:text-white hover:bg-white/10 rounded-full p-2 transition-all"
             >
-              <X className="h-6 w-6" />
+              <X className="h-5 w-5" />
             </button>
           </div>
+        </div>
+
+        {/* Corpul Chat-ului */}
+        <div className="bg-slate-50 h-[320px] p-5 overflow-y-auto flex flex-col relative">
           
-          {/* Chat Body - Background Pattern */}
-          <div className="flex-1 p-4 overflow-y-auto bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')] bg-repeat">
-            {/* Mesaj de la "Agent" */}
-            <div className="bg-white p-3 rounded-tr-lg rounded-bl-lg rounded-br-lg shadow-sm max-w-[85%] mb-2 animate-fade-in">
-              <p className="text-gray-800 text-sm leading-relaxed">
-                {t('chat.intro')}
-              </p>
-              <span className="text-[10px] text-gray-400 float-right mt-1 ml-2">
-                {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+          {/* Mesajul de întâmpinare (Bot) */}
+          <div className="flex gap-3 animate-fade-in-up mt-2">
+            <div className="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 max-w-[85%] text-slate-700 text-sm leading-relaxed relative group hover:shadow-md transition-shadow">
+              <p>{t('chat.intro')}</p>
+              <span className="text-[10px] text-slate-400 mt-2 block font-medium">
+                {t('chat.agent.name')} • Acum
               </span>
             </div>
           </div>
+          
+          {/* Spațiu gol pentru scroll */}
+          <div ref={messagesEndRef} />
+        </div>
 
-          {/* Input Area */}
-          <div className="bg-[#F0F2F5] p-3 flex items-end gap-2">
-            <form onSubmit={handleSubmit} className="flex-1 flex items-end gap-2 bg-white rounded-2xl px-4 py-2 shadow-sm border border-gray-100">
-              <textarea
-                ref={textareaRef}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder={t('chat.placeholder')}
-                className="w-full bg-transparent border-none focus:ring-0 p-0 text-sm text-gray-800 placeholder-gray-500 resize-none max-h-24 py-1"
-                rows={1}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' && !e.shiftKey) {
-                    e.preventDefault();
-                    handleSubmit(e);
-                  }
-                }}
-              />
-            </form>
+        {/* Zona de Input (Footer) */}
+        <div className="p-4 bg-white border-t border-slate-100">
+          <form onSubmit={handleSubmit} className="relative flex items-center group">
+            <input
+              type="text"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder={t('chat.placeholder')}
+              className="w-full bg-slate-100 text-slate-700 placeholder:text-slate-400 pl-5 pr-12 py-3.5 rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:bg-white transition-all shadow-inner text-sm"
+            />
             <button
-              onClick={handleSubmit}
+              type="submit"
               disabled={!message.trim()}
-              className={`p-3 rounded-full shadow-md transition-all duration-200 flex items-center justify-center ${
-                message.trim() 
-                  ? 'bg-[#008069] hover:bg-[#006d59] text-white transform hover:scale-105' 
-                  : 'bg-gray-200 text-gray-400 cursor-not-allowed'
-              }`}
+              className={`
+                absolute right-2 p-2 rounded-full transition-all duration-300
+                ${message.trim() 
+                  ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg scale-100 hover:scale-110' 
+                  : 'bg-slate-200 text-slate-400 scale-90 cursor-not-allowed'}
+              `}
             >
-              <Send className="h-5 w-5 ml-0.5" />
+              <Send className="h-4 w-4" />
             </button>
+          </form>
+          <div className="text-center mt-2">
+             <span className="text-[10px] text-slate-400 flex items-center justify-center gap-1">
+               Powered by <span className="font-semibold text-emerald-600">WhatsApp</span>
+             </span>
           </div>
         </div>
       </div>
 
-      {/* 3. Main Toggle Button */}
-      {!isOpen && (
-        <button
-          onClick={handleOpen}
-          className="fixed bottom-6 right-6 z-50 group transition-all duration-300 hover:scale-110"
-          aria-label="Open chat"
-        >
-          {/* Pulsing Effect */}
-          <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping duration-1000"></span>
-          
-          <div className="relative bg-[#25D366] hover:bg-[#20bd5a] w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-colors">
-            <MessageCircle className="h-8 w-8 text-white fill-white" />
-            
-            {/* Notification Badge */}
-            <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white shadow-sm ring-2 ring-white">
-              1
-            </span>
+      {/* --- Butonul Principal (Trigger) --- */}
+      <div className="relative group">
+        {/* Notificare tip "Bubble" (apare când chat-ul e închis) */}
+        {showNotification && !isOpen && (
+          <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 whitespace-nowrap z-0">
+             <div className="bg-white px-4 py-2 rounded-xl shadow-lg border border-slate-100 flex items-center gap-2 animate-fade-in-left origin-right">
+               <span className="text-sm font-medium text-slate-700">{t('chat.welcome.title')}</span>
+               <ChevronRight className="h-3 w-3 text-emerald-500" />
+             </div>
           </div>
+        )}
+
+        <button
+          onClick={handleToggle}
+          className={`
+            relative h-16 w-16 flex items-center justify-center rounded-full shadow-2xl transition-all duration-300 z-10
+            ${isOpen 
+              ? 'bg-slate-800 rotate-90' 
+              : 'bg-gradient-to-br from-emerald-400 to-teal-600 hover:scale-110 hover:shadow-emerald-500/30'}
+          `}
+        >
+          {isOpen ? (
+            <X className="h-6 w-6 text-white" />
+          ) : (
+            <>
+              <MessageCircle className="h-8 w-8 text-white animate-bounce-slow" />
+              {/* Punct roșu de notificare */}
+              <span className="absolute top-0 right-0 h-4 w-4 bg-red-500 border-2 border-white rounded-full"></span>
+            </>
+          )}
         </button>
-      )}
-    </>
+        
+        {/* Inel pulsatil în jurul butonului */}
+        {!isOpen && (
+          <span className="absolute -inset-1 rounded-full bg-emerald-500 opacity-30 animate-ping -z-10"></span>
+        )}
+      </div>
+    </div>
   );
 };
 
