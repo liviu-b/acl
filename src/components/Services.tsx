@@ -76,57 +76,57 @@ const Services = () => {
   const services = [
     {
       icon: <Smartphone className="h-5 w-5 text-blue-400" />,
-      title: t('services.apps.title'),
-      description: t('services.apps.description'),
+      title: "Custom Web & Mobile Apps",
+      description: "We design and develop tailored applications that fit your business needs perfectly — fast, intuitive, secure, and ready to scale.",
       // Imagine: Mobile/Tablet usage
       imageUrl: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "custom-web-mobile-apps",
-      features: [t('services.apps.f1'), t('services.apps.f2'), t('services.apps.f3'), t('services.apps.f4')]
+      features: ["Native iOS/Android", "React Native", "Responsive Web", "UI/UX Design"]
     },
     {
       icon: <Code className="h-5 w-5 text-emerald-400" />,
-      title: t('services.custom.title'),
-      description: t('services.custom.description'),
+      title: "Custom Software Development",
+      description: "From internal tools to enterprise-grade systems, we build software engineered around your processes, not the other way around.",
       // Imagine: Code/Programming
       imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "custom-software-development",
-      features: [t('services.custom.f1'), t('services.custom.f2'), t('services.custom.f3'), t('services.custom.f4')]
+      features: ["Enterprise ERP", "Internal Tools", "Legacy Modernization", "Scalable Architecture"]
     },
     {
       icon: <Cloud className="h-5 w-5 text-sky-400" />,
-      title: t('services.saas.title'),
-      description: t('services.saas.description'),
+      title: "SaaS Development",
+      description: "We transform concepts into full SaaS products — architecture, multi-tenancy, subscription logic, deployment, and long-term scalability.",
       // Imagine: Dashboard/Analytics
       imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "saas-development",
-      features: [t('services.saas.f1'), t('services.saas.f2'), t('services.saas.f3'), t('services.saas.f4')]
+      features: ["Multi-tenancy", "Subscription Billing", "Cloud Native", "Microservices"]
     },
     {
       icon: <Cpu className="h-5 w-5 text-purple-400" />,
-      title: t('services.ai.title'),
-      description: t('services.ai.description'),
-      // Imagine: Neural Network / Digital Brain
+      title: "AI & Automation",
+      description: "We integrate intelligent automation and AI-driven workflows that unlock efficiency, reduce manual effort, and enhance decision-making.",
+      // Imagine: Neural Network / Digital Brain (CHANGED)
       imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "ai-automation",
-      features: [t('services.ai.f1'), t('services.ai.f2'), t('services.ai.f3'), t('services.ai.f4')]
+      features: ["Machine Learning", "Chatbots & NLP", "Predictive Analytics", "Process Automation"]
     },
     {
       icon: <Network className="h-5 w-5 text-amber-400" />, 
-      title: t('services.api.title'),
-      description: t('services.api.description'),
-      // Imagine: Circuitry / Connectivity
+      title: "API Integrations & Automation",
+      description: "Seamless system-to-system communication: we connect platforms, streamline operations, and build reliable automation pipelines.",
+      // Imagine: Circuitry / Connectivity / Nodes (CHANGED)
       imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "api-integrations",
-      features: [t('services.api.f1'), t('services.api.f2'), t('services.api.f3'), t('services.api.f4')]
+      features: ["REST/GraphQL API", "Third-party Integration", "Webhooks", "Data Sync"]
     },
     {
       icon: <Wrench className="h-5 w-5 text-rose-400" />,
-      title: t('services.consulting.title'),
-      description: t('services.consulting.description'),
-      // Imagine: Blueprint / Planning
+      title: "Software Consulting & Architecture",
+      description: "We provide strategic technical guidance, system architecture, and technology roadmaps that help companies build future-proof solutions.",
+      // Imagine: Blueprint / Planning / Strategy (CHANGED)
       imageUrl: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       slug: "software-consulting",
-      features: [t('services.consulting.f1'), t('services.consulting.f2'), t('services.consulting.f3'), t('services.consulting.f4')]
+      features: ["Tech Audit", "Cloud Strategy", "Code Review", "CTO as a Service"]
     }
   ];
 
