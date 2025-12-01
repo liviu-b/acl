@@ -18,7 +18,7 @@ export default {
   "about.vision.title": "Our Vision",
   "about.vision.text": "To be the leading provider of custom software solutions that transform businesses in the digital age.",
 
-  // Services Page Main Title
+  // Services Page
   "services.title": "Our Services",
   "services.subtitle": "ACL-Smart Software delivers a comprehensive range of IT services designed to empower businesses to excel in the digital age.",
   
@@ -77,6 +77,10 @@ export default {
   "footer.phone": "+40 758 158 490",
   "footer.email": "office@acl-smartsoftware.tech",
   "footer.services": "Services",
+  "footer.software": "Software Development",
+  "footer.mobile": "Mobile App Development",
+  "footer.consulting": "Consulting & Architecture",
+  "footer.web": "Web Solutions",
   "footer.legal": "Legal",
   "footer.privacy": "Privacy Policy",
   "footer.gdpr": "GDPR Compliance",
