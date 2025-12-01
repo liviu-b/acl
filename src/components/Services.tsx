@@ -134,7 +134,7 @@ const Services = () => {
 
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16">
-          <h2 className="font-tech text-5xl font-bold mb-6 tech-gradient-text">
+          <h2 className="font-tech text-4xl font-bold mb-6 tech-gradient-text">
             {t('services.title')}
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
