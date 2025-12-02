@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Code, Wrench, Globe, Smartphone, Cloud, Cpu, Network } from 'lucide-react'; // Am adaugat iconitele lipsa
+import { useParams, useNavigate, Link } from 'react-router-dom'; // Am adaugat Link
+import { Code, Wrench, Globe, Smartphone, Cloud, Cpu, Network, ChevronRight, Home } from 'lucide-react'; // Am adaugat ChevronRight si Home
 import { useTranslation } from 'react-i18next';
 
 const ServiceDetail = () => {
@@ -239,6 +239,36 @@ const ServiceDetail = () => {
       </div>
 
       <div className="container mx-auto px-4 relative pb-20">
+        
+        {/* === NEW: Breadcrumbs Implementation === */}
+        <nav className="flex mb-8 text-gray-400 text-sm md:text-base" aria-label="Breadcrumb">
+          <ol className="inline-flex items-center space-x-1 md:space-x-3">
+            <li className="inline-flex items-center">
+              <Link to="/" className="inline-flex items-center hover:text-blue-400 transition-colors duration-200">
+                <Home className="w-4 h-4 mr-2" />
+                {currentLanguage === 'en' ? 'Home' : 'Acasă'}
+              </Link>
+            </li>
+            <li>
+              <div className="flex items-center">
+                <ChevronRight className="w-4 h-4 mx-1" />
+                <Link to="/#services" className="hover:text-blue-400 transition-colors duration-200">
+                  {currentLanguage === 'en' ? 'Services' : 'Servicii'}
+                </Link>
+              </div>
+            </li>
+            <li aria-current="page">
+              <div className="flex items-center">
+                <ChevronRight className="w-4 h-4 mx-1" />
+                <span className="text-gray-100 font-medium truncate max-w-[150px] md:max-w-none">
+                  {service.title}
+                </span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+        {/* === END Breadcrumbs === */}
+
         <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden mb-12 shadow-2xl border border-white/10">
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/80 to-gray-900/90"></div>
           <img 
