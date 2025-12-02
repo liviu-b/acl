@@ -18,6 +18,27 @@ export default {
   "about.vision.title": "Our Vision",
   "about.vision.text": "To be the leading provider of custom software solutions that transform businesses in the digital age.",
 
+  // FAQ Section
+  "faq.title": "Frequently Asked Questions",
+  "faq.subtitle": "Common questions about our development process, pricing, and post-launch support.",
+  "faq.moreQuestions": "Have more questions?",
+  "faq.contactUs": "Contact our team",
+
+  "faq.q1.question": "How long does it take to develop a custom application?",
+  "faq.q1.answer": "The timeline varies based on complexity. A simple MVP (Minimum Viable Product) can take 4-8 weeks, while a complex enterprise solution might take 3-6 months. We provide a detailed timeline during our initial consultation.",
+
+  "faq.q2.question": "Do you provide maintenance after launch?",
+  "faq.q2.answer": "Yes, absolutely. We offer flexible maintenance packages that include bug fixes, security updates, server monitoring, and feature enhancements to ensure your software remains healthy and up-to-date.",
+
+  "faq.q3.question": "How is the payment structure organized?",
+  "faq.q3.answer": "Typically, we work with a milestone-based structure: an initial deposit to start, followed by payments released upon completion of key development phases (e.g., Design, Beta, Launch).",
+
+  "faq.q4.question": "Will I own the source code?",
+  "faq.q4.answer": "Yes. Once the project is fully paid for, you have 100% ownership of the source code, intellectual property, and all related assets.",
+
+  "faq.q5.question": "Can you integrate with our existing systems?",
+  "faq.q5.answer": "Integration is one of our specialties. We can connect with your existing ERP, CRM, or legacy databases using custom APIs to ensure seamless data flow across your organization.",
+
   // Services Page
   "services.title": "Our Services",
   "services.subtitle": "ACL-Smart Software delivers a comprehensive range of IT services designed to empower businesses to excel in the digital age.",
