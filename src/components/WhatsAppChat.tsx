@@ -109,7 +109,8 @@ const WhatsAppChat = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder={t('chat.placeholder')}
-              className="w-full bg-slate-100 text-slate-700 placeholder:text-slate-400 pl-5 pr-12 py-3.5 rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:bg-white transition-all shadow-inner text-sm"
+              // MODIFICARE AICI: am schimbat 'text-sm' cu 'text-base md:text-sm'
+              className="w-full bg-slate-100 text-slate-700 placeholder:text-slate-400 pl-5 pr-12 py-3.5 rounded-full focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:bg-white transition-all shadow-inner text-base md:text-sm"
             />
             <button
               type="submit"
