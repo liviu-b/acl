@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, MapPin, Phone, Mail } from 'lucide-react';
+import { Code, MapPin, Phone, Mail, Linkedin } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -64,6 +64,19 @@ const Footer = () => {
                   {t('footer.email')}
                 </span>
               </div>
+            </div>
+
+            {/* Social Media Links - Added LinkedIn */}
+            <div className="mt-8">
+              <a 
+                href="https://www.linkedin.com/company/acl-smart-software" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center p-3 rounded-full bg-white/5 hover:bg-blue-600 transition-all duration-300 group"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors duration-300" />
+              </a>
             </div>
           </div>
           
