@@ -62,7 +62,7 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="py-20 relative overflow-hidden">
-      {/* === Background Identic cu Services.tsx === */}
+      {/* Background identic cu Services */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/10 to-transparent opacity-50"></div>
@@ -71,7 +71,6 @@ const FAQ = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
-          {/* Header Section */}
           <div className="lg:w-1/3">
             <div className="sticky top-24">
               <div className="inline-flex items-center justify-center p-3 mb-6 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 shadow-lg shadow-blue-500/10">
@@ -83,8 +82,6 @@ const FAQ = () => {
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
                 {t('faq.subtitle')}
               </p>
-              
-              {/* Call to Action card */}
               <div className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-colors duration-300">
                 <p className="text-white font-medium mb-3 text-lg">{t('faq.moreQuestions')}</p>
                 <a href="#contact" className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center font-medium">
@@ -94,7 +91,6 @@ const FAQ = () => {
             </div>
           </div>
 
-          {/* Questions List */}
           <div className="lg:w-2/3">
             <div className="bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 p-6 md:p-10 shadow-2xl">
               {faqs.map((faq, index) => (

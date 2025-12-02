@@ -33,7 +33,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
-      {/* === Background Identic cu Services.tsx & FAQ.tsx === */}
+      {/* Background identic cu Services */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/10 to-transparent opacity-50"></div>
@@ -41,7 +41,6 @@ const Contact = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header Section */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="font-tech text-3xl md:text-5xl font-bold mb-6 tech-gradient-text">
             {t('contact.title') || 'Contact Us'}
@@ -53,11 +52,9 @@ const Contact = () => {
         
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 max-w-6xl mx-auto">
           
-          {/* Left Column: Contact Info Card */}
+          {/* Card Informații */}
           <div className="lg:w-1/3">
             <div className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-8 h-full shadow-2xl relative overflow-hidden group hover:border-white/20 transition-all duration-300">
-              
-              {/* Decorative background blob */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full filter blur-3xl translate-x-1/2 -translate-y-1/2"></div>
 
               <h3 className="text-2xl font-bold text-white mb-8">
@@ -65,7 +62,6 @@ const Contact = () => {
               </h3>
               
               <div className="space-y-8">
-                {/* Address */}
                 <div className="flex items-start group/item">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover/item:bg-blue-500/20 group-hover/item:scale-110 transition-all duration-300 border border-blue-500/20">
                     <MapPin className="h-5 w-5" />
@@ -80,7 +76,6 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                {/* Phone */}
                 <div className="flex items-start group/item">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 group-hover/item:bg-purple-500/20 group-hover/item:scale-110 transition-all duration-300 border border-purple-500/20">
                     <Phone className="h-5 w-5" />
@@ -91,7 +86,6 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                {/* Email */}
                 <div className="flex items-start group/item">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 group-hover/item:bg-emerald-500/20 group-hover/item:scale-110 transition-all duration-300 border border-emerald-500/20">
                     <Mail className="h-5 w-5" />
@@ -107,7 +101,7 @@ const Contact = () => {
             </div>
           </div>
           
-          {/* Right Column: Form */}
+          {/* Formular */}
           <div className="lg:w-2/3">
             <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-8 shadow-2xl relative overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
