@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-const FAQItem = ({ question, answer, isOpen, onClick }) => {
+const FAQItem = ({ question, answer, isOpen, onClick }: { question: string, answer: string, isOpen: boolean, onClick: () => void }) => {
   return (
     <div className="border-b border-white/10 last:border-0">
       <button
@@ -12,7 +12,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
         <span className={`text-lg md:text-xl font-medium transition-colors duration-300 ${isOpen ? 'text-blue-400' : 'text-gray-200 group-hover:text-white'}`}>
           {question}
         </span>
-        <div className={`ml-4 p-1 rounded-full border transition-all duration-300 ${isOpen ? 'bg-blue-500/20 border-blue-400 text-blue-400' : 'border-white/10 text-gray-400 group-hover:border-white/30'}`}>
+        <div className={`ml-4 p-1 rounded-full border transition-all duration-300 flex-shrink-0 ${isOpen ? 'bg-blue-500/20 border-blue-400 text-blue-400' : 'border-white/10 text-gray-400 group-hover:border-white/30'}`}>
           {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
         </div>
       </button>
@@ -21,7 +21,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
           isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-gray-400 leading-relaxed pr-8">
+        <p className="text-gray-400 leading-relaxed pr-8 text-base md:text-lg">
           {answer}
         </p>
       </div>
@@ -62,9 +62,11 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gray-900">
-         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-500/5 via-transparent to-transparent opacity-50"></div>
+      {/* === Background Identic cu Services.tsx === */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/10 to-transparent opacity-50"></div>
+        <div className="absolute inset-0 pattern-grid opacity-20"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -72,7 +74,7 @@ const FAQ = () => {
           {/* Header Section */}
           <div className="lg:w-1/3">
             <div className="sticky top-24">
-              <div className="inline-flex items-center justify-center p-3 mb-6 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400">
+              <div className="inline-flex items-center justify-center p-3 mb-6 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 shadow-lg shadow-blue-500/10">
                 <HelpCircle size={24} />
               </div>
               <h2 className="font-tech text-3xl md:text-4xl font-bold mb-6 tech-gradient-text">
@@ -82,10 +84,10 @@ const FAQ = () => {
                 {t('faq.subtitle')}
               </p>
               
-              {/* Optional: Call to Action small card */}
-              <div className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-                <p className="text-white font-medium mb-2">{t('faq.moreQuestions')}</p>
-                <a href="#contact" className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center">
+              {/* Call to Action card */}
+              <div className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-colors duration-300">
+                <p className="text-white font-medium mb-3 text-lg">{t('faq.moreQuestions')}</p>
+                <a href="#contact" className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center font-medium">
                   {t('faq.contactUs')} <ChevronDown className="ml-1 rotate-[-90deg]" size={16} />
                 </a>
               </div>
@@ -94,7 +96,7 @@ const FAQ = () => {
 
           {/* Questions List */}
           <div className="lg:w-2/3">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 p-6 md:p-8">
+            <div className="bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 p-6 md:p-10 shadow-2xl">
               {faqs.map((faq, index) => (
                 <FAQItem
                   key={index}
