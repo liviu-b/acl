@@ -65,19 +65,6 @@ const Footer = () => {
                 </span>
               </div>
             </div>
-
-            {/* Social Media Links - Added LinkedIn */}
-            <div className="mt-8">
-              <a 
-                href="https://www.linkedin.com/company/acl-smart-software" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center p-3 rounded-full bg-white/5 hover:bg-blue-600 transition-all duration-300 group"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors duration-300" />
-              </a>
-            </div>
           </div>
           
           {/* Services */}
@@ -99,39 +86,60 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Legal & Social Media */}
           <div className="flex flex-col items-center">
-            <h3 className="text-xl font-tech font-semibold mb-6 tech-gradient-text">
-              {t('footer.legal')}
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link 
-                  to="/privacy-policy" 
-                  className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
-                >
-                  {t('footer.privacy')}
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/gdpr-policy" 
-                  className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
-                >
-                  {t('footer.gdpr')}
-                </Link>
-              </li>
-              <li>
-                <a 
-                  href="https://anpc.ro/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
-                >
-                  {t('footer.anpc')}
-                </a>
-              </li>
-            </ul>
+            {/* Legal Section */}
+            <div className="mb-8">
+                <h3 className="text-xl font-tech font-semibold mb-6 tech-gradient-text">
+                {t('footer.legal')}
+                </h3>
+                <ul className="space-y-3">
+                <li>
+                    <Link 
+                    to="/privacy-policy" 
+                    className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
+                    >
+                    {t('footer.privacy')}
+                    </Link>
+                </li>
+                <li>
+                    <Link 
+                    to="/gdpr-policy" 
+                    className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
+                    >
+                    {t('footer.gdpr')}
+                    </Link>
+                </li>
+                <li>
+                    <a 
+                    href="https://anpc.ro/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-gray-300 hover:text-blue-300 transform transition-all duration-300 inline-block hover:translate-x-2"
+                    >
+                    {t('footer.anpc')}
+                    </a>
+                </li>
+                </ul>
+            </div>
+
+            {/* Social Media Section - NEW */}
+            <div>
+                <h3 className="text-xl font-tech font-semibold mb-4 tech-gradient-text">
+                    {t('footer.social') || 'Social Media'}
+                </h3>
+                <div className="flex justify-center">
+                    <a 
+                        href="https://www.linkedin.com/company/acl-smart-software" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center p-3 rounded-full bg-white/5 hover:bg-blue-600 transition-all duration-300 group"
+                        aria-label="LinkedIn"
+                    >
+                        <Linkedin className="h-5 w-5 text-gray-300 group-hover:text-white transition-colors duration-300" />
+                    </a>
+                </div>
+            </div>
           </div>
         </div>
         

@@ -247,6 +247,8 @@ export default {
   "footer.anpc": "ANPC",
   "footer.copyright": "All rights reserved.",
 
+  "footer.social": "Follow Us",
+
   // WhatsApp Chat Widget
   "chat.title": "Support",
   "chat.welcome.title": "Chat with us! 👋",
