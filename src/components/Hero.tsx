@@ -13,7 +13,7 @@ const Hero = () => {
   };
   
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-0">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
@@ -22,10 +22,10 @@ const Hero = () => {
       </div>
 
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -inset-[10px] opacity-50">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
         </div>
       </div>
       
@@ -35,45 +35,45 @@ const Hero = () => {
           {/* Logo */}
           <div 
             onClick={scrollToTop}
-            className="inline-flex justify-center mb-12 cursor-pointer group"
+            className="inline-flex justify-center mb-8 md:mb-12 cursor-pointer group"
           >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/50 to-purple-500/50 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
-              <div className="relative p-6 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 transform group-hover:scale-110 transition-all duration-500">
-                <Code className="h-16 w-16 text-white group-hover:text-blue-300 transition-colors duration-500" />
+              <div className="relative p-4 md:p-6 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 transform group-hover:scale-110 transition-all duration-500">
+                <Code className="h-12 w-12 md:h-16 md:w-16 text-white group-hover:text-blue-300 transition-colors duration-500" />
               </div>
             </div>
           </div>
 
           {/* Title */}
-          <div className="relative mb-8">
-            <h1 className="font-tech text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tech-gradient-text relative z-10 tracking-tight">
+          <div className="relative mb-6 md:mb-8">
+            <h1 className="font-tech text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 tech-gradient-text relative z-10 tracking-tight leading-tight">
               {t('hero.title')}
             </h1>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl -z-10 transform scale-150"></div>
           </div>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl lg:text-3xl mb-12 max-w-4xl mx-auto text-gray-300 font-light leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 md:mb-12 max-w-4xl mx-auto text-gray-300 font-light leading-relaxed px-2">
             {t('hero.subtitle')}
           </p>
 
           {/* CTA Button */}
           <a 
             href="#services" 
-            className="group relative inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-xl transition-all duration-500 hover:bg-white/15 hover:scale-105 overflow-hidden min-w-[240px] justify-center"
+            className="group relative inline-flex items-center px-6 py-3 md:px-8 md:py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-xl transition-all duration-500 hover:bg-white/15 hover:scale-105 overflow-hidden w-full sm:w-auto min-w-[200px] md:min-w-[240px] justify-center"
           >
             {/* Button Background Animation */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-blue-500/0 group-hover:from-blue-500/10 group-hover:via-purple-500/10 group-hover:to-blue-500/10 transition-all duration-500"></div>
             
-            <span className="relative font-tech text-lg whitespace-nowrap">
+            <span className="relative font-tech text-base md:text-lg whitespace-nowrap">
               {t('hero.cta')}
             </span>
             <ArrowDown className="relative ml-3 h-5 w-5 transform group-hover:translate-y-1 transition-transform duration-500" />
           </a>
 
           {/* Decorative Elements */}
-          <div className="absolute left-1/2 bottom-8 transform -translate-x-1/2">
+          <div className="absolute left-1/2 bottom-8 transform -translate-x-1/2 hidden md:block">
             <div className="w-px h-24 bg-gradient-to-b from-white/0 via-white/20 to-white/0"></div>
           </div>
         </div>

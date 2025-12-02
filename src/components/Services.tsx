@@ -8,14 +8,14 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
     <Link 
       to={`/services/${slug}`} 
       className="group block relative focus:outline-none overflow-hidden
-                w-full max-w-md mx-auto bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10
-                transition-all duration-300 hover:bg-white/10 shadow-md hover:shadow-xl"
+                w-full bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10
+                transition-all duration-300 hover:bg-white/10 shadow-md hover:shadow-xl h-full flex flex-col"
       aria-labelledby={`service-title-${index}`}
     >
       {/* Card header with image */}
-      <div className="relative">
+      <div className="relative shrink-0">
         {/* Background image */}
-        <div className="relative h-48 overflow-hidden rounded-t-2xl">
+        <div className="relative h-48 sm:h-56 overflow-hidden rounded-t-2xl">
           <img 
             src={imageUrl} 
             alt={title} 
@@ -27,7 +27,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
           {/* Title overlaid on image */}
           <h2 
             id={`service-title-${index}`}
-            className="absolute bottom-4 left-4 right-4 font-bold text-xl text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text z-20
+            className="absolute bottom-4 left-4 right-4 font-bold text-xl md:text-2xl text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text z-20
                         transition-transform duration-300 group-hover:translate-y-[-4px]"
           >
             {title}
@@ -36,7 +36,7 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
 
         {/* Overlapping icon */}
         <div className="absolute -bottom-6 right-8 w-12 h-12 rounded-full bg-blue-500/20 border border-blue-400/30
-                        flex items-center justify-center shadow-lg group-hover:bg-blue-500/30 transition-colors duration-300">
+                        flex items-center justify-center shadow-lg group-hover:bg-blue-500/30 transition-colors duration-300 backdrop-blur-md">
           <div className="text-blue-400">
             {icon}
           </div>
@@ -44,9 +44,9 @@ const ServiceCard = ({ icon, title, description, imageUrl, index, slug, features
       </div>
       
       {/* Card body */}
-      <div className="pt-10 px-6 pb-6">
+      <div className="pt-10 px-6 pb-6 flex-grow flex flex-col justify-between">
         {/* Description */}
-        <p className="text-gray-300 text-sm leading-relaxed mb-6 group-hover:text-gray-200 transition-colors duration-300">
+        <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 group-hover:text-gray-200 transition-colors duration-300">
           {description}
         </p>
         
@@ -125,7 +125,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 relative overflow-hidden">
+    <section id="services" className="py-16 md:py-24 relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/10 to-transparent opacity-50"></div>
@@ -133,16 +133,17 @@ const Services = () => {
       </div>
 
       <div className="container mx-auto px-4 relative">
-        <div className="text-center mb-16">
-          <h2 className="font-tech text-4xl font-bold mb-6 tech-gradient-text">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="font-tech text-3xl md:text-4xl font-bold mb-4 md:mb-6 tech-gradient-text">
             {t('services.title')}
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-300 max-w-2xl mx-auto text-base md:text-lg leading-relaxed px-2">
             {t('services.subtitle')}
           </p>
         </div>
         
-        <div className="grid gap-8 max-w-7xl mx-auto" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+        {/* Responsive Grid System changed from fixed pixels to columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard 
               key={index}
@@ -161,4 +162,4 @@ const Services = () => {
   );
 };
 
-export default Services; 
+export default Services;
