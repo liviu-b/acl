@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code } from 'lucide-react'; // Am eliminat Globe
+import { Menu, X, Code } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -8,7 +8,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-  const { t } = useTranslation(); // Nu mai avem nevoie de i18n aici
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,8 +26,6 @@ const Header = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  // Funcția toggleLanguage a fost ștearsă
 
   const navLinkClasses = "text-gray-100 text-lg font-medium transition-all duration-300 hover:text-white hover:shadow-glow";
 
@@ -56,14 +54,13 @@ const Header = () => {
                 <Link to="/#services" className={navLinkClasses}>{t('nav.services')}</Link>
               </>
             )}
-            
-            {/* Butonul de schimbare limbă a fost șters de aici */}
           </div>
           
           <div className="md:hidden flex items-center space-x-4">
-            {/* Butonul mobil de schimbare limbă a fost șters de aici */}
-            
-            <button onClick={toggleMenu} className="text-gray-100">
+            <button 
+              onClick={toggleMenu} 
+              className="text-gray-100">
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
