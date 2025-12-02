@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code } from 'lucide-react';
+import { Menu, X, Code } from 'lucide-react'; 
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -26,6 +26,7 @@ const Header = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
 
   const navLinkClasses = "text-gray-100 text-lg font-medium transition-all duration-300 hover:text-white hover:shadow-glow";
 
@@ -60,7 +61,6 @@ const Header = () => {
             <button 
               onClick={toggleMenu} 
               className="text-gray-100">
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
