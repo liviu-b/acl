@@ -1,113 +1,66 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import React from "react";
 
-const FAQItem = ({ question, answer, isOpen, onClick }: { question: string, answer: string, isOpen: boolean, onClick: () => void }) => {
+const faqs = [
+  {
+    q: "What services do you offer?",
+    a: "We provide custom web & mobile development, SaaS products, AI integrations, and automation solutions."
+  },
+  {
+    q: "How long does a typical project take?",
+    a: "From 2–4 weeks for small MVPs to several months for complex enterprise systems."
+  },
+  {
+    q: "How do we start working together?",
+    a: "Send us a short brief or message, and we'll schedule a free 30-minute discovery call."
+  },
+  {
+    q: "Do you work with startups or only established companies?",
+    a: "We work with both — from early-stage startups to established enterprises."
+  },
+  {
+    q: "What technologies do you specialize in?",
+    a: "We mainly use TypeScript, React, Node.js, Next.js, mobile frameworks, and modern cloud architectures."
+  },
+  {
+    q: "Can you help scale an existing product?",
+    a: "Yes — we optimize performance, redesign architecture, and improve scalability."
+  },
+  {
+    q: "Do you provide maintenance after delivery?",
+    a: "Yes, we offer ongoing support, maintenance, and long-term product evolution."
+  },
+  {
+    q: "How much does a project usually cost?",
+    a: "It depends on scope — small MVPs start low, while full digital platforms vary based on complexity and required features."
+  }
+];
+
+export default function FAQMinimal() {
   return (
-    <div className="border-b border-white/10 last:border-0">
-      <button
-        className="w-full py-6 flex items-center justify-between text-left focus:outline-none group"
-        onClick={onClick}
-      >
-        <span className={`text-lg md:text-xl font-medium transition-colors duration-300 ${isOpen ? 'text-blue-400' : 'text-gray-200 group-hover:text-white'}`}>
-          {question}
-        </span>
-        <div className={`ml-4 p-1 rounded-full border transition-all duration-300 flex-shrink-0 ${isOpen ? 'bg-blue-500/20 border-blue-400 text-blue-400' : 'border-white/10 text-gray-400 group-hover:border-white/30'}`}>
-          {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-        </div>
-      </button>
-      <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <p className="text-gray-400 leading-relaxed pr-8 text-base md:text-lg">
-          {answer}
-        </p>
-      </div>
-    </div>
-  );
-};
+    <section id="faq" className="max-w-3xl mx-auto py-8">
+      <h3 className="sr-only">Frequently Asked Questions</h3>
 
-const FAQ = () => {
-  const { t } = useTranslation();
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+      <ul className="space-y-3">
+        {faqs.map((f, i) => (
+          <li key={i} className="border-b last:border-b-0 pb-3">
+            <button
+              type="button"
+              className="w-full text-left flex items-start gap-3 focus:outline-none"
+              onClick={(e) => {
+                const next = e.currentTarget.nextElementSibling as HTMLElement | null;
+                if (next) next.classList.toggle("hidden");
+              }}
+            >
+              <span className="font-medium text-sm">{f.q}</span>
+              <span className="ml-auto text-xs opacity-60">▾</span>
+            </button>
 
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  const faqs = [
-    {
-      question: t('faq.q1.question'),
-      answer: t('faq.q1.answer')
-    },
-    {
-      question: t('faq.q2.question'),
-      answer: t('faq.q2.answer')
-    },
-    {
-      question: t('faq.q3.question'),
-      answer: t('faq.q3.answer')
-    },
-    {
-      question: t('faq.q4.question'),
-      answer: t('faq.q4.answer')
-    },
-    {
-      question: t('faq.q5.question'),
-      answer: t('faq.q5.answer')
-    }
-  ];
-
-  return (
-    <section id="faq" className="py-20 relative overflow-hidden">
-      {/* Background identic cu Services */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/10 to-transparent opacity-50"></div>
-        <div className="absolute inset-0 pattern-grid opacity-20"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
-          <div className="lg:w-1/3">
-            <div className="sticky top-24">
-              <div className="inline-flex items-center justify-center p-3 mb-6 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 shadow-lg shadow-blue-500/10">
-                <HelpCircle size={24} />
-              </div>
-              <h2 className="font-tech text-3xl md:text-4xl font-bold mb-6 tech-gradient-text">
-                {t('faq.title')}
-              </h2>
-              <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                {t('faq.subtitle')}
-              </p>
-              <div className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-colors duration-300">
-                <p className="text-white font-medium mb-3 text-lg">{t('faq.moreQuestions')}</p>
-                <a href="#contact" className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center font-medium">
-                  {t('faq.contactUs')} <ChevronDown className="ml-1 rotate-[-90deg]" size={16} />
-                </a>
-              </div>
+            <div className="mt-2 text-sm text-slate-600 hidden">
+              {f.a}
             </div>
-          </div>
-
-          <div className="lg:w-2/3">
-            <div className="bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 p-6 md:p-10 shadow-2xl">
-              {faqs.map((faq, index) => (
-                <FAQItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                  isOpen={openIndex === index}
-                  onClick={() => toggleFAQ(index)}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+          </li>
+        ))}
+      </ul>
     </section>
   );
-};
-
-export default FAQ;
+}
