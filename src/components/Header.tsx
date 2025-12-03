@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Code } from 'lucide-react'; 
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
   const { t } = useTranslation();
 
@@ -18,10 +19,34 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Scroll către elementul cu hash din URL
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navLinkClasses =
     "text-gray-100 text-lg font-medium transition-all duration-300 hover:text-white hover:shadow-glow";
+
+  // Funcție pentru click pe link
+  const handleNavClick = (hash) => {
+    toggleMenu(); // închide meniul mobil dacă e deschis
+
+    if (location.pathname === '/') {
+      // dacă suntem pe home, scroll direct
+      const element = document.querySelector(hash);
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // dacă suntem pe altă pagină, navigăm către home + hash
+      navigate(`/${hash}`);
+    }
+  };
 
   return (
     <header
@@ -44,23 +69,15 @@ const Header = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {isHomePage ? (
-              <>
-                <a href="#home" className={navLinkClasses}>{t('nav.home')}</a>
-                <a href="#about" className={navLinkClasses}>{t('nav.about')}</a>
-                <a href="#services" className={navLinkClasses}>{t('nav.services')}</a>
-                <a href="#FAQ" className={navLinkClasses}>{t('nav.FAQ')}</a>
-                <a href="#contact" className={navLinkClasses}>{t('nav.contact')}</a>
-              </>
-            ) : (
-              <>
-                <Link to="/" className={navLinkClasses}>{t('nav.home')}</Link>
-                <Link to="/#about" className={navLinkClasses}>{t('nav.about')}</Link>
-                <Link to="/#services" className={navLinkClasses}>{t('nav.services')}</Link>
-                <Link to="/#FAQ" className={navLinkClasses}>{t('nav.FAQ')}</Link>
-                <Link to="/#contact" className={navLinkClasses}>{t('nav.contact')}</Link>
-              </>
-            )}
+            {['home', 'about', 'services', 'FAQ', 'contact'].map((section) => (
+              <button
+                key={section}
+                onClick={() => handleNavClick(`#${section}`)}
+                className={navLinkClasses}
+              >
+                {t(`nav.${section}`)}
+              </button>
+            ))}
           </div>
 
           {/* Mobile toggle */}
@@ -77,23 +94,15 @@ const Header = () => {
         <div className="md:hidden bg-gray-900/80 backdrop-blur-sm border-t border-white/10">
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col space-y-4">
-              {isHomePage ? (
-                <>
-                  <a href="#home" className={navLinkClasses} onClick={toggleMenu}>{t('nav.home')}</a>
-                  <a href="#about" className={navLinkClasses} onClick={toggleMenu}>{t('nav.about')}</a>
-                  <a href="#services" className={navLinkClasses} onClick={toggleMenu}>{t('nav.services')}</a>
-                  <a href="#FAQ" className={navLinkClasses} onClick={toggleMenu}>{t('nav.FAQ')}</a>
-                  <a href="#contact" className={navLinkClasses} onClick={toggleMenu}>{t('nav.contact')}</a>
-                </>
-              ) : (
-                <>
-                  <Link to="/" className={navLinkClasses} onClick={toggleMenu}>{t('nav.home')}</Link>
-                  <Link to="/#about" className={navLinkClasses} onClick={toggleMenu}>{t('nav.about')}</Link>
-                  <Link to="/#services" className={navLinkClasses} onClick={toggleMenu}>{t('nav.services')}</Link>
-                  <Link to="/#FAQ" className={navLinkClasses} onClick={toggleMenu}>{t('nav.FAQ')}</Link>
-                  <Link to="/#contact" className={navLinkClasses} onClick={toggleMenu}>{t('nav.contact')}</Link>
-                </>
-              )}
+              {['home', 'about', 'services', 'FAQ', 'contact'].map((section) => (
+                <button
+                  key={section}
+                  onClick={() => handleNavClick(`#${section}`)}
+                  className={navLinkClasses}
+                >
+                  {t(`nav.${section}`)}
+                </button>
+              ))}
             </div>
           </div>
         </div>
