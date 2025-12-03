@@ -1,66 +1,113 @@
-// src/components/FAQ.tsx
-import React from "react";
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-type FAQProps = {
-  containerClass?: string; // e.g. "container mx-auto px-6 max-w-7xl"
-  compact?: boolean;      // if true, uses tighter spacing + smaller text
+const FAQItem = ({ question, answer, isOpen, onClick }: { question: string, answer: string, isOpen: boolean, onClick: () => void }) => {
+  return (
+    <div className="border-b border-white/10 last:border-0">
+      <button
+        className="w-full py-6 flex items-center justify-between text-left focus:outline-none group"
+        onClick={onClick}
+      >
+        <span className={`text-lg md:text-xl font-medium transition-colors duration-300 ${isOpen ? 'text-blue-400' : 'text-gray-200 group-hover:text-white'}`}>
+          {question}
+        </span>
+        <div className={`ml-4 p-1 rounded-full border transition-all duration-300 flex-shrink-0 ${isOpen ? 'bg-blue-500/20 border-blue-400 text-blue-400' : 'border-white/10 text-gray-400 group-hover:border-white/30'}`}>
+          {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+        </div>
+      </button>
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <p className="text-gray-400 leading-relaxed pr-8 text-base md:text-lg">
+          {answer}
+        </p>
+      </div>
+    </div>
+  );
 };
 
-const faqs = [
-  { q: "What services do you offer?", a: "Custom web & mobile apps, SaaS, AI integrations and automation." },
-  { q: "How long does a typical project take?", a: "Small MVPs: ~2–4 weeks. Larger/enterprise: several months depending on scope." },
-  { q: "How do we start?", a: "Send a short brief or email and we'll schedule a discovery call." },
-  { q: "Do you work with startups?", a: "Yes — startups and enterprises; we adapt to budget and stage." },
-  { q: "What tech do you use?", a: "We primarily use TypeScript, React/Next.js, Node.js and cloud-native infra." },
-  { q: "Do you provide maintenance?", a: "Yes — we offer post-launch support and SLAs if needed." },
-  { q: "Can you scale our product?", a: "We do audits, architectural improvements and performance tuning." },
-  { q: "How do you price projects?", a: "Fixed-price for scoped work or time-and-materials for iterative engagements." }
-];
+const FAQ = () => {
+  const { t } = useTranslation();
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-export default function FAQ({ containerClass = "max-w-3xl mx-auto", compact = false }: FAQProps) {
-  const textSize = compact ? "text-xs" : "text-sm";
-  const spacingY = compact ? "space-y-2" : "space-y-3";
-  const summaryPadding = compact ? "py-1" : "py-2";
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqs = [
+    {
+      question: t('faq.q1.question'),
+      answer: t('faq.q1.answer')
+    },
+    {
+      question: t('faq.q2.question'),
+      answer: t('faq.q2.answer')
+    },
+    {
+      question: t('faq.q3.question'),
+      answer: t('faq.q3.answer')
+    },
+    {
+      question: t('faq.q4.question'),
+      answer: t('faq.q4.answer')
+    },
+    {
+      question: t('faq.q5.question'),
+      answer: t('faq.q5.answer')
+    }
+  ];
 
   return (
-    <section id="faq" aria-labelledby="faq-heading" className="w-full bg-transparent">
-      <h2 id="faq-heading" className="sr-only">Frequently Asked Questions</h2>
+    <section id="faq" className="py-20 relative overflow-hidden">
+      {/* Background identic cu Services */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/10 to-transparent opacity-50"></div>
+        <div className="absolute inset-0 pattern-grid opacity-20"></div>
+      </div>
 
-      <div className={containerClass + " py-4"}>
-        <ul className={spacingY}>
-          {faqs.map((f, i) => (
-            <li key={i} className="">
-              <details className="group" role="group">
-                <summary
-                  className={
-                    [
-                      "list-none cursor-pointer select-none flex items-center justify-between gap-3",
-                      summaryPadding,
-                      "px-0",
-                      "font-medium",
-                      textSize,
-                      // make sure we inherit parent color & font
-                      "text-current bg-transparent"
-                    ].join(" ")
-                  }
-                >
-                  <span className="truncate">{f.q}</span>
-                  <span
-                    aria-hidden="true"
-                    className="ml-4 text-xs opacity-60 transform transition-transform duration-150 group-open:rotate-180"
-                  >
-                    ▾
-                  </span>
-                </summary>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+          <div className="lg:w-1/3">
+            <div className="sticky top-24">
+              <div className="inline-flex items-center justify-center p-3 mb-6 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 shadow-lg shadow-blue-500/10">
+                <HelpCircle size={24} />
+              </div>
+              <h2 className="font-tech text-3xl md:text-4xl font-bold mb-6 tech-gradient-text">
+                {t('faq.title')}
+              </h2>
+              <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                {t('faq.subtitle')}
+              </p>
+              <div className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-colors duration-300">
+                <p className="text-white font-medium mb-3 text-lg">{t('faq.moreQuestions')}</p>
+                <a href="#contact" className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center font-medium">
+                  {t('faq.contactUs')} <ChevronDown className="ml-1 rotate-[-90deg]" size={16} />
+                </a>
+              </div>
+            </div>
+          </div>
 
-                <div className={`mt-1 ml-0 ${textSize} text-current opacity-80`}>
-                  {f.a}
-                </div>
-              </details>
-            </li>
-          ))}
-        </ul>
+          <div className="lg:w-2/3">
+            <div className="bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 p-6 md:p-10 shadow-2xl">
+              {faqs.map((faq, index) => (
+                <FAQItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={openIndex === index}
+                  onClick={() => toggleFAQ(index)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default FAQ;
