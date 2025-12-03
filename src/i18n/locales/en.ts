@@ -3,6 +3,8 @@ export default {
   "nav.home": "Home",
   "nav.about": "About",
   "nav.services": "Services",
+  "nav.FAQ": "FAQ",
+  "nav.contact": "Contact",
 
   // Hero
   "hero.title": "Innovative Software Solutions",
