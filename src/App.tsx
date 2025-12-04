@@ -12,14 +12,17 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen relative">
-        {/* Global background gradients */}
+        {/* GLOBAL BACKGROUND - Se aplică o singură dată pentru toată aplicația */}
         <div className="fixed inset-0 z-0">
+          {/* Base gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
+          {/* Radial glow */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/10 to-transparent opacity-50"></div>
+          {/* Pattern grid */}
           <div className="absolute inset-0 pattern-grid opacity-20"></div>
         </div>
 
-        {/* Content */}
+        {/* Content - Tot conținutul stă peste fundalul fix */}
         <div className="relative z-10">
           <Header />
           <Routes>

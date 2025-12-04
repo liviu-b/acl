@@ -33,12 +33,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
-      {/* Background identic cu Services */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/10 via-purple-500/10 to-transparent opacity-50"></div>
-        <div className="absolute inset-0 pattern-grid opacity-20"></div>
-      </div>
+      {/* Background sters - folosim background-ul global din App.tsx */}
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 md:mb-16">
