@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -35,7 +35,7 @@ const Contact = () => {
     <section id="contact" className="py-20 relative overflow-hidden">
       {/* Background sters - folosim background-ul global din App.tsx */}
 
-      <div className="container mx-auto px-4 relative z-10">
+     /* <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="font-tech text-3xl md:text-5xl font-bold mb-6 tech-gradient-text">
             {t('contact.title') || 'Contact Us'}
@@ -48,7 +48,7 @@ const Contact = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 max-w-6xl mx-auto">
           
           {/* Card Informații */}
-          <div className="lg:w-1/3">
+       /*   <div className="lg:w-1/3">
             <div className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-8 h-full shadow-2xl relative overflow-hidden group hover:border-white/20 transition-all duration-300">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full filter blur-3xl translate-x-1/2 -translate-y-1/2"></div>
 
@@ -97,7 +97,7 @@ const Contact = () => {
           </div>
           
           {/* Formular */}
-          <div className="lg:w-2/3">
+      /*    <div className="lg:w-2/3">
             <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-8 shadow-2xl relative overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2">
@@ -180,4 +180,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact; */
