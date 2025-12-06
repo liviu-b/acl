@@ -93,23 +93,6 @@ export default {
   "services.consulting.f3": "Code Review",
   "services.consulting.f4": "CTO as a Service",
 
-  // Contact Page (Added)
-  "contact.title": "Contact Us",
-  "contact.subtitle": "Have a question or want to discuss a project? Get in touch with our team.",
-  "contact.info": "Contact Information",
-  "contact.address.title": "Address",
-  "contact.address.value": "Hunedoara, Petroșani",
-  "contact.address.city": "332014",
-  "contact.phone.title": "Phone",
-  "contact.phone.value": "+40 758 154 490",
-  "contact.email.title": "Email",
-  "contact.email.value": "office@acl-smartsoftware.tech",
-  "contact.form.name": "Name",
-  "contact.form.email": "Email",
-  "contact.form.subject": "Subject",
-  "contact.form.message": "Message",
-  "contact.form.submit": "Send Message",
-
   // GDPR Policy (Added)
   "gdpr.title": "GDPR Compliance Policy",
   "gdpr.lastUpdated": "Last Updated: December 2024",
