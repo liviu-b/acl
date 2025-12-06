@@ -40,7 +40,7 @@ const Header = () => {
     }
   };
 
-  const sections = ['home', 'about', 'services', 'faq', 'contact'];
+  const sections = ['home', 'about', 'services', 'faq'];
 
   return (
     <header
